@@ -15,7 +15,7 @@ Mais un désavantage aussi :
 
 ### Numérotations des pages "sections"
 
-Chaque page HTML "section" (c-à-d celles affichées dans l'`iframe` et stockées dans `resources/sections/`) est numéroté selon le numéro de sa section et le numéro de sa sous-section : `[numéro de section]-[numéro de sous-section].html`.
+Chaque page HTML "section" (c-à-d celles affichées dans l'`iframe` et stockées dans `resources/sections/`) est numérotée selon le numéro de sa section et le numéro de sa sous-section : `[numéro de section]-[numéro de sous-section].html`.
 
 
 ## CHANGELOG
