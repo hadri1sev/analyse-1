@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang=fr>
+
+<head>
+
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+
+</head>
+
+<body>
+
+  <h3>3.7 Comportements polynômiaux, logarithmiques, exponentiels</h3>
+
+  <div class="video">
+    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_comportement_polynexplog" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_comportement_polynexplog">Comportements \(~x^n\), \(~\log\), \(~a^x\)</a>
+    <div class="collapse" id="IDvideodiv-v_suites_comportement_polynexplog">
+      <div class="card card-body">
+        <video class="HTMLvideo" src="../videos/v_suites_comportement_polynexplog.mp4" poster="../videos/v_suites_comportement_polynexplog_thumbnail.png" controls=true></video>
+      </div>
+    </div>
+  </div>
+
+  <p>
+    Parmi toutes les suites qui tendent vers l'infini, certaines tendent vers
+    l'infini plus vite que d'autres.
+  </p>
+
+  <div class="defin">
+    Si \((a_n)\) et \((b_n)\) sont deux suites qui tendent vers l'infini, on
+    dira que \(b_n\) tend vers l'infini <b>plus vite</b> que \(a_n\) si
+    \[
+    \frac{a_n}{b_n}\to 0\,.
+    \]
+  </div>
+
+  <div class="exemple">
+    Les suites \(a_n=n^2\) et
+    \(b_n=n^3\) tendent toutes deux vers l'infini, mais \(b_n\) tend vers l'infini
+    plus vite que \(a_n\), car \(\frac{a_n}{b_n}=\frac{1}{n}\to 0\).
+  </div>
+
+  <p>
+    Il est donc naturel d'établir une certaine hiérarchie parmis les
+    comportements typiques des
+    suites qui tendent vers l'infini.
+    Les comportements les plus classiques sont ceux de types
+    <i>polynomial, logarithmique et exponentiel</i>.
+  </p>
+
+  <div class="theo">(Comportements à l'infini)
+    <ol>
+      <li>
+        <b>Un exponentielle tend vers l'infini plus vite que n'importe quelle puissance</b>:
+        pour toute base \(r\gt 1\) et toute puissance \(\alpha>0\),
+        \[
+        \frac{n^\alpha}{r^n}\to 0\,.
+        \]
+      <li>
+        <b>Une puissance tend vers l'infini plus vite que n'importe quelle puissance de logarithme</b>:
+        pour toute base \(r>1\), et toutes puissances \(\alpha,\beta>0\),
+        \[
+        \frac{\bigl(\log_r (n)\bigr)^\beta}{n^\alpha}\to 0\,.
+        \]
+  </div>
+
+  <div class="preuve">
+    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuvedelahierarchie" role="button" aria-expanded="false" aria-controls="preuvedelahierarchie">Preuve:</a>
+    <div class="collapse" id="preuvedelahierarchie">
+      <div class="card card-body">
+        <p>1.
+        Remarquons d'abord que si on sait traiter les cas où \(\alpha\) est entier,
+        alors on sait aussi traiter le cas d'un \(\alpha\) quelconque.
+        (En effet, pour tout \(n\geqslant 1\), \(\frac{n^\alpha}{r^n}\leqslant
+        \frac{n^{[\alpha]+1}}{r^n}\), donc si \(\frac{n^{\alpha'}}{r^n}\to 0\), avec
+        \(\alpha'=[\alpha]+1\geqslant \alpha\), alors \(\frac{n^\alpha}{r^n}\to 0\) aussi.)
+
+        <br><br>
+        Pour simplifier, considérons le cas \(\alpha=r=2\). On aimerait donc montrer que
+        \[
+        \frac{n^2}{2^n}\to 0\,.
+        \]
+        L'idée est d'utiliser la formule du binôme pour montrer que le dénominateur est
+        plus grand qu'une puissance supérieure à \(n^2\). En effet, la formule du binôme
+        avec \(x=y=1\) donne
+        \[ 2^n=(1+1)^n=\sum_{k=0}^n\binom{n}{k}1^{n-k}1^k=\sum_{k=0}^n\binom{n}{k}\,.\]
+        Or comme tout les termes de cette dernière
+        somme sont positifs, la somme est plus grande
+        que n'importe lequel de ces termes. Dans notre cas, il suffit de ne garder que
+        le terme correspondant à \(k=3\)
+        \[\sum_{k=0}^n\binom{n}{k}\geqslant \binom{n}{3}=\frac{n!}{(n-3)!3!}
+        =\frac{n(n-1)(n-2)}{6}\,.\]
+        Ceci implique que
+        \[
+        0\leqslant \frac{n^2}{2^n}\leqslant
+        \frac{n^2}{\frac{n(n-1)(n-2)}{6}}
+        =\frac{6n^2}{n(n-1)(n-2)}\,.
+        \]
+        On voit que dans ce dernier quotient, le numérateur se comporte en \(n^2\),
+        alors que le dénominateur se comporte en \(n^3\),
+        ce qui implique que sa limite est nulle. Plus précisément,
+        \[
+        \lim_{n\to \infty}\frac{6n^2}{n(n-1)(n-2)}
+        =\lim_{n\to \infty}\underbrace{\frac{1}{n}}_{\to 0}
+        \underbrace{\frac{6}{(1-\frac1n)(1-\frac2n)}}_{\to 6}=0\,.
+        \]
+        Par le théorème des deux gendarmes, on conclut donc que \(\frac{n^2}{2^n}\to
+        0\).
+
+        <br><br>
+        Dans le cas général, pour une exponentielle de base \(r>1\) et une
+        puissance entière \(\alpha\) quelconque, on peut
+        adapter la preuve ci-dessus. En effet, en
+        écrivant \(r=1+\delta\), où \(\delta>0\), et en
+        utilisant à nouveau la formule du binôme, on peut minorer
+        \[
+        r^n=(1+\delta)^n\geqslant \binom{n}{\alpha+1}\delta^{\alpha+1}\,.
+        \]
+        Le reste de la preuve s'adapte facilement, et mène à \(\frac{n^\alpha}{r^n}\to
+        0\).
+
+        <br><br>
+        2. On peut démontrer la deuxième affirmation à l'aide de la première.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="info">
+    Le théorème implique par exemple que
+    \[\frac{(\ln n)^{1000}}{n^{0.0001}}\to 0\,.\]
+    Pourtant, la petitesse du quotient
+    est difficile à <i>observer</i> (avec une calculatrice par
+    exemple), dans le sens
+    où il faut que \(n\) soit vraiment <i>très grand</i> pour que ce quotient
+    commence à se rapprocher de zéro...
+  </div>
+
+</body>
+
+</html>

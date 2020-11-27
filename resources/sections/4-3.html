@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang=fr>
+
+<head>
+
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+
+</head>
+
+<body>
+
+  <h3>4.3 Le plan complexe</h3>
+  <h4>Identifier \(\mathbb{C}\) avec le plan cartésien</h4>
+
+  <p>
+    Il est naturel de représenter un
+    nombre complexe \(z=(x,y)=x+\mathsf{i} y\) à l'aide d'un point
+    dans le plan cartésien, dont l'abscisse est \(x\) et l'ordonnée \(y\).
+    On remarque alors que le module \(|z|\) n'est autre que
+    la distance qui sépare \(z\) de l'origine, et que \(\overline{z}\) est obtenu en
+    réfléchissant \(z\) à travers l'axe \(Ox\):
+    <center><img src="../images/i_complexe_cartesien.jpg" class="img-fluid" width="360"></center>
+    Les \(z\) purement réels se trouvent sur l'axe \(Ox\), que l'on nomme alors
+    <b>l'axe réel</b>, alors que
+    les \(z\) purement imaginaires se trouvent sur l'axe \(Oy\),
+    que l'on nomme alors <b>l'axe imaginaire</b>.
+    On parle alors du <b>plan complexe</b>.
+  </p>
+
+  <h4>Représentation polaire: module et argument</h4>
+
+  <p>
+    Mais il existe d'autres façons de repérer un point dans le plan.
+    Donc on peut associer à tout \(z\in \mathbb{C}\) sa distance à l'origine, donnée par
+    son module \(|z|=r\), et considérer l'angle orienté
+    \(\theta\) formé par \(z\) et
+    l'axe réel:
+    <center><img src="../images/i_complexe_coordonnees_polaires.jpg" class="img-fluid" width="250"></center>
+    Si \(z=x+\mathsf{i} y\), on a donc
+    \[\begin{aligned}
+    x=\mathrm{Re}(z)&=r\cos \theta\\
+    y=\mathrm{Im}(z)&=r\sin \theta\,.
+    \end{aligned}\]
+    On peut donc écrire \(z\) sous <b>forme polaire</b>:
+    \[
+    \boxed{
+    z=r(\cos \theta+\mathsf{i} \sin \theta)\,.
+    }
+    \]
+    On appelle \(\theta\) l'<b>argument</b> de
+    \(z\), et on le note \(\theta\equiv \mathrm{Arg }(z)\).
+    Bien-sûr, \(\theta\) étant défini à un multiple entier de \(2\pi\)
+    près (puisque sinus et cosinus sont \(2\pi\)-périodiques), il
+    n'est pas unique. Lorsqu'on considère
+    l'unique argument pour lequel
+    \(\theta\in [-\pi,\pi[\), on appelle \(\theta\)
+    l'<b>argument principal de \(z\)</b>.
+
+    <br><br>
+    Si \(z=x+\mathsf{i} y\), et \(x\neq 0\),
+    son argument \(\theta\) satisfait
+    \[ \tan\theta= \frac{y}{x}\,.\]
+  </p>
+
+  <div class="rem">
+    L'unique complexe dont on ne définit pas l'argument est \(z=0\).
+  </div>
+
+  <div class="exemple">
+    Mettons \(z=2-2\sqrt{3}\mathsf{i}\) sous forme polaire, et calculons son argument
+    principal.
+    D'abord, \(r=|z|=\sqrt{4+12}=4\), et
+    donc
+    \[
+    z=4\bigl(\tfrac12-\tfrac{\sqrt{3}}{2}\mathsf{i}\bigr)
+    \]
+    Comme \(\frac12=\cos (-\frac{\pi}{3})\), \(-\frac{\sqrt{3}}{2}=\sin
+    (-\frac{\pi}{3})\), l'argument principal de \(z\) est \(\theta=-\frac{\pi}{3}\).
+    Sa forme polaire peut donc s'écrire
+    \[z=4\bigl(\cos(-\tfrac{\pi}{3})+\mathsf{i} \sin (-\tfrac{\pi}{3})\bigr)\]
+    <center><img src="../images/i_complexe_coordonnees_polaires_exemple.jpg" class="img-fluid" width="250"></center>
+  </div>
+
+  <p>
+    La représentation polaire des nombres complexes représente des avantages
+    très importants par rapport à la représentation cartésienne.
+    La principale raison est que l'argument
+    possède quelques propriétés remarquables, que nous listons dans une proposition.
+    (Comme l'argument n'est pas défini de manière unique,
+    il faudrait rajouter partout ''modulo \(2\pi\)''.)
+  </p>
+
+  <div class="pro">
+    (Propriétés de l'argument)
+    <ol>
+      <li>\(\mathrm{Arg }(\overline{z})=-\mathrm{Arg }(z)\)
+      <li>\(\mathrm{Arg }(zz')=\mathrm{Arg }(z)+\mathrm{Arg }(z')\) <img src="../svg/lightning-fill.svg" style="vertical-align:middle" />
+      <li>\(\mathrm{Arg }(\frac{z}{z'})=\mathrm{Arg }(z)-\mathrm{Arg } (z')\)
+      <li>\(\mathrm{Arg }(z^n)=n\mathrm{Arg }(z)\)
+    </ol>
+  </div>
+
+  <div class="preuve">
+    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuvedesproprdelargument" role="button" aria-expanded="false" aria-controls="preuvedesproprdelargument">Preuve:</a>
+    <div class="collapse" id="preuvedesproprdelargument">
+      <div class="card card-body">
+        <ol>
+          <li>Trivial
+          <li>
+            <img src="../svg/lightning-fill.svg" style="vertical-align:middle" />
+            Si \(z=r(\cos \theta +\mathsf{i} \sin \theta)\)
+            et \(z'=r'(\cos \theta' +\mathsf{i} \sin \theta')\), alors
+            \[\begin{aligned}
+            zz'&=rr'\bigl(
+            (\underbrace{\cos \theta \cos
+            \theta'-\sin\theta\sin\theta'}_{=\cos(\theta+\theta')})
+            +\mathsf{i}(\underbrace{\cos \theta\sin \theta'+\cos\theta'\sin
+            \theta)}_{=\sin(\theta+\theta')})\\
+            &=rr'\bigl(
+            \cos(\theta+\theta')+\mathsf{i} \sin (\theta+\theta')
+            \bigr)
+            \end{aligned}\]
+            On a donc \(\mathrm{Arg }(zz')=\theta+\theta'=\mathrm{Arg }(z)+\mathrm{Arg }(z')\).
+          <li>
+            Calcul semblable:
+            \[\begin{aligned}
+            \frac{z}{z'}&=\frac{r}{r'}\frac{\cos \theta +\mathsf{i} \sin \theta}{\cos
+            \theta'+\mathsf{i} \sin \theta'}\\
+            &=\frac{r}{r'}
+            \bigl(
+            \cos \theta\cos\theta'+\sin\theta\sin\theta'
+            \bigr)
+            +\mathsf{i}
+            \bigl(
+            \sin \theta\cos\theta'-\sin\theta'\cos\theta
+            \bigr)\\
+            &=
+            \frac{r}{r'}\bigl(
+            \cos(\theta-\theta')+\mathsf{i} \sin (\theta-\theta')
+            \bigr)
+            \end{aligned}\]
+          <li> S'obtient en itérant 2.
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <h4>Première conséquence:</h4>
+  <p>
+    D'abord, on apprend quelque chose sur l'interprétation géométrique de la
+    multiplication complexe:
+  </p>
+
+  <div class="cor">
+    Soit \(\omega\in \mathbb{C}\) un nombre complexe de module \(1\): \(|\omega|=1\). Alors
+    pour tout \(z\in \mathbb{C}\), le complexe \(\omega z\) est obtenu en faisant tourner
+    \(z\) autour de l'origine, d'un angle de \(\theta=\mathrm{Arg }(\omega)\) (dans le
+    sens anti-horaire).
+  </div>
+  <center><img src="../images/i_complexes_rotation_omega.jpg" class="img-fluid" width="200"></center>
+
+  <div class="preuve">
+    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#letrucdelarotationquandonmultiplie" role="button" aria-expanded="false" aria-controls="letrucdelarotationquandonmultiplie">Preuve:</a>
+    <div class="collapse" id="letrucdelarotationquandonmultiplie">
+      <div class="card card-body">
+        <p>En effet, \(\omega z\) a pour module
+        \(|\omega z|=|z|\), et pour argument
+        \(\mathrm{Arg }(\omega z)=\mathrm{Arg }(\omega)+\mathrm{Arg }(z)=\mathrm{Arg }(z)+\theta\).</p>
+      </div>
+    </div>
+  </div>
+
+  <h4>Deuxième conséquence: formule de de Moivre</h4>
+
+  <p>
+    En multipliant \(z=r(\cos \theta+\mathsf{i} \sin \theta)\) par lui-même,
+    \[ z^2=r^2\bigl(
+    \cos(2\theta)+\mathsf{i} \sin (2\theta)
+    \bigr) \]
+    que l'on peut généraliser: </p>
+  <div class="theo">(<b>Formule de de Moivre</b>)
+    Si \(z=r(\cos \theta+\mathsf{i} \sin \theta)\), alors pour tout entier \(n\geqslant 2\),
+    \[
+    \boxed{z^n=r^n\bigl(
+    \cos(n\theta)+\mathsf{i} \sin (n\theta)
+    \bigr)}
+    \]
+  </div>
+
+  <div class="preuve">
+    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuvededeMoivre" role="button" aria-expanded="false" aria-controls="preuvededeMoivre">Preuve:</a>
+    <div class="collapse" id="preuvededeMoivre">
+      <div class="card card-body">
+        <p>Soit \(z=r(\cos \theta+\mathsf{i} \sin \theta)\).
+        Pour \(n=2\), on sait que \(|z^2|=r^2\), et que
+        \(\mathrm{Arg }(z^2)=2\mathrm{Arg }(z)=2\theta\), et donc la formule est vérifiée:
+        \[ z^2=r^2(\cos(2\theta)+\mathsf{i} \sin(2\theta))\,
+        \]
+        Si on suppose que la formule est
+        vraie pour \(n\), calculons
+        \[\begin{aligned}
+        z^{n+1}&=z\cdot z^n\\
+        &=
+        r(\cos \theta+\mathsf{i} \sin \theta)
+        \cdot
+        r^n\bigl(
+        \cos(n\theta)+\mathsf{i} \sin (n\theta)
+        \bigr) \\
+        &=r^{n+1}\Bigl(
+        \bigl(\cos(\theta)\cos(n\theta)-\sin(\theta)\sin(n\theta)\bigr)\\
+        &\phantom{xxxxxxxxxxxx}+\mathsf{i}
+        \bigl(\cos(\theta)\sin(n\theta)+\sin(\theta)\cos(n\theta)
+        \bigr)
+        \Bigr)\\
+        &=r^{n+1}\bigl(\cos((n+1)\theta)+\mathsf{i} \sin((n+1)\theta)\bigr)\,,
+        \end{aligned}\]
+        ce qui montre que la formule est vraie aussi pour \(n+1\).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quiz" id="quiz4_3_1">
+    Parmi les identités suivantes, lesquelles sont correctes?
+    <ol>
+      <li><span class="itemEMPTY">[ ]</span> \(\mathrm{Arg }(z+z')=\mathrm{Arg }(z)+\mathrm{Arg }(z')\) pour tous \(z,z'\in
+        \mathbb{C}\)
+      <li><span class="itemEMPTY">[ ]</span> \(\mathrm{Arg }(\lambda z)=\lambda \mathrm{Arg }(z)\) pour tous \(\lambda\in
+        \mathbb{R}\), \(z\in \mathbb{C}\)
+      <li><span class="itemFULL">[ ]</span> \(\mathrm{Arg }(z^{-1})=\mathrm{Arg }(\overline{z})\) pour tout \(z\in \mathbb{C}\setminus\mathbb{R}\)
+      <li><span class="itemEMPTY">[ ]</span> \(|\mathrm{Arg }(z)|=\mathrm{Arg }(|z|)\) pour tout \(z\in \mathbb{C}\)
+      <li><span class="itemEMPTY">[ ]</span> \(|\mathrm{Arg }(z)|=\mathrm{Arg }(|z|)\) pour tout \(z\in \mathbb{R}\)
+    </ol>
+    <span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz4_3_1')">Solutions</button></span>
+  </div>
+  <div class="quiz" id="quiz4_3_2">
+    Parmi les identités suivantes, lesquelles sont correctes?
+    <ol>
+      <li><span class="itemFULL">[ ]</span> \(\overline{z}=z\) si et seulement \(z\in \mathbb{R}\)
+      <li><span class="itemFULL">[ ]</span> \(\overline{z}=-z\) si et seulement si \(z\) est purement imaginaire
+      <li><span class="itemEMPTY">[ ]</span> \(\overline{2+z}=2-\overline{z}\)
+      <li><span class="itemFULL">[ ]</span> \(\overline{z^{-1}}=\overline{z}^{-1}\) pour tout \(z\neq 0\)
+      <li><span class="itemEMPTY">[ ]</span> \(z^2\geqslant 0\) pour tout \(z\in \mathbb{C}\)
+      <li><span class="itemFULL">[ ]</span> \(\overline{1+\overline{1+\overline{z}}}=2+\overline{z}\)
+      <li><span class="itemEMPTY">[ ]</span> \((\mathsf{i}+1)(\mathsf{i}+2)(\mathsf{i}+3)=6-\mathsf{i}\)
+      <li><span class="itemEMPTY">[ ]</span> \(1+2+3+\cdots+(z-1)+z=\frac{z(z+1)}{2}\)
+      <li><span class="itemFULL">[ ]</span> \(1+z+z^2+\cdots+z^n=\frac{1-z^{n+1}}{1-z}\) (lorsque \(z\neq 1\))
+      <li><span class="itemEMPTY">[ ]</span>
+        \(\frac{1+\overline{z}}{1-\overline{z}}=\frac{(1+\mathrm{Re}(z))^2-\mathrm{Im}(z)^2
+        -2(1+\mathrm{Re}(z))\mathrm{Im}(z)\mathsf{i}}{|1+\overline{z}|}\)
+      <li><span class="itemEMPTY">[ ]</span> \(|z+z'|=|z|+|z'|\) pour tout \(z,z'\in \mathbb{C}\)
+      <li><span class="itemEMPTY">[ ]</span> Si \(|\overline{z}|=|z|\), alors \(z\in \mathbb{R}\)
+    </ol>
+    <span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz4_3_2')">Solutions</button></span>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang=fr>
+
+<head>
+
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+
+</head>
+
+<body>
+
+  <div class="sec" id="IDs-secobjectifs-sDI">
+
+    <h3>0.1 Présentation</h3>
+
+    <h4>À propos du contenu</h4>
+
+    <p>
+      Le but de ce cours est de présenter les bases de l'analyse d'une fonction réelle
+      d'une variable réelle. (À part le petit chapitre sur les nombres complexes, qui
+      joue un rôle un peu particulier...)
+
+      <br><br>
+      Destiné à des étudiant(es) des domaines de l'ingénierie, son contenu n'est pas
+      aussi rigoureux que celui donné aux étudiants en mathématiques. On n'y trouve
+      par exemple pas la construction rigoureuse du corps des réels, ni la preuve du
+      Théorème Fondamental de l'Algèbre, utilisé dans le chapitre sur les nombres
+      complexes.
+
+      <br><br>
+      <b>Attention:</b> On supposera,
+      depuis le début, que les propriétés basiques des
+      fonctions trigonométriques, exponentielles et
+      logarithmes sont connues. Même si ceci constitue une brèche logique dans la
+      structure du cours (car pour
+      définir le nombre \(e^{\sqrt{2}}\), par exemple, on a besoin de
+      la notion de limite, qui n'intervient qu'au Chapitre 4!), cela
+      représente aussi l'avantage de pouvoir utiliser ces fonctions dès le début du
+      cours, dans toutes sortes
+      d'exemples qui permettent d'éclairer des concepts théoriques.
+    </p>
+
+    <h4>Quiz et vidéos</h4>
+
+    <p>
+      En plus du contenu textuel, ce cours contient des <i>vidéos</i> qui couvrent
+      certaines parties du cours (pas toutes).
+      Comme certaines de ces vidéos ont été préparées avant la rédaction du
+      texte, leur contenu pourra parfois s'écarter sensiblement du texte.
+
+      <br><br>
+      Des quizz, en fins de sections, ont pour but de faire prendre conscience de
+      certaines subtilités des énoncés qui les précèdent, sans rajouter de longues
+      remarques qui freineraient la lecture.
+
+    </p>
+
+    <h4>Remarques, critiques et suggestions bienvenues!</h4>
+
+    <p>
+      Ce cours ne prétend à aucune forme d'originalité, et va évoluer constamment au
+      cours des années à venir.
+      Toute coquille, remarque, suggestion ou critique de votre part
+      (concernant le contenu, l'utilisation du site, etc.) contribuera à son
+      amélioration, et facilitera la lecture des prochains utilisateurs.
+      Ils vous en sont d'avance reconnaissants.
+
+      <br><br>
+      Contact: <b>sacha point friedli at epfl point ch</b>.
+    </p>
+
+    <h4>Quelques documents</h4>
+    <ul>
+      <li>
+        Le contenu intégral
+        de ce cours:
+        <a class="btn disabled" href="#" target="_blank">[PDF: (pdf en préparation)]</a>
+
+        <br><br>
+        <b>Planet Alert:</b> <i>N'imprimez pas ce pdf!</i>
+        En plus de l'utilisation excessive de papier qu'il représente, un fichier pdf
+        imprimé ne s'actualise pas avec le temps. La version web offerte ici a
+        l'avantage, en plus d'être beaucoup plus navigable, d'être constamment
+        améliorée. Elle sera <i>toujours</i> disponible.
+        <br><br>
+      <li>
+        L'analyse réelle pose plusieurs problèmes au novice. Un de ces problèmes est
+        d'aborder des notions nouvelles exprimées dans un langage nouveau.
+        J'ai donc essayé d'écrire un texte
+        qui aborde quelques-unes des difficultés
+        rencontrées en analyse, en particulier celles liées à la notion de limite pour
+        des suites de nombres réels, mais <i>sans utiliser de symboles mathématiques</i>:
+        <a href="../pdfs/billes.pdf" target="_blank">[PDF: Le marchand de billes]</a>.
+
+        <br><br>
+        <b>Attention:</b> Ce texte ne constitue en aucun cas un sustitut d'un vrai
+        cours!
+    </ul>
+
+  </div>
+
+</body>
+
+</html>

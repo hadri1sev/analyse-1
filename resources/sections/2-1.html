@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang=fr>
+
+<head>
+
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+
+</head>
+
+<body>
+
+  <h3>2.1 Introduction</h3>
+
+  <p>
+    L'ensemble des nombres réels, \(\mathbb{R}\), constitue le socle sur lequel
+    se construisent toutes les notions fondamentales de l'analyse: limite,
+    continuité, dérivabilité, intégrabilité.
+    Donc si on prétend comme ici donner un cours d'analyse un tant soit peu
+    rigoureux, on se doit de définir \(\mathbb{R}\) précisément.
+  </p>
+
+
+  <p>
+    On se représente habituellement \(\mathbb{R}\), en physique par exemple,
+    comme l'ensemble de tous les points situés sur une droite:
+    <center><img src="../images/i_reels_la_droite_simple.jpg" class="img-fluid" width="350"></center>
+    Même si cette image est en partie correcte et se trouve être
+    très utile pour l'intuition (en particulier pour se représenter des distances,
+    ou comparer des grandeurs),
+    elle ne constitue évidemment pas une définition rigoureuse.
+    En particulier, elle n'exprime pas le fait que
+    les réels se prêtent bien au <i>calcul</i>, à savoir à la
+    manipulation abstraite de quantités, qu'elles
+    soient positives ou négatives, (très) petites ou (très) grandes.
+    Donc on listera plus loin des règles de calcul, qui donneront aux réels la
+    structure de ce qu'on appelle un <i>corps</i>.
+  </p>
+
+  <h4>Les réels: nécessaires pour mesurer les grandeurs géométriques</h4>
+  <p>
+    D'un point de vue ensembliste, on place souvent les réels au sommet d'une
+    sorte de hiérarchie:
+    <center><img src="../images/i_reels_R_Q_Z_N.jpg" class="img-fluid" width="350"></center>
+    Une définition naturelle des réels pourrait être
+    <i>qu'ils doivent constituer un ensemble de nombres qui permette de mesurer, a priori, n'importe quelle quantité géométrique ou physique, qu'elle soit positive ou négative.</i>
+
+    <br><br>
+    Dans une telle construction, on commence naturellement par
+    introduire un premier ensemble de nombres, celui
+    des <b>nombres naturels/entiers</b>, avec lequel on peut
+    au moins de <i>compter</i> (''un mouton,
+    deux moutons, trois moutons, ...''):
+    \[
+    \mathbb{N}:=\{0,1,2,3,4,\dots\}\,.
+    \]
+    Puis, on introduirait les <b>entiers relatifs</b>, en rajoutant
+    des quantités entières négatives (''il fait froid, \(-15\) degrés!''):
+    \[
+    \mathbb{Z}:=\{\dots,-4,-3,-2,-1,0,1,2,3,4,\dots\}\,.
+    \]
+    Puis, on y rajouterait encore toutes
+    les proportions possibles entre deux grandeurs entières (''un demi litre de
+    lait'', ''une heure et quart'', ''deux tiers des étudiants'',...),
+    pour obtenir les
+    <b>nombres rationnels</b>:
+    \[
+    \mathbb{Q}=\bigl\{\tfrac{p}{q}\,\big|\,p,q\in \mathbb{Z}\,,q\neq 0\bigr\}\,.
+    \]
+    Puisqu'ils contiennent des entiers aussi grands que l'on veut, les rationnels
+    peuvent être utilisés pour décrire des grandeurs astronomiques; puisqu'ils
+    contiennent des entiers aussi petits que l'on veut (\(\frac1{10}=0.1\),
+    \(\frac1{100}=0.01\), etc.), ils peuvent être utilisés pour décrire des
+    grandeurs atomiques ou subatomiques.
+
+    <br><br>
+    On a donc l'impression que les rationnels, une fois qu'on les munit de bonnes
+    règles de calcul, permettent de décrire toutes les quantités physiques
+    intéressantes.
+
+    <br><br>
+    Mais il n'en est rien! En effet, beaucoup
+    de nombres importants, en mathématiques, sont
+    des quantités <i>irrationnelles</i>.
+  </p>
+
+
+  <h4>Grandeurs physiques irrationnelles</h4>
+
+  <div class="exemple">
+    (Irrationnalité de \(\pi\))
+    Comme on sait, le nombre \(\pi\) est
+    défini comme la longueur de la circonférence d'un disque dont le
+    diamètre est égal à \(1\):
+    <br><br>
+    <center><img src="../images/i_reels_definition_PI.jpg" class="img-fluid" width="350"></center>
+    \[
+    \pi=3.1415926535897932384626433\dots
+    \]
+    En faisant des mesures de plus en plus précises, on remarque que l'on peut
+    trouver des rationnels qui approximent \(\pi\) à un niveau essentiellement
+    arbitraire de précision:
+    \[\begin{aligned}
+    \frac{22}{7}&=3.14{\color{red}285714286...}\\
+    \frac{333}{106}&=3.1415{\color{red}0943396...}\\
+    \frac{103993}{33102}&=3.141592653{\color{red}01...}
+    & \text{etc.}
+    \end{aligned}\]
+    Pourtant,
+    Johann Heinrich Lambert a montré en 1761 que \(\pi\) est
+    <b>irrationnel</b>:
+    <i>il n'existe aucune paire \(p,q\in \mathbb{N}^*\) telle que</i>
+    \[\pi=\frac{p}{q}\,.\]
+  </div>
+
+  <p>
+    Bien avant la preuve de Lambert,
+    un problème géométrique encore plus simple montrait de manière embarassante
+    l'importance des irrationnels:
+  </p>
+
+  <div class="exemple"> (Irrationalité de \(\sqrt{2}\))
+    L'école Pythagoricienne (env. 500BC) avait observé le fait suivant.
+    Considérons un triangle rectangle dont les deux cathètes ont longueur \(1\):
+    <br><br>
+    <center><img src="../images/i_reels_hypothenuse_racine_de_2.jpg" class="img-fluid" width="200"></center>
+    La longueur de
+    l'hypothénuse est donnée par la solution \(x>0\) de l'équation
+    \[x^2=1^2+1^2=2\,.\]
+    <div class="lem">
+      Si l'équation \(x^2=2\) possède une solution, elle n'est pas rationnelle.
+    </div>
+
+    <div class="preuve">
+      <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuveirratonalitederacinededeux" role="button" aria-expanded="false" aria-controls="preuveirratonalitederacinededeux">Preuve:</a>
+      <div class="collapse" id="preuveirratonalitederacinededeux">
+        <div class="card card-body">
+          <p>Supposons que l'équation possède une solution, et que celle-ci est rationnelle,
+            c'est-à-dire
+            qu'il existe des entiers \(p\) et \(q\) tels que si \(x=\frac{p}{q}\), alors
+            \[
+            x^2=\bigl(\frac{p}{q}\bigr)^2=2\,.
+            \]
+            Il est important de remarquer que l'on peut supposer
+            \(p\) et \(q\) sont premiers
+            entre eux, c'est-à-dire qu'ils
+            n'ont aucun diviseur commun (s'ils ont un diviseur commun, on peut toujours
+            simplifier la fraction).
+
+            <br><br>
+            On a alors \(p^2=2q^2\), ce qui
+            implique que \(p^2\) est pair, et donc que \(p\) est pair aussi (exercice!).
+            On peut alors
+            écrire \(p\) sous la forme \(p=2e\), où \(e\) est un entier. Ceci implique
+            également que
+            \(q^2=\frac{p^2}{2}=2e^2\), et donc \(q\), par le même argument qu'avant, est
+            pair. Ceci implique que \(p\) et \(q\) sont tous deux divisibles par \(2\), une
+            contradiction, puisqu'on a supposé que \(p\) et \(q\) n'avaient aucun diviseur
+            commun.
+
+            (Une autre preuve très jolie de l'irrationnalité de \(\sqrt{2}\):
+            Youtube, ''Root 2 and deadly marching squares''
+            )
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    Cette discussion montre que même si \(\mathbb{Q}\) constitue un ensemble de nombres
+    allant des échelles subatomiques à superastronomiques, il ne contient pas tout.
+    Si la circonférence du disque et l'hypothénuse du triangle
+    sont irrationnelles, ce ne sont certainement pas des cas
+    isolés: une multitude d'autres grandeurs géométriques
+    naturelles sont probablement aussi
+    irrationnelles (et c'est effectivement le cas).
+
+    <br><br>
+    Donc l'ensemble \(\mathbb{R}\) dont a besoin pour faire de l'analyse est
+    vraiment plus grand que celui des rationnels, puisqu'il contient
+    tous les irrationnels (tels que \(\sqrt{2}\) et \(\pi\)).
+  </p>
+
+
+
+  <p>
+    Donc comment définir \(\mathbb{R}\) pour être sûr qu'il contienne, en plus des
+    rationnels \(\mathbb{Q}\), ces grandeurs fondamentales irrationnelles?
+  </p>
+
+  <div class="info">
+    Idéalement c'est qu'on aimerait c'est prendre \(\mathbb{Q}\) et lui
+    ''rajouter ce qui manque, en ''bouchant les trous'' que sont \(\pi\), \(\sqrt{2}\),
+    etc.'' Mais un ''bouchage de trou'' n'est pas si facile à décrire
+    mathématiquement.
+  </div>
+
+  <h4>Sur la construction de \(\mathbb{R}\)</h4>
+
+  <p>
+    Ce que nous ferons, dans les sections suivantes, sera de définir \(\mathbb{R}\)
+    en listant les propriétés dont nous aurons besoin et
+    qui feront de lui un ensemble adapté au développement de l'analyse.
+
+    <br><br>
+    Nous dirons d'abrod que c'est,
+    comme \(\mathbb{Q}\), un ensemble
+    dans lequel on peut faire de l'arithmétique, c'est à dire des calculs à l'aide
+    d'opérations telles que addition et multiplication.
+
+    <br><br>
+    Ensuite nous introduirons
+    une condition additionnelle naturelle, mais plus difficile à formuler (voir
+    <i>supremum et infimum</i> plus loin),
+    qui le distinguera singulièrement des rationnels et qui permettra de
+    commencer à construire l'analyse.
+
+  </p>
+
+  <div class="rem">
+    Ce que nous ne ferons pas, c'est de <i>montrer</i> qu'il est
+    effectivement possible de construire un ensemble satisfaisant à toutes ces
+    propriétés. Nous ne donnerons pas
+    cette construction abstraite, qui sort du cadre de ce cours.
+  </div>
+
+</body>
+
+</html>

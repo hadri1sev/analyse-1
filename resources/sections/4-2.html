@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang=fr>
+
+<head>
+
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+
+</head>
+
+<body>
+
+  <h3>4.2 Définition</h3>
+  <p>
+    Comme \(\mathbb{R}\), \(\mathbb{C}\) est un <b>corps</b>, c'est-à-dire
+    un ensemble muni de \(+,-,\cdot,\div\), satisfaisant les propriétés usuelles.
+  </p>
+
+  <div class="defin">
+    On note \(\mathbb{C}\) l'ensemble des paires de réels, \(z=(x,y)\),
+    muni des deux opérations suivantes.
+    Si \(z=(x,y)\) et \(z'=(x',y')\),
+    <ul>
+      <li>leur <b>addition</b> est définie
+        \[
+        z+z':= (x+x',y+y')\,,
+        \]
+      <li>
+        et leur <b>multiplication</b> par
+        \[
+        z\cdot z':= \bigl(xx'-yy',xy'+x'y\bigr)\,.
+        \]
+    </ul>
+  </div>
+
+  <div class="exemple">
+    \((1,2)\cdot (-3,4)=(-11,-2)\).
+  </div>
+
+  <div class="exemple">
+    \((\alpha,0)\cdot (x,y)=(\alpha x-0\cdot y,\alpha y+0\cdot y)=(\alpha x,\alpha
+    y)\).
+  </div>
+
+  <div class="lem">
+    (Propriétés des opérations \(+\) et \(\cdot\))
+    <ol>
+      <li>\(z+z'=z'+z\) pour toute paire \(z,z'\in \mathbb{C}\)
+      <li>\(z+(z'+z'')=(z+z')+z''\) pour tous \(z,z',z''\in \mathbb{C}\)
+      <li>L'élément \((0,0)\) est appelé
+        <b>élément neutre pour l'addition</b>, puisque
+        \(z+(0,0)=(0,0)+z=z\) pour tout \(z\in \mathbb{C}\).
+      <li>Pour tout \(z\in \mathbb{C}\) il existe un unique élément noté \(-z\in \mathbb{C}\) et
+        appelé <b>opposé de \(z\)</b>, tel
+        que \(z+(-z)=0\). En fait, si \(z=(x,y)\), alors \(-z=(-x,-y)\).
+      <li>\(z\cdot z'=z'\cdot z\) pour tous \(z,z'\in \mathbb{C}\)
+      <li>\(z\cdot (z'\cdot z'')=(z\cdot z')\cdot z''\) pour tout triplet
+        \(z,z',z''\in \mathbb{C}\)
+      <li>\(z\cdot(z'+z'')=z\cdot z'+z\cdot z''\) pour tous \(z,z',z''\in \mathbb{C}\),
+      <li>L'élément \((1,0)\) est appelé
+        <b>élément neutre pour la multiplication</b>, puisque
+        \((1,0)\cdot z=z\cdot (1,0)=z\) pour tout \(z\in \mathbb{C}\).
+      <li>Pour tout \(z\in \mathbb{C}\), \(z\neq (0,0)\),
+        il existe un unique élément appelé <b>inverse</b>, noté \(z^{-1}\), tel que
+        \[z\cdot z^{-1}=z^{-1}\cdot z=(1,0)\,.\]
+        En fait, si \(z=(x,y)\) alors
+        \[ z^{-1}=\Bigl(\frac{x}{x^2+y^2},\frac{-y}{x^2+y^2}\Bigr)\,.\]
+    </ol>
+  </div>
+  <div class="preuve">
+    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#lapreuvedesproprietessimplesdescomplexes" role="button" aria-expanded="false" aria-controls="lapreuvedesproprietessimplesdescomplexes">Preuve:</a>
+    <div class="collapse" id="lapreuvedesproprietessimplesdescomplexes">
+      <div class="card card-body">
+        <p>(Voir exercices.)</p>
+      </div>
+    </div>
+  </div>
+
+  <p>
+  <ul>
+    <li>Une fois que l'on a l'addition et la notion d'opposé, on a aussi une
+      <i>soustraction</i>:
+      si \(z',z''\in \mathbb{C}\), on définit leur <b>soustraction</b>:
+      \[z'-z'':= z'+(-z'')\,.\]
+    <li>Une fois que l'on a la multiplication et la notion d'inverse, on a aussi
+      une <i>division</i>:
+      si \(z,z'\in \mathbb{C}\) et si \(z'\neq 0\), on définit leur
+      <b>division</b>:
+      \[
+      \frac{z}{z'}:= z\cdot z'^{-1}\,.
+      \]
+  </ul>
+  </p>
+
+  <div class="rem">
+    Comme pour les réels, on écrira \(zz'\) au lieu de \(z\cdot z'\).
+    On utilisera aussi la notation
+    \(z^n:= \underbrace{z\cdots z}_{n\text{ fois}}\)
+  </div>
+
+  <div class="info">
+    Remarquons que l'on
+    n'introduira pas d'<i>ordre total</i> sur \(\mathbb{C}\), c'est-à-dire que l'on
+    ne définira pas, comme on le fait sur \(\mathbb{R}\), de symboles tels que
+    ''\(\leqslant,\geqslant,\lt,\gt\)''.
+
+    En effet, entre \((1,2)\) et \((2,1)\), lequel définir comme étant le
+    ''plus grand''?
+  </div>
+
+  <h4>Voir \(\mathbb{R}\) comme plongé dans \(\mathbb{C}\)</h4>
+
+  <p>
+    Remarquons que sur le sous ensemble de \(\mathbb{C}\) formé des paires dont la deuxième
+    composante est nulle, \((x,0)\), on a les propriétés suivantes:
+  <ul>
+    <li>\((x,0)+(x',0)=(x+x',0)\)
+    <li>\((x,0)\cdot (x',0)=(xx',0)\)
+    <li>Opposé: \(-(x,0)=(-x,0)\)
+    <li>Inverse: Si \(x\neq 0\), alors \((x,0)^{-1}=(x^{-1},0)\)
+  </ul>
+  Ces propriétés montrent que les nombres complexes \((x,0)\) se comportent
+  essentiellement comme des nombres réels, ce qui mène à faire l'identification
+  suivante (en abusant des notations),
+  \[
+  \mathbb{R}=\{(x,0)\in \mathbb{C}\,:\,x\in \mathbb{R}\}\,
+  \]
+  qui permet de considérer \(\mathbb{R}\) comme un sous-ensemble de \(\mathbb{C}\).
+  De plus, lorsqu'aucune ambiguïté n'est possible, on
+  écrira simplement ''\(x\)'' au lieu de ''\((x,0)\)''.
+  Par exemple, \(0\) sera considéré comme étant \((0,0)\).
+  </p>
+
+  <h4>L'équation \(z^2+1=0\) et le nombre \(\mathsf{i}\)</h4>
+
+  <p>
+    Définissons le complexe
+    \[ \mathsf{i} := (0,1)\,. \]
+    On remarque alors que
+    \[(-\mathsf{i})^2=\mathsf{i}^2=(0,1)\cdot (0,1)=(-1,0)=-1\,,\]
+    et donc que \(\mathsf{i}\) et \(-\mathsf{i}\) sont solutions de l'équation
+    \[
+    z^2+1=0\,.
+    \]
+    En d'autres termes, le polynôme \(z^2+1\) peut être factorisé (ce qu'on ne peut
+    pas faire dans les réels!):
+    \[ z^2+1=(z-\mathsf{i})(z+\mathsf{i})\,.
+    \]
+  </p>
+
+  <div class="rem">
+    Vers 1750, Euler a introduit la notation suivante:
+    \[
+    \mathsf{i}=\sqrt{-1}\,.
+    \]
+    ''<i>Toutes les expressions comme</i>
+    \(\sqrt{-1},\sqrt{-2},\dots\)
+    <i>sont des nombres impossibles ou imaginaires, puisqu'ils représentent les racines carrées de quantités négatives ; de ces nombres, nous pouvons seulement affirmer qu'ils ne sont ni zéro, ni supérieurs à zéro, ni inférieurs à lui, ce qui
+      nécessairement les rend imaginaires ou impossibles.</i>''
+  </div>
+
+  Remarquons que
+  \[\mathsf{i}^1=\mathsf{i},\quad
+  \mathsf{i}^2=-1,\quad \mathsf{i}^3=-i\,,\quad \mathsf{i}^4=+1,\quad
+  \mathsf{i}^5=\mathsf{i}, \quad \text{
+  etc}
+  \]
+
+  <h4>Partie réelle, partie imaginaire</h4>
+
+  <p>
+    On peut maintenant écrire
+    \[
+    (x,y)=(x,0)+(0,y)=(x,0)+(0,1)y\equiv x+\mathsf{i} y\,.
+    \]
+  </p>
+
+  <div class="defin">
+    Si \(z=(x,y)=x+\mathsf{i} y\),
+    <ul>
+      <li>
+        \(\mathrm{Re}(z):= x\) est la <b>partie réelle</b> de \(z\), et
+      <li>
+        \(\mathrm{Im}(z):= y\) est la <b>partie imaginaire</b> de \(z\).
+    </ul>
+  </div>
+
+  <div class="rem">
+    Avec cette notation, l'expression du
+    produit de \((x,y)=x+\mathsf{i} y\) et \((x',y')=x'+\mathsf{i}
+    y'\) s'obtient en calculant
+    \[\begin{aligned}
+    (x,y)\cdot(x',y')&=(x+\mathsf{i} y)(x'+\mathsf{i} y')\\
+    &=xx'+xy'\mathsf{i} +x'y\mathsf{i} +yy'\underbrace{\mathsf{i}^2}_{=-1}\\
+    &=(xx'-yy')+\mathsf{i}(xy'+x'y)\\
+    &=(xx'-yy',xy'+x'y)\,.
+    \end{aligned}\]
+  </div>
+
+  <p>
+    On a
+    \[\begin{aligned}
+    \mathrm{Re}(z+z')&=\mathrm{Re}(x)+\mathrm{Re}(z')\,,\qquad\\
+    \mathrm{Im}(z+z')&=\mathrm{Im}(x)+\mathrm{Im}(z')\,.
+    \end{aligned}\]
+    Comme on a dit plus tôt,
+    les nombres sans partie imaginaire (\(\mathrm{Im}(z)=0\))
+    sont identifiés avec les réels. Aussi, les
+    nombres sans partie réelle (\(\mathrm{Re}(z)=0\))
+    sont les nombres <b>purement imaginaires</b>. En particulier,
+    \(\mathsf{i}\) est purement imaginaire.
+  </p>
+
+  <h4>Conjugué et module</h4>
+
+  <p>
+    Remarquons que
+    \[
+    (x+\mathsf{i} y)(x-\mathsf{i} y)=x^2+y^2\,.
+    \]
+    Ceci mène naturellement à introduire deux notions:
+  </p>
+
+  <div class="defin">
+    Si \(z=x+\mathsf{i} y\),
+    <ul>
+      <li>le complexe \(\overline{z}:=
+        x-\mathsf{i} y\) est appelé <b>complexe conjugué à</b> \(z\),
+      <li>le réel \(|z|:= \sqrt{x^2+y^2}\) est appelé <b>module</b> de \(z\).
+    </ul>
+  </div>
+
+  <div class="lem">
+    Propriétés:
+    <ol>
+      <li>\(\overline{\overline{z}}=z\)
+      <li>\(z=\overline{z}\) si et seulement si \(z\in \mathbb{R}\)
+      <li>\(\overline{z+z'}=\overline{z}+\overline{z'}\)
+      <li>\(\overline{zz'}=\overline{z}\overline{z'}\)
+      <li>\(z\overline{z}=|z|^2\)
+      <li>\(|\overline{z}|=|z|\)
+      <li>\(\overline{(\frac{z}{z'})}=\frac{\overline{z}}{\overline{z'}}\)
+      <li>\(\frac{z+\overline{z}}{2}=\mathrm{Re}{z}\)
+      <li>\(\frac{z-\overline{z}}{2\mathsf{i}}=\mathrm{Im}{z}\)
+    </ol>
+  </div>
+  <p>
+    On peut calculer une division \(\frac{z}{z'}\)
+    en divisant et multipliant par le conjugué de \(z'\):
+    \[\begin{aligned}
+    \frac{z}{z'}=
+    \frac{x+\mathsf{i} y}{x'+\mathsf{i} y'}&=
+    \frac{(x+\mathsf{i} y)(x'-\mathsf{i} y')}{(x'+\mathsf{i} y')(x'-\mathsf{i} y')}\\
+    &=
+    \frac{xx'+yy'+\mathsf{i}(yx'-xy')}{x'^2+y'^2}\\
+    &=
+    \underbrace{\frac{xx'+yy'}{x'^2+y'^2}}_{=\mathrm{Re}(\frac{z}{z'})}
+    +\mathsf{i} \underbrace{\frac{yx'-xy'}{x'^2+y'^2}}_{=\mathrm{Im}(
+    \frac{z}{z'})}\,.
+    \end{aligned}\]
+    Cette expression permet aussi de retrouver la formule pour l'inverse:
+    \[
+    z^{-1}=\frac{1}{z}
+    =\frac{x}{x^2+y^2}-\mathsf{i}\frac{y}{x^2+y^2}
+    =\Bigl(\frac{x}{x^2+y^2},\frac{-y}{x^2+y^2}\Bigr)\,.
+    \]
+  </p>
+
+  <h4>Résoudre des équations complexes simples</h4>
+
+
+  <div class="rem">
+    Soient \(z=x+\mathsf{i} x\), \(z'=x'+\mathsf{i} y'\).
+    Alors
+    \[ z=z'\qquad \Leftrightarrow \qquad x=x'\text{ et }y=y'\,.
+    \]
+    On utilise cette propriété pour résoudre des équations.
+  </div>
+
+  <div class="exemple">
+    Résolvons l'équation du premier degré en \(z\) donnée par
+    \[
+    z-3\mathsf{i} z -3+6\mathsf{i}=0\,.
+    \]
+    Une manière de procéder est d'isoler
+    \(z\), et de faire la division à l'aide du conjugué:
+    \[
+    z=\frac{3-6\mathsf{i}}{1-3\mathsf{i}}=\frac{21}{10}+\mathsf{i}\frac{3}{10}\,.
+    \]
+    Sinon, on peut aussi poser \(z=a+b\mathsf{i}\), injecter dans l'équation de départ
+    et
+    réarranger:
+    \[\begin{aligned}
+    0&=(a+b\mathsf{i})-3\mathsf{i}(a+b\mathsf{i})-3+6\mathsf{i}\\
+    &=(a+3b-3)+\mathsf{i}(b-3a+6)\,.
+    \end{aligned}\]
+    Or pour qu'un nombre complexe soit le complexe nul \(0+\mathsf{i} 0\),
+    ses parties réelles et imaginaires
+    doivent toutes deux être égales à zéro, ce qui implique que
+    \(a\) et \(b\) sont solutions du système
+    \[\begin{aligned}
+    a+3b-3&=0\\
+    -3a+b+6&=0\,,
+    \end{aligned}\]
+    ce qui donne \(a=\frac{21}{10}\), \(b=\frac{3}{10}\).
+  </div>
+
+  <div class="quiz" id="quiz4_2_1">
+    Parmi les identités suivantes, lesquelles sont correctes?
+    <ol>
+      <li><span class="itemFULL">[ ]</span> \((1+\mathsf{i})(1-\mathsf{i})=2\)
+      <li><span class="itemEMPTY">[ ]</span> \((\mathsf{i}+1)(\mathsf{i}+2)(\mathsf{i}+3)=6-\mathsf{i}\)
+      <li><span class="itemFULL">[ ]</span> \(1+\mathsf{i}+\mathsf{i}^2+\mathsf{i}^3+\cdots+\mathsf{i}^{443}=0\)
+    </ol>
+    <span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz4_2_1')">Solutions</button></span>
+  </div>
+
+</body>
+
+</html>
