@@ -87,4 +87,4 @@ Pour avoir des images qui s'adapte à la taille d'écran, il suffit d'ajouter la
 
 ### Remarque sur KaTeX
 
-Parfois KaTeX revient à la ligne après chaque expression mathématique lorsqu'elles sont inclues dans une `div`. Pour corriger cela, il suffit simplement de tout inclure dans une balise paragraphe `<p></p>`.
+Parfois KaTeX revient à la ligne après chaque expression mathématique lorsqu'elles sont incluses dans une `div`. Pour corriger cela, il suffit simplement de tout inclure dans une balise paragraphe `<p></p>`.
