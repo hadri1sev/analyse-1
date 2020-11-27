@@ -85,6 +85,7 @@ Pour avoir des images qui s'adapte à la taille d'écran, il suffit d'ajouter la
 <img src="../images/i_reels_la_droite_simple.jpg" class="img-fluid" width="350">
 ```
 
-### Remarque sur KaTeX
+### Remarques sur KaTeX
 
-Parfois KaTeX revient à la ligne après chaque expression mathématique lorsqu'elles sont incluses dans une `div`. Pour corriger cela, il suffit simplement de tout inclure dans une balise paragraphe `<p></p>`.
+* KaTeX est très peu adapté pour l'affichage mobile, les expressions mathématiques forment des blocs donc cela produit fréquement des "overflow" lorsque l'on réduit la taille de l'écran. J'ai réussi à trouver un bout de code CSS sur Github qui permet de rendre chaque expression "scrollable" horizontalement et individuellement lorsqu'il y a overflow, ce qui évite de devoir scroller toute la page horizontalement.
+* Parfois KaTeX revient à la ligne après chaque expression mathématique lorsqu'elles sont incluses dans une `div`. Pour corriger cela, il suffit simplement de tout inclure dans une balise paragraphe `<p></p>`.
