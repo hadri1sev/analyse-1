@@ -222,15 +222,17 @@ body {
 }
 
 .video .btn-outline-secondary {
-  display: flex;
+  display: block;
   margin: 5px 20px 0 0;
   text-align: left;
   font-weight: bold;
   color: black;
   border-color: #fa9d41;
-  height: 25px;
+}
+
+.video .btn-outline-secondary a, .video .btn {
   padding-top: 0;
-  padding-bottom: 25px;
+  padding-bottom: 0;
 }
 
 .video .btn-outline-secondary:before {
