@@ -99,7 +99,6 @@ iframe {
   margin: auto;
   border: 0;
   height: calc(100vh - 74px);
-  padding-top: 15px;
   width: 100%;
 }
 
