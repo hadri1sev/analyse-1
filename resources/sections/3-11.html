@@ -1,211 +1,195 @@
 <!DOCTYPE html>
 <html lang=fr>
-
 <head>
-
   <meta charset="utf-8">
   <title></title>
-
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
   </script>
-
   <!-- Bootstrap 4 & jQuery scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../content-styles.css">
-
   <!-- Custom JS -->
   <script type="text/javascript" src="../content-main.js"></script>
-
 </head>
-
 <body>
+<div class="sec" id="IDs-secbolzanoweierstrass-sDI"><h3>3.11 Le Théorème de Bolzano-Wierstrass</h3>
 
-  <h3>3.11 Le Théorème de Bolzano-Weierstrass</h3>
+<center>
 
-  <div class="video">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_Bolzano_Weierstrass" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_Bolzano_Weierstrass">Le Théorème de Bolzano-Weierstrass</a>
-    <div class="collapse" id="IDvideodiv-v_suites_Bolzano_Weierstrass">
-      <div class="card card-body">
-        <video class="HTMLvideo" src="../videos/v_suites_Bolzano_Weierstrass.mp4" poster="../videos/v_suites_Bolzano_Weierstrass_thumbnail.png" controls=true></video>
-      </div>
-    </div>
-  </div>
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_Bolzano_Weierstrass" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_Bolzano_Weierstrass">Le Théorème de Bolzano-Weierstrass</a>
+                    <div class="collapse" id="IDvideodiv-v_suites_Bolzano_Weierstrass">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_suites_Bolzano_Weierstrass.mp4" poster="../videos/v_suites_Bolzano_Weierstrass_thumbnail.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
+<div class="info">
+Supposons qu'à l'aide d'un crayon noir,
+on place une infinité de points dans un
+intervalle \([-C,C]\). Les points sont placés les uns après les autres, 
+et peuvent être choisis <i>de façon tout à fait arbitraire</i>.
+On affirme qu'il existe nécessairement
+un point de l'intervalle proche duquel vont s'accumuler une infinité de points
+noirs.
 
-  <div class="info">
-    Supposons qu'à l'aide d'un crayon noir,
-    on place une infinité de points dans un
-    intervalle \([-C,C]\). Les points sont placés les uns après les autres,
-    et peuvent être choisis <i>de façon tout à fait arbitraire</i>.
-    On affirme qu'il existe nécessairement
-    un point de l'intervalle proche duquel vont s'accumuler une infinité de points
-    noirs.
+<br/><br/>
+En effet, on peut considérer les deux moitiés de l'intervalle, la gauche et la
+droite. Puisqu'on place une infinité de points, au moins une des moitiés doit
+contenir une infinité de points. Si on considère la moitié qui contient une
+infinité de points, on peut à nouveau considérer sa moitié gauche et sa moitié
+droite, et conclure qu'une de ces moitiés contient une infinité de points, etc. 
 
-    <br><br>
-    En effet, on peut considérer les deux moitiés de l'intervalle, la gauche et la
-    droite. Puisqu'on place une infinité de points, au moins une des moitiés doit
-    contenir une infinité de points. Si on considère la moitié qui contient une
-    infinité de points, on peut à nouveau considérer sa moitié gauche et sa moitié
-    droite, et conclure qu'une de ces moitiés contient une infinité de points, etc.
+<br/><br/>
+On a ainsi, dans l'intervalle de départ, 
+des intervalles de tailles toujours plus petites,
+contenant tous une infinité de points.
+</div>
+<p>
+En termes plus précis, ce que cette anecdote tentait d'exprimer, c'est
+que
+<i>d'une suite bornée, on peut toujours extraire une sous-suite convergente</i>.
+</p>
+<div class="defin">
+Soit \((a_n)_{n\geqslant 0}\) une suite, et \(0\leqslant 
+n_0\lt n_1\lt n_2\lt \dots\) une suite 
+d'entiers, strictement croissante. 
+Alors \((a_{n_k})_{k\geqslant 0}\) est une <b>sous-suite</b> de
+\((a_n)_{n\geqslant 0}\). 
+</div>
+<div class="exemple">
+Considérons la suite \((a_n)_{n\geqslant 0}\) définie par 
+\[
+a_n=\sin(n\frac{\pi}{4})\,.
+\]
+Cette suite prend successivement les valeurs
+\(0,\frac{\sqrt{2}}{2},1,-\frac{\sqrt{2}}{2},0,-\frac{\sqrt{2}}{2},-1,
+\frac{\sqrt{2}}{2},0,\dots\).
+<ul>
+<li>Si on considère les
+entiers \(n_1\lt n_2\lt\cdots\) définis par \(n_k=2k\), alors la sous-suite
+\((a_{n_k})_{k\geqslant 0}\) est la suite \(0,1,0,-1,0,1,0,-1,\dots\)
+</li><li>Si on considère les
+entiers \(n_1\lt n_2\lt\cdots\) définis par \(n_k=4k\), alors la sous-suite
+\((a_{n_k})_{k\geqslant 0}\) est une suite constante puisque
+\(a_{n_k}=a_{4k}=\sin(k\pi)=0\) pour tout \(k\). 
+</li></ul>
+</div>
+<div class="theo">(Théorème de Bolzano-Weierstrass)
+De toute suite bornée \((a_n)_n\) on peut extraire une sous-suite convergente.
+Plus précisément: Si \(|a_n|\leqslant C\) pour tout \(n\), alors 
+il existe \(L\in [-C,C]\) et 
+une sous-suite \((a_{n_k})_k\) telle que \(a_{n_k}\to L\).
+</div>
 
-    <br><br>
-    On a ainsi, dans l'intervalle de départ,
-    des intervalles de tailles toujours plus petites,
-    contenant tous une infinité de points.
-  </div>
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvedeBW" role="button" aria-expanded="false" aria-controls="theproofpreuvedeBW">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvedeBW">
+                    <div class="card card-body">
+                    <p>
+Soit 
+\(L:= \limsup_{n\to \infty}x_n\), c'est-à-dire
+\[L=\lim_{n\to \infty} M_n\,,\]
+où \(M_n=\sup\{a_n,a_{n+1},\dots\}\).
+Considérons une suite \((\varepsilon_j)_{j\geqslant 1}\) positive, tendant vers
+zéro. (Pour fixer les idées, on peut choisir
+\(\varepsilon_j:= \frac{1}{j}\).)
+</p><ul>
+<li><u>\(j=1\):</u> Par définition de la limite, il existe \(n_1'\) tel
+que 
+\[ L-\tfrac{\varepsilon_1}{2}\leqslant M_{n_1'}\leqslant L+\tfrac{\varepsilon_1}{2}\,.\]
+Par définition du supremum, il existe \(n_1\geqslant n_1'\) tel que  
+\[ L-\varepsilon_1\leqslant a_{n_1}\leqslant L+\varepsilon_1\,.\]
+</li><li><u>\(j=2\):</u> Par définition de la limite, il existe 
+\(n_2'\gt n_1\) tel que 
+\[ L-\tfrac{\varepsilon_2}{2}\leqslant M_{n_2'}\leqslant L+\tfrac{\varepsilon_2}{2}\,.\]
+Par définition du supremum, il existe \(n_2\geqslant n_2'\) tel que  
+\[ L-\varepsilon_2\leqslant a_{n_2}\leqslant L+\varepsilon_2\,.\]
+</li><li>etc.
+</li></ul><p>
+Ainsi, on a construit une suite \((n_k)\) strictement croissante telle que 
+pour tout \(k\),
+\[ 
+L-\varepsilon_k\leqslant a_{n_k}\leqslant L+\varepsilon_k\,.
+\]
+Ceci signifie bien que \(a_{n_k}\to L\).
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<div class="exemple">
+Considérons la suite \(a_n=\sin(n)-2\cos(e^{3n}+e^{n^2})\). Puisque \(|a_n|\leqslant
+3\), le théorème garantit l'existence d'un réel \(L\in [-3,3]\) et 
+d'une sous suite \((a_{n_k})_k\) telle que \(a_{n_k}\to L\) lorsque \(k\to
+\infty\).
+</div>
+<p>
+Dans ce dernier exemple, la valeur du réel \(L\), ainsi que la sous-suite,
+peuvent être très difficile (voire impossible) à exprimer de manière explicite.
 
+<br/><br/>
+Voyons un exemple 
+simple dans lequel la sous-suite peut être donnée explicitement.
+</p>
+<div class="exemple">
+Considérons \(a_n=(-1)^n\frac{n}{n+1}\), qui est bornée puisque 
+\(|a_n|=\frac{n}{n+1}\leqslant 2\).
+Cette suite ne converge pas, mais 
+le théorème garantit l'existence d'une sous-suite convergente.
 
-  <p>
-    En termes plus précis, ce que cette anecdote tentait d'exprimer, c'est
-    que
-    <i>d'une suite bornée, on peut toujours extraire une sous-suite convergente</i>.
-  </p>
-
-  <div class="defin">
-    Soit \((a_n)_{n\geqslant 0}\) une suite, et \(0\leqslant
-    n_0\lt n_1\lt n_2\lt \dots\) une suite
-    d'entiers, strictement croissante.
-    Alors \((a_{n_k})_{k\geqslant 0}\) est une <b>sous-suite</b> de
-    \((a_n)_{n\geqslant 0}\).
-  </div>
-
-  <div class="exemple">
-    Considérons la suite \((a_n)_{n\geqslant 0}\) définie par
-    \[
-    a_n=\sin(n\frac{\pi}{4})\,.
-    \]
-    Cette suite prend successivement les valeurs
-    \(0,\frac{\sqrt{2}}{2},1,-\frac{\sqrt{2}}{2},0,-\frac{\sqrt{2}}{2},-1,
-    \frac{\sqrt{2}}{2},0,\dots\).
-    <ul>
-      <li>Si on considère les
-        entiers \(n_1\lt n_2\lt\cdots\) définis par \(n_k=2k\), alors la sous-suite
-        \((a_{n_k})_{k\geqslant 0}\) est la suite \(0,1,0,-1,0,1,0,-1,\dots\)
-      <li>Si on considère les
-        entiers \(n_1\lt n_2\lt\cdots\) définis par \(n_k=4k\), alors la sous-suite
-        \((a_{n_k})_{k\geqslant 0}\) est une suite constante puisque
-        \(a_{n_k}=a_{4k}=\sin(k\pi)=0\) pour tout \(k\).
-    </ul>
-  </div>
-
-  <div class="theo">(Théorème de Bolzano-Weierstrass)
-    De toute suite bornée \((a_n)_n\) on peut extraire une sous-suite convergente.
-    Plus précisément: Si \(|a_n|\leqslant C\) pour tout \(n\), alors
-    il existe \(L\in [-C,C]\) et
-    une sous-suite \((a_{n_k})_k\) telle que \(a_{n_k}\to L\).
-  </div>
-
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuvedeBW" role="button" aria-expanded="false" aria-controls="preuvedeBW">Preuve:</a>
-    <div class="collapse" id="preuvedeBW">
-      <div class="card card-body">
-        <p>Soit
-        \(L:= \limsup_{n\to \infty}x_n\), c'est-à-dire
-        \[L=\lim_{n\to \infty} M_n\,,\]
-        où \(M_n=\sup\{a_n,a_{n+1},\dots\}\).
-        Considérons une suite \((\varepsilon_j)_{j\geqslant 1}\) positive, tendant vers
-        zéro. (Pour fixer les idées, on peut choisir
-        \(\varepsilon_j:= \frac{1}{j}\).)</p>
-        <ul>
-          <li><u>\(j=1\):</u> Par définition de la limite, il existe \(n_1'\) tel
-            que
-            \[ L-\tfrac{\varepsilon_1}{2}\leqslant M_{n_1'}\leqslant L+\tfrac{\varepsilon_1}{2}\,.\]
-            Par définition du supremum, il existe \(n_1\geqslant n_1'\) tel que
-            \[ L-\varepsilon_1\leqslant a_{n_1}\leqslant L+\varepsilon_1\,.\]
-          <li><u>\(j=2\):</u> Par définition de la limite, il existe
-            \(n_2'\gt n_1\) tel que
-            \[ L-\tfrac{\varepsilon_2}{2}\leqslant M_{n_2'}\leqslant L+\tfrac{\varepsilon_2}{2}\,.\]
-            Par définition du supremum, il existe \(n_2\geqslant n_2'\) tel que
-            \[ L-\varepsilon_2\leqslant a_{n_2}\leqslant L+\varepsilon_2\,.\]
-          <li>etc.
-        </ul>
-        <p>Ainsi, on a construit une suite \((n_k)\) strictement croissante telle que
-        pour tout \(k\),
-        \[
-        L-\varepsilon_k\leqslant a_{n_k}\leqslant L+\varepsilon_k\,.
-        \]
-        Ceci signifie bien que \(a_{n_k}\to L\).</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="exemple">
-    Considérons la suite \(a_n=\sin(n)-2\cos(e^{3n}+e^{n^2})\). Puisque \(|a_n|\leqslant
-    3\), le théorème garantit l'existence d'un réel \(L\in [-3,3]\) et
-    d'une sous suite \((a_{n_k})_k\) telle que \(a_{n_k}\to L\) lorsque \(k\to
-    \infty\).
-  </div>
-
-  <p>
-    Dans ce dernier exemple, la valeur du réel \(L\), ainsi que la sous-suite,
-    peuvent être très difficile (voire impossible) à exprimer de manière explicite.
-
-    <br><br>
-    Voyons un exemple
-    simple dans lequel la sous-suite peut être donnée explicitement.
-  </p>
-
-  <div class="exemple">
-    Considérons \(a_n=(-1)^n\frac{n}{n+1}\), qui est bornée puisque
-    \(|a_n|=\frac{n}{n+1}\leqslant 2\).
-    Cette suite ne converge pas, mais
-    le théorème garantit l'existence d'une sous-suite convergente.
-
-    <br><br>
-    Effectivement, pour cette suite, on voit que
-    <ul>
-      <li>Si on ne regarde que les indices
-        <i>pairs</i>, c'est-à-dire que l'on considère \(n_k=2k\), alors
-        on obtient la sous-suite \(a_{n_k}=a_{2k}=\frac{2k}{2k+1}\), qui converge vers
-        \(1\) lorsque \(k\to\infty\).
-      <li>Si on ne regarde que les indices
-        <i>impairs</i>, c'est-à-dire que l'on considère \(n_k=2k+1\), alors
-        on obtient la sous-suite \(a_{n_k}=a_{2k+1}=-\frac{2k+1}{2k+2}\), qui converge
-        vers \(-1\) lorsque \(k\to \infty\).
-    </ul>
-    Donc dans cet exemple, on peut extraire de la suite deux sous-suites
-    différentes, qui ont des limites différentes:
-    <center><img src="../images/i_suites_exemple_Bolzano_Weierstrass.jpg" class="img-fluid" width="400"></center>
-  </div>
-
-  <p>
-    Finalement, remarquons que la
-    conclusion du théorème n'est évidemment plus vraie
-    si la suite n'est pas bornée:
-  </p>
-
-  <div class="exemple">
-    La suite \(a_n=n\) n'est pas majorée, et on ne
-    peut pas en extraire une sous-suite convergente.
-  </div>
-
-  <div class="quiz" id="quiz3_11_1">
-    Vrai ou faux?
-    <ol>
-      <li><span class="itemEMPTY">[ ]</span> Si une suite est bornée, alors elle converge.
-      <li><span class="itemFULL">[ ]</span> Si une suite n'est pas bornée, alors elle diverge.
-      <li><span class="itemFULL">[ ]</span> Si toutes les sous-suites d'une suite sont bornées, alors cette
-        suite est bornée.
-      <li><span class="itemEMPTY">[ ]</span> Si une suite possède une sous-suite bornée, alors elle est bornée.
-      <li><span class="itemEMPTY">[ ]</span> Si une suite est minorée, alors elle possède une sous-suite
-        convergente.
-      <li><span class="itemEMPTY">[ ]</span> Toute suite possède une sous-suite convergente.
-      <li><span class="itemEMPTY">[ ]</span> Si une suite possède une sous-suite convergente, alors elle est
-        bornée.
-      <li><span class="itemEMPTY">[ ]</span> Si une suite \(a_n\) est bornée, alors il existe un unique \(L\) et une
-        unique sous-suite \(a_{n_k}\) telle que \(a_{n_k}\to L\).
-    </ol>
-    <span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_11_1')">Solutions</button></span>
-  </div>
-
+<br/><br/>
+Effectivement, pour cette suite, on voit que
+<ul>
+<li>Si on ne regarde que les indices
+<i>pairs</i>, c'est-à-dire que l'on considère \(n_k=2k\), alors  
+on obtient la sous-suite \(a_{n_k}=a_{2k}=\frac{2k}{2k+1}\), qui converge vers
+\(1\) lorsque \(k\to\infty\).
+</li><li>Si on ne regarde que les indices
+<i>impairs</i>, c'est-à-dire que l'on considère \(n_k=2k+1\), alors
+on obtient la sous-suite \(a_{n_k}=a_{2k+1}=-\frac{2k+1}{2k+2}\), qui converge
+vers \(-1\) lorsque \(k\to \infty\).
+</li></ul>
+Donc dans cet exemple, on peut extraire de la suite deux sous-suites
+différentes, qui ont des limites différentes:
+<br/><br/><center><img class="img-fluid" src="../images/i_suites_exemple_Bolzano_Weierstrass.jpg" width="400"/></center>
+</div>
+<p>
+Finalement, remarquons que la 
+conclusion du théorème n'est évidemment plus vraie 
+si la suite n'est pas bornée:
+</p>
+<div class="exemple">
+La suite \(a_n=n\) n'est pas majorée, et on ne
+peut pas en extraire une sous-suite convergente.
+</div>
+<div class="quiz" id="quiz3_11_1">
+Vrai ou faux?
+<ol>
+<li><span class="itemEMPTY">[  ]</span> Si une suite est bornée, alors elle converge.
+</li><li><span class="itemFULL">[  ]</span> Si une suite n'est pas bornée, alors elle diverge.
+</li><li><span class="itemFULL">[  ]</span> Si toutes les sous-suites d'une suite sont bornées, alors cette 
+suite est bornée.
+</li><li><span class="itemEMPTY">[  ]</span> Si une suite possède une sous-suite bornée, alors elle est bornée.
+</li><li><span class="itemEMPTY">[  ]</span> Si une suite est minorée, alors elle possède une sous-suite
+convergente.
+</li><li><span class="itemEMPTY">[  ]</span> Toute suite possède une sous-suite convergente.
+</li><li><span class="itemEMPTY">[  ]</span> Si une suite possède une sous-suite convergente, alors elle est
+bornée.
+</li><li><span class="itemEMPTY">[  ]</span> Si une suite \(a_n\) est bornée, alors il existe un unique \(L\) et une
+unique sous-suite \(a_{n_k}\) telle que \(a_{n_k}\to L\).
+</li></ol>
+<span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_11_1')">Solutions</button></span>
+</div><!--quizz-->
+</div>
 </body>
-
 </html>

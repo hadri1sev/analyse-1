@@ -1,152 +1,141 @@
 <!DOCTYPE html>
 <html lang=fr>
-
 <head>
-
   <meta charset="utf-8">
   <title></title>
-
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
   </script>
-
   <!-- Bootstrap 4 & jQuery scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../content-styles.css">
-
   <!-- Custom JS -->
   <script type="text/javascript" src="../content-main.js"></script>
-
 </head>
-
 <body>
+<div class="sec" id="IDs-seccriteredalembertpoursuites-sDI"><h3>3.10 Critère de d'Alembert pour les suites</h3>
+<p>
+</p>
+<div class="theo">
+(Critère de d'Alembert pour les suites)
+Soit \((a_n)\) une suite telle que la limite suivante existe:
+\[ 
+\rho:= 
+\lim_{n\to \infty}\Bigl|\frac{a_{n+1}}{a_n}\Bigr|\,.
+\]
+<ul>
+<li>Si \(\rho\gt 1\), alors \((a_n)\) diverge. 
+(Dans le cas où \(a_n\gt 0\) (pour tout \(n\) suffisamment grand),
+\(\rho\gt 1\) implique \(a_n\to +\infty\).)
+</li><li>Si \(0\leqslant \rho \lt 1\), alors \(a_n\to 0\).
+</li></ul>
+</div>
+<div class="info">
+Ce critère est utile, mais surtout pour déduire le comportement des suites
+telles que \(|a_n|\) tend soit très vite vers <i>l'infini</i>, soit très vite vers 
+<i>zéro</i>.
+Car si une suite \(a_n\) tend vers une limite \(L\) qui est différente de zéro,
+\(L\neq 0\), alors
+\(|\frac{a_{n+1}}{a_n}|\to 1\), un cas qui n'est pas traité par le critère.
+(Voir exemples plus bas.)
+</div>
 
-  <h3>3.10 Critère de d'Alembert pour les suites</h3>
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvededalembertpourlessuites" role="button" aria-expanded="false" aria-controls="theproofpreuvededalembertpourlessuites">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvededalembertpourlessuites">
+                    <div class="card card-body">
+                    <p>
+Si \(\rho\gt 1\), fixons un \(\varepsilon\gt 0\) tel que \(1+\varepsilon\lt \rho\). 
+On a alors l'existence d'un entier
+\(N\) tel que 
+\[ 
+\Bigl|\frac{a_{n+1}}{a_n}\Bigr|\geqslant 1+\varepsilon\qquad \forall n\geqslant N\,.
+\]
+En itérant cette relation,
+\[ 
+|a_{n+1}|\geqslant (1+\varepsilon)|a_n|\geqslant (1+\varepsilon)^2|a_{n-1}|\geqslant 
+\cdots (1+\varepsilon)^{n-N+1}|a_N|\,.
+\]
+Comme \(1+\varepsilon\gt 1\), et comme \(n-N+1\to \infty\), on 
+a que \(|a_{n+1}|\to \infty\), et donc \((a_n)\) ne converge
+pas, elle diverge.
 
-  <div class="theo">
-    (Critère de d'Alembert pour les suites)
-    Soit \((a_n)\) une suite telle que la limite suivante existe:
-    \[
-    \rho:=
-    \lim_{n\to \infty}\Bigl|\frac{a_{n+1}}{a_n}\Bigr|\,.
-    \]
-    <ul>
-      <li>Si \(\rho\gt 1\), alors \((a_n)\) diverge.
-        (Dans le cas où \(a_n\gt 0\) (pour tout \(n\) suffisamment grand),
-        \(\rho\gt 1\) implique \(a_n\to +\infty\).)
-      <li>Si \(0\leqslant \rho \lt 1\), alors \(a_n\to 0\).
-    </ul>
-  </div>
-
-  <div class="info">
-    Ce critère est utile, mais surtout pour déduire le comportement des suites
-    telles que \(|a_n|\) tend soit très vite vers <i>l'infini</i>, soit très vite vers
-    <i>zéro</i>.
-    Car si une suite \(a_n\) tend vers une limite \(L\) qui est différente de zéro,
-    \(L\neq 0\), alors
-    \(|\frac{a_{n+1}}{a_n}|\to 1\), un cas qui n'est pas traité par le critère.
-    (Voir exemples plus bas.)
-  </div>
-
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuvededalembertpourlessuites" role="button" aria-expanded="false" aria-controls="preuvededalembertpourlessuites">Preuve:</a>
-    <div class="collapse" id="preuvededalembertpourlessuites">
-      <div class="card card-body">
-        <p>Si \(\rho\gt 1\), fixons un \(\varepsilon\gt 0\) tel que \(1+\varepsilon\lt \rho\).
-        On a alors l'existence d'un entier
-        \(N\) tel que
-        \[
-        \Bigl|\frac{a_{n+1}}{a_n}\Bigr|\geqslant 1+\varepsilon\qquad \forall n\geqslant N\,.
-        \]
-        En itérant cette relation,
-        \[
-        |a_{n+1}|\geqslant (1+\varepsilon)|a_n|\geqslant (1+\varepsilon)^2|a_{n-1}|\geqslant
-        \cdots (1+\varepsilon)^{n-N+1}|a_N|\,.
-        \]
-        Comme \(1+\varepsilon\gt 1\), et comme \(n-N+1\to \infty\), on
-        a que \(|a_{n+1}|\to \infty\), et donc \((a_n)\) ne converge
-        pas, elle diverge.
-
-        <br><br>
-        Supposons
-        maintenant que \(0\leqslant \rho \lt 1\). Alors il existe \(\delta\gt 0\) et un
-        entier \(N\) tels que
-        \[
-        \Bigl|\frac{a_{n+1}}{a_n}\Bigr|\leqslant 1-\delta\qquad \forall n\geqslant N\,.
-        \]
-        On a alors, pour tout \(n\geqslant N\),
-        \[
-        |a_{n+1}|\leqslant (1-\delta)|a_n|\leqslant (1-\delta)^2|a_{n-1}|\leqslant
-        \cdots (1-\delta)^{n-N+1}|a_N|\,.
-        \]
-        Comme \((1-\delta)^{n-N+1}\to 0\), le Théorème des deux gendarmes implique que
-        \(|a_{n+1}|\to 0\), et donc \(a_n\to 0\).</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="exemple">
-    Considérons la suite \(a_n=\frac{n^2}{2^n}\), qui tend vers zéro puisque comme
-    on sait, le comportement exponentiel l'emporte sur le polynomial.
-    Voyons comment le
-    critère de d'Alembert permet d'obtenir le même résultat. Calculons
-    \[
-    \rho
-    =\lim_{n\to \infty}
-    \Bigl|\frac{a_{n+1}}{a_n}\Bigr|
-    =\lim_{n\to \infty}
-    \Bigl|\frac{(n+1)^2/2^{n+1}}{n^2/2^n}\Bigr|
-    =\frac12\lim_{n\to \infty}\frac{(n+1)^2}{n^2}=\frac12<1\,. \] Par le critère, ceci implique que \(a_n\to 0\). </div>
-
-      <p>
-        Il est important de souligner que le critère ne dit rien dans le cas où
-        \(\rho=1\). Or beaucoup de suites très simples dont le comportement est bien
-        connu sont des suites pour lesquelles le critère de d'Alembert ne dit rien.
-        Voyons trois exemples de suites pour lesquelles \(\rho=1\).
-      </p>
-
-      <div class="exemple">
-        Pour la suite \(a_n=\frac1n\), on a \(\rho=1\), donc le critère ne dit rien.
-        Pourtant, on sait bien que \(a_n\to 0\).
-      </div>
-
-      <div class="exemple">
-        Pour la suite \(a_n=n\), on a \(\rho=1\), donc le critère ne dit rien.
-        Pourtant, on sait bien que \(a_n\to \infty\).
-      </div>
-
-      <div class="exemple">
-        Pour la suite \(a_n=(-1)^n\), on a \(\rho =1\), donc le critère ne dit rien.
-        Pourtant, on sait bien que \(a_n\) ne converge pas, n'a pas de limite.
-      </div>
-      <div class="quiz" id="quiz3_10_1">
-        Vrai ou faux?
-        <ol>
-          <li><span class="itemEMPTY">[ ]</span> Si une suite est convergente, alors
-            \(\lim_n|\frac{a_{n+1}}{a_n}|\lt 1\).
-          <li><span class="itemEMPTY">[ ]</span> Si une suite est divergente, alors
-            \(\lim_n|\frac{a_{n+1}}{a_n}|\) n'a pas de limite.
-          <li><span class="itemFULL">[ ]</span>
-            Si \(\lim_n|\frac{a_{n+1}}{a_n}|\lt 1\), alors \(a_n\) tend vers zéro
-            exponentiellement vite.
-          <li><span class="itemEMPTY">[ ]</span> Si \(|\frac{a_{n+1}}{a_n}|\lt 1\) pour tout \(n\), alors \(a_n\to 0\).
-          <li><span class="itemEMPTY">[ ]</span> Si \(|\frac{a_{n+1}}{a_n}|\) n'a pas de limite lorsque
-            \(n\to\infty\), alors \(a_n\) ne peut pas converger.
-          <li><span class="itemEMPTY">[ ]</span> Si \(a_n\to 0\), alors
-            \(\lim_n|\frac{a_{n+1}}{a_n}|\lt 1\).
-        </ol>
-        <span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_10_1')">Solutions</button></span>
-      </div>
-
+<br/><br/>
+Supposons 
+maintenant que \(0\leqslant \rho \lt 1\). Alors il existe \(\delta\gt 0\) et un
+entier \(N\) tels que 
+\[ 
+\Bigl|\frac{a_{n+1}}{a_n}\Bigr|\leqslant 1-\delta\qquad \forall n\geqslant N\,.
+\]
+On a alors, pour tout \(n\geqslant N\),
+\[ 
+|a_{n+1}|\leqslant (1-\delta)|a_n|\leqslant (1-\delta)^2|a_{n-1}|\leqslant 
+\cdots (1-\delta)^{n-N+1}|a_N|\,.
+\]
+Comme \((1-\delta)^{n-N+1}\to 0\), le Théorème des deux gendarmes implique que
+\(|a_{n+1}|\to 0\), et donc \(a_n\to 0\).
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<div class="exemple">
+Considérons la suite \(a_n=\frac{n^2}{2^n}\), qui tend vers zéro puisque comme
+on sait, le comportement exponentiel l'emporte sur le polynomial.
+Voyons comment le
+critère de d'Alembert permet d'obtenir le même résultat. Calculons
+\[ 
+\rho
+=\lim_{n\to \infty}
+\Bigl|\frac{a_{n+1}}{a_n}\Bigr|
+=\lim_{n\to \infty}
+\Bigl|\frac{(n+1)^2/2^{n+1}}{n^2/2^n}\Bigr|
+=\frac12\lim_{n\to \infty}\frac{(n+1)^2}{n^2}=\frac12<1\,.
+\]
+Par le critère, ceci implique que \(a_n\to 0\).
+</div>
+<p>
+Il est important de souligner que le critère ne dit rien dans le cas où 
+\(\rho=1\). Or beaucoup de suites très simples dont le comportement est bien
+connu sont des suites pour lesquelles le critère de d'Alembert ne dit rien.
+Voyons trois exemples de suites pour lesquelles \(\rho=1\).
+</p>
+<div class="exemple">
+Pour la suite \(a_n=\frac1n\), on a \(\rho=1\), donc le critère ne dit rien.
+Pourtant, on sait bien que \(a_n\to 0\).
+</div>
+<div class="exemple">
+Pour la suite \(a_n=n\), on a \(\rho=1\), donc le critère ne dit rien.
+Pourtant, on sait bien que \(a_n\to \infty\).
+</div>
+<div class="exemple">
+Pour la suite \(a_n=(-1)^n\), on a \(\rho =1\), donc le critère ne dit rien.
+Pourtant, on sait bien que \(a_n\) ne converge pas, n'a pas de limite.
+</div>
+<div class="quiz" id="quiz3_10_1">
+ Vrai ou faux?
+<ol>
+<li><span class="itemEMPTY">[  ]</span> Si une suite est convergente, alors
+\(\lim_n|\frac{a_{n+1}}{a_n}|\lt 1\).
+</li><li><span class="itemEMPTY">[  ]</span> Si une suite est divergente, alors 
+\(\lim_n|\frac{a_{n+1}}{a_n}|\) n'a pas de limite.
+</li><li><span class="itemFULL">[  ]</span> 
+Si \(\lim_n|\frac{a_{n+1}}{a_n}|\lt 1\), alors \(a_n\) tend vers zéro
+exponentiellement vite.
+</li><li><span class="itemEMPTY">[  ]</span> Si \(|\frac{a_{n+1}}{a_n}|\lt 1\) pour tout \(n\), alors \(a_n\to 0\).
+</li><li><span class="itemEMPTY">[  ]</span> Si \(|\frac{a_{n+1}}{a_n}|\) n'a pas de limite lorsque
+\(n\to\infty\), alors \(a_n\) ne peut pas converger.
+</li><li><span class="itemEMPTY">[  ]</span> Si \(a_n\to 0\), alors 
+\(\lim_n|\frac{a_{n+1}}{a_n}|\lt 1\).
+</li></ol>
+<span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_10_1')">Solutions</button></span>
+</div><!--quizz-->
+</div>
 </body>
-
 </html>

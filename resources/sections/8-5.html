@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+</head>
+<body>
+<div class="sec" id="IDs-secderiveeetapproximation-sDI"><h3>8.5 Dérivée et approximation</h3>
+<p>
+  On a pour l'instant deux notions de régularité pour une fonction \(f\) au
+  voisinage d'un point \(x_0\).
+  </p>
+<ul>
+<li>
+<u>La <i>continuité</i>:</u>
+  Si on suppose que \(f\) est 
+  continue en \(x_0\),
+  \[\lim_{x\to x_0}f(x)=f(x_0)\,,\] 
+  ce qui
+  implique que les valeurs de \(f(x)\) sont proches de \(f(x_0)\) lorsque \(x\)
+  est proche de \(x_0\). Ceci fournit 
+  une <b>approximation d'ordre zéro</b> de \(f\) au voisinage de \(x_0\):
+  \[ \boxed{f(x)\simeq f(x_0)}
+  \]
+  </li><li>
+<u>La <i>dérivabilité</i>:</u>
+  Si on suppose que \(f\) est dérivable en \(x_0\),
+  \[ 
+  f'(x_0):= \lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}\,,
+  \]
+  ce qui implique que pour \(x\) proche de \(x_0\),
+  \[
+  \frac{f(x)-f(x_0)}{x-x_0}\simeq f'(x_0)\,.
+  \]
+  On peut isoler \(f(x)\) et obtenir ainsi
+  une <b>approximation du premier ordre</b>, appelée aussi 
+  <b>approximation linéaire</b> de \(f\)  au voisinage de \(x_0\):
+  \[\boxed{f(x)\simeq f(x_0)+f'(x_0)(x-x_0)}\]
+  <br/><br/><center><img class="img-fluid" src="../images/i_fonctions_derivee_Approx_Lin.jpg" width="250"/></center>
+</li></ul>
+<div class="info">
+  L'approximation à l'ordre zéro revient à approximer \(f(x)\), dans un voisinage
+  de \(x_0\), par la simple constante \(f(x_0)\).
+  L'approximation linéaire est plus précise, puisqu'elle tient compte de
+  comment \(f\) varie au voisinage de \(x_0\)!
+  </div>
+<p>
+  Comparons ces approximations sur un exemple simple:
+  </p>
+<div class="exemple">
+  Supposons que l'on veuille calculer \(1.998^4\).
+  
+  <br/><br/>
+  Écrivons \(1.998^4=f(1.998)\), où \(f(x)=x^4\). Ce que l'on aimerait faire est
+  donc d'estimer la valeur de \(f\) en un point \(x=1.998\) qui est proche de
+  \(x_0=2\).
+  <ul>
+<li>À l'ordre zéro, 
+  \[1.998^4=f(1.998)\simeq f(2)= 2^4=16\,.\]
+  </li><li>Au premier ordre,
+  \[\begin{aligned} 1.998^4= 
+  f(1.998)&\simeq f(2)+f'(2)(1.998-2)\\
+  &= 2^4+4\cdot 2^3(1.998-2)\\ 
+  &=15.936
+  \end{aligned}\]
+  </li></ul>
+  Avec une calculatrice, on trouve \(1.998^4=15.9360959...\).
+  L'approximation à l'ordre zéro représente donc une erreur d'environ \(0.4\%\),
+  alors que celle du premier ordre, moins de \(0.001\%\)!
+  </div>
+<p>
+  Nous verrons plus tard comment aller au-delà de l'approximation linéaire,
+  lorsque nous calculerons des <i>développements limités</i>.
+  </p>
+</div>
+</body>
+</html>

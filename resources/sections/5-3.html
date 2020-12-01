@@ -1,134 +1,126 @@
 <!DOCTYPE html>
 <html lang=fr>
-
 <head>
-
   <meta charset="utf-8">
   <title></title>
-
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
   </script>
-
   <!-- Bootstrap 4 & jQuery scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../content-styles.css">
-
   <!-- Custom JS -->
   <script type="text/javascript" src="../content-main.js"></script>
-
 </head>
-
 <body>
+<div class="sec" id="IDs-seccriterescomparaisonseries-sDI"><h3>5.3 Le critère de comparaison</h3>
 
-  <h3>5.3 Le critère de comparaison</h3>
+<center>
 
-  <div class="video">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDentetevid-v_series_critere_comparaison" role="button" aria-expanded="false" aria-controls="IDentetevid-v_series_critere_comparaison">Séries: le critère de comparaison</a>
-    <div class="collapse" id="IDentetevid-v_series_critere_comparaison">
-      <div class="card card-body">
-        <video class="HTMLvideo" src="../videos/v_series_critere_comparaison.mp4" poster="../videos/v_series_critere_comparaison_thumbnail.png" controls=true></video>
-      </div>
-    </div>
-  </div>
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_series_critere_comparaison" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_series_critere_comparaison">Séries: le critère de comparaison</a>
+                    <div class="collapse" id="IDvideodiv-v_series_critere_comparaison">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_series_critere_comparaison.mp4" poster="../videos/v_series_critere_comparaison_thumbnail.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
+<p>
+Le critère de comparaison est un des plus utiles dans l'étude des séries. Il
+permet, lorsqu'il s'applique, d'étudier 
+la convergence/divergence d'une série donnée, en la comparant 
+avec une autre série donc la convergence/divergence est connue.
+</p>
+<div class="theo">
+Soient \((a_n)\) et \((b_n)\) deux suites telles que 
+\(0\leqslant a_n\leqslant b_n\) pour tout \(n\) suffisamment grand, 
+<ol>
+<li>Si \(\sum_nb_n\) converge, alors \(\sum_na_n\) converge aussi.
+</li><li>Si \(\sum_na_n=+\infty\), alors \(\sum_nb_n=+\infty\). 
+</li></ol>
+</div>
 
-  <p>
-    Le critère de comparaison est un des plus utiles dans l'étude des séries. Il
-    permet, lorsqu'il s'applique, d'étudier
-    la convergence/divergence d'une série donnée, en la comparant
-    avec une autre série donc la convergence/divergence est connue.
-  </p>
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvecomparaisonseries" role="button" aria-expanded="false" aria-controls="theproofpreuvecomparaisonseries">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvecomparaisonseries">
+                    <div class="card card-body">
+                    <p>
+1) Supposons que \(0\leqslant a_n\leqslant b_n\) pour tout \(n\geqslant N\). 
+Définissons les sommes
+\[s_n:=\sum_{k=N}^na_k\,,\qquad  
+s_n':= \sum_{k=N}^nb_k\,.\] 
+Comme la convergence d'une série ne dépend pas de ce que font ses premiers
+termes, on a que \(\sum_na_n\) converge si et seulement si \(s_n\) possède une
+limite.
+De même, \(\sum_nb_n\) converge si et seulement si \(s_n'\) possède une limite.
 
-  <div class="theo">
-    Soient \((a_n)\) et \((b_n)\) deux suites telles que
-    \(0\leqslant a_n\leqslant b_n\) pour tout \(n\) suffisamment grand,
-    <ol>
-      <li>Si \(\sum_nb_n\) converge, alors \(\sum_na_n\) converge aussi.
-      <li>Si \(\sum_na_n=+\infty\), alors \(\sum_nb_n=+\infty\).
-    </ol>
-  </div>
+Observons maintenant que comme tous les termes que leurs sommes contiennent sont
+positifs, les suites \(s_n\) et \(s_n'\) sont monotones croissantes.
 
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuvecomparaisonseries" role="button" aria-expanded="false" aria-controls="preuvecomparaisonseries">Preuve:</a>
-    <div class="collapse" id="preuvecomparaisonseries">
-      <div class="card card-body">
-        <p>  1) Supposons que \(0\leqslant a_n\leqslant b_n\) pour tout \(n\geqslant N\).
-          Définissons les sommes
-          \[s_n:=\sum_{k=N}^na_k\,,\qquad
-          s_n':= \sum_{k=N}^nb_k\,.\]
-          Comme la convergence d'une série ne dépend pas de ce que font ses premiers
-          termes, on a que \(\sum_na_n\) converge si et seulement si \(s_n\) possède une
-          limite.
-          De même, \(\sum_nb_n\) converge si et seulement si \(s_n'\) possède une limite.
+Supposons maintenant que 
+\(s_n'\) converge: \(s_n'\to s'\). Comme \(s_n'\) est croissante, on a 
+\(s_n'\leqslant s'\).
+On peut donc écrire 
+\[ 0\leqslant s_n\leqslant s_n'\leqslant s'\qquad \forall n\geqslant N\,.\]
+On conclut que \(s_n\) est croissante et majorée, donc aussi convergente.
 
-          Observons maintenant que comme tous les termes que leurs sommes contiennent sont
-          positifs, les suites \(s_n\) et \(s_n'\) sont monotones croissantes.
-
-          Supposons maintenant que
-          \(s_n'\) converge: \(s_n'\to s'\). Comme \(s_n'\) est croissante, on a
-          \(s_n'\leqslant s'\).
-          On peut donc écrire
-          \[ 0\leqslant s_n\leqslant s_n'\leqslant s'\qquad \forall n\geqslant N\,.\]
-          On conclut que \(s_n\) est croissante et majorée, donc aussi convergente.
-
-          2) En utilisant la même inégalité, \(s_n'\geqslant s_n\) pour tout \(n\geqslant N\), on
-          déduit que si
-          \(s_n\to+\infty\), alors le théorème du chien méchant implique
-          \(s_n'\to\infty\).</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="exemple">
-    Considérons
-    \(\sum_{n\geqslant 1}\frac{1}{2^n+n+\sin(n)}\). Puisque on a, pour tout \(n\geqslant 1\),
-    que \(n+\sin(n)\geqslant 1-1=0\), on peut écrire
-    \[
-    0\leqslant \underbrace{\frac{1}{2^n+n+\sin(n)}}_{=a_n}\leqslant
-    \frac{1}{2^n+0}=\underbrace{\frac{1}{2^n}}_{=b_n}\,.
-    \]
-    Comme \(\sum_{n\geqslant 1}b_n\) est une série géométrique de raison \(r=\frac12<1\), elle converge. Donc \(\sum_{n\geqslant 1}a_n\) converge aussi. </div>
-
-      <div class="exemple">
-        On a montré que \(\sum_{n\geqslant 1}\frac{1}{n^2}\) converge.
-        Comme
-        \[0\leqslant \underbrace{\frac{1}{n^3}}_{=a_n}\leqslant \underbrace{\frac{1}{n^2}}_{=b_n}\qquad \text{ pour tout }n\geqslant 1\,\]
-        on en déduit
-        que \(\sum_{n\geqslant 1}\frac{1}{n^3}\) converge aussi.
-      </div>
-
-      <div class="exemple">
-        Considérons maintenant \(\sum_{n\geqslant 1}\frac{1}{\sqrt{n}}\). Puisque
-        \(\sqrt{n}\leqslant n\) pour tout \(n\geqslant 1\), on peut écrire
-        \[ 0\leqslant \underbrace{\frac1n}_{=a_n}\leqslant \underbrace{\frac{1}{\sqrt{n}}}_{=b_n}
-        \]
-        Et comme la série harmonique \(\sum_na_n\)
-        diverge, \(\sum_{n\geqslant 1}b_n\) diverge aussi.
-      </div>
-
-      <div class="info">
-        Les comparaisons utilisées dans ces deux derniers exemples permettent de
-        montrer, plus généralement, qu'une série du type
-        \[
-        \sum_{n\geqslant 1}\frac{1}{n^p}
-        =
-        \begin{cases}
-        \text{diverge si }p\leqslant 1\,,\\
-        \text{converge si }p\geqslant 2\,.\\
-        \end{cases}
-        \]
-        Nous verrons plus loin comment traiter les
-        valeurs intermédiaires \(p\in ]1,2[\).
-      </div>
-
+2) En utilisant la même inégalité, \(s_n'\geqslant s_n\) pour tout \(n\geqslant N\), on
+déduit que si 
+\(s_n\to+\infty\), alors le théorème du chien méchant implique
+\(s_n'\to\infty\).
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<div class="exemple">
+Considérons
+\(\sum_{n\geqslant 1}\frac{1}{2^n+n+\sin(n)}\). Puisque on a, pour tout \(n\geqslant 1\),
+que \(n+\sin(n)\geqslant 1-1=0\), on peut écrire
+\[ 
+0\leqslant \underbrace{\frac{1}{2^n+n+\sin(n)}}_{=a_n}\leqslant
+\frac{1}{2^n+0}=\underbrace{\frac{1}{2^n}}_{=b_n}\,.
+\]
+Comme \(\sum_{n\geqslant 1}b_n\) est une série géométrique de raison \(r=\frac12<1\),
+elle converge. Donc \(\sum_{n\geqslant 1}a_n\) converge aussi.
+</div>
+<div class="exemple">
+On a montré que \(\sum_{n\geqslant 1}\frac{1}{n^2}\) converge.
+Comme 
+\[0\leqslant \underbrace{\frac{1}{n^3}}_{=a_n}\leqslant \underbrace{\frac{1}{n^2}}_{=b_n}\qquad \text{ pour tout }n\geqslant 1\,\] 
+on en déduit
+que \(\sum_{n\geqslant 1}\frac{1}{n^3}\) converge aussi. 
+</div>
+<div class="exemple">
+Considérons maintenant \(\sum_{n\geqslant 1}\frac{1}{\sqrt{n}}\). Puisque
+\(\sqrt{n}\leqslant n\) pour tout \(n\geqslant 1\), on peut écrire
+\[ 0\leqslant \underbrace{\frac1n}_{=a_n}\leqslant \underbrace{\frac{1}{\sqrt{n}}}_{=b_n}
+\]
+Et comme la série harmonique \(\sum_na_n\) 
+diverge, \(\sum_{n\geqslant 1}b_n\) diverge aussi.
+</div>
+<div class="info">
+Les comparaisons utilisées dans ces deux derniers exemples permettent de
+montrer, plus généralement, qu'une série du type
+\[ 
+\sum_{n\geqslant 1}\frac{1}{n^p}
+=
+\begin{cases}
+\text{diverge si }p\leqslant 1\,,\\
+\text{converge si }p\geqslant 2\,.\\
+\end{cases}
+\]
+Nous verrons plus loin comment traiter les
+valeurs intermédiaires \(p\in ]1,2[\).
+</div>
+</div>
 </body>
-
 </html>

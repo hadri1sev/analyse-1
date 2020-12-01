@@ -1,247 +1,220 @@
 <!DOCTYPE html>
 <html lang=fr>
-
 <head>
-
   <meta charset="utf-8">
   <title></title>
-
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
   </script>
-
   <!-- Bootstrap 4 & jQuery scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../content-styles.css">
-
   <!-- Custom JS -->
   <script type="text/javascript" src="../content-main.js"></script>
-
 </head>
-
 <body>
+<div class="sec" id="IDs-sectionexponentiellecomplexe-sDI"><h3>4.4 Exponentielle complexe</h3>
+<p>
+Considérons la fonction \(\varphi:\mathbb{R}\to \mathbb{C}\) définie par
+\[\varphi(\theta):= \cos \theta +\mathsf{i} \sin \theta\,.
+\]
+La propriété 
+''\(\mathrm{Arg }(z)+\mathrm{Arg }(z')=\mathrm{Arg }(zz')\)'' peut alors s'écrire,
+pour deux complexes de modules égaux à \(1\), 
+\[\varphi(\theta+\theta')=\varphi(\theta)\varphi(\theta')\,.\]
+Cette relation rappelle étrangement la propriété de base de la fonction
+exponentielle:
+\[e^{x+y}=e^xe^y\,.\]
+Cette remarque montre qu'en passant par les complexes, 
+un lien assez profond semble exister entre
+les fonctions d'exponentielle/logarithme et les fonctions de la trigonométrie. 
 
-  <h3>4.4 Exponentielle complexe</h3>
+<br/><br/>
+Ce lien est rendu plus clair 
+en introduisant une nouvelle fonction sur \(\mathbb{C}\).
+</p>
+<div class="defin">
+Soit \(z\in \mathbb{C}\). Alors l'<b>exponentielle de</b> \(z\) est définie par
+\[ e^z:=
+e^{\mathrm{Re}(z)}(\cos(\mathrm{Im}(z))+\mathsf{i}\sin(\mathrm{Im}(z))).
+\]
+</div>
+<div class="rem">
+Dans cette définition, la partie ''\(e^{\mathrm{Re}(z)}\)'' est
+l'exponentielle classique (du réel \(\mathrm{Re}(z)\)), 
+et ''\(\cos\)'' et ''\(\sin\)'' sont les
+fonctions trigonométriques usuelles.
+</div>
+<div class="pro">
+(Propriétés de \(z\mapsto e^z\))
+<ol>
+<li>\(e^ze^{z'}=e^{z+z'}\) 
+</li><li>\(|e^z|=e^{\mathrm{Re}(z)}\)
+</li><li>\(\mathrm{Arg } (e^z)=\mathrm{Im}(z)\)
+</li><li>\(e^{z+2k\pi \mathsf{i}}=e^z\)
+</li></ol>
+</div>
 
-  <p>
-    Considérons la fonction \(\varphi:\mathbb{R}\to \mathbb{C}\) définie par
-    \[\varphi(\theta):= \cos \theta +\mathsf{i} \sin \theta\,.
-    \]
-    La propriété
-    ''\(\mathrm{Arg }(z)+\mathrm{Arg }(z')=\mathrm{Arg }(zz')\)'' peut alors s'écrire,
-    pour deux complexes de modules égaux à \(1\),
-    \[\varphi(\theta+\theta')=\varphi(\theta)\varphi(\theta')\,.\]
-    Cette relation rappelle étrangement la propriété de base de la fonction
-    exponentielle:
-    \[e^{x+y}=e^xe^y\,.\]
-    Cette remarque montre qu'en passant par les complexes,
-    un lien assez profond semble exister entre
-    les fonctions d'exponentielle/logarithme et les fonctions de la trigonométrie.
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvedesproprdelexpcomplexe" role="button" aria-expanded="false" aria-controls="theproofpreuvedesproprdelexpcomplexe">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvedesproprdelexpcomplexe">
+                    <div class="card card-body">
+                    <p>
+1) suit de la formule pour l'argument: si \(z=x+\mathsf{i} y\), \(z'=x'+\mathsf{i}
+y'\), alors en utilisant la fonction \(\varphi\),
+\[\begin{aligned}
+e^{z+z'}
+&=e^{(x+x')+\mathsf{i} (y+y')}\\
+&=e^{x+x'}\bigl(\cos(y+y')+\mathsf{i} \sin(y+y')\bigr)\\
+&=e^{x+x'}\varphi(y+y')\\
+&=e^xe^{x'}\varphi(y)\varphi(y')\\
+&=e^ze^{z'}\,.
+\end{aligned}\]
+2) Si \(z=x+\mathsf{i} y\), alors 
+\(|e^z|=|e^x\varphi(y)|=|e^x||\varphi(y)|=|e^x|=e^x\).
 
-    <br><br>
-    Ce lien est rendu plus clair
-    en introduisant une nouvelle fonction sur \(\mathbb{C}\).
-  </p>
+3) et 4) suivent immédiatement de la définition de \(e^z\).
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<div class="info">
+En analyse complexe, l'exponentielle est en général définie par une série
+(après avoir introduit les séries de nombres complexes, que nous ne ferons pas
+ici):
+\[ \exp(z):= \sum_{n\geqslant 0}\frac{z^n}{n!}\,.\]
+</div>
+<h4>Exponentielle de nombres purement imaginaires, Formule d'Euler</h4>
+<p>
+L'exponentielle d'un nombre purement imaginaire \(\mathsf{i} y\) n'est donc autre
+que \(\varphi(y)\):
+\[ 
+e^{\mathsf{i} y}= \cos y+\mathsf{i} \sin y\,.
+\]
+Ainsi, la fonction \(y\mapsto e^{\mathsf{i} y}\) jouit des 
+propriétés suivantes:
+</p><ul>
+<li>\(|e^{\mathsf{i} y}|=1\)
+</li><li>\(\overline{e^{\mathsf{i} y}}=e^{\mathsf{i} (-y)}\)
+</li><li>\(e^{\mathsf{i} y}e^{\mathsf{i} y'}=e^{\mathsf{i} (y+y')}\)
+</li><li>\(\frac{e^{\mathsf{i} y}}{e^{\mathsf{i} y'}}=e^{\mathsf{i} (y-
+y')}\)
+</li><li>\(\sin y=\frac{e^{\mathsf{i} y}-e^{-\mathsf{i} y}}{2\mathsf{i} }\)
+</li><li>\(\cos y=\frac{e^{\mathsf{i} y}+e^{-\mathsf{i} y}}{2}\)
+</li></ul>
+Observons \(e^{\mathsf{i} y}\) pour quelques valeurs particulières de \(y\).
 
-  <div class="defin">
-    Soit \(z\in \mathbb{C}\). Alors l'<b>exponentielle de</b> \(z\) est définie par
-    \[ e^z:=
-    e^{\mathrm{Re}(z)}(\cos(\mathrm{Im}(z))+\mathsf{i}\sin(\mathrm{Im}(z))).
-    \]
-  </div>
+<ul>
+<li>
+\(e^{\mathsf{i} \frac{\pi}{2}}=\mathsf{i}\),
+</li><li>
+\(e^{\mathsf{i} 2k\pi}=1\qquad \forall k\in \mathbb{Z}\),
+</li><li>
+<b>Formule d'Euler</b>: \(e^{\mathsf{i}\pi}=-1\).
+</li></ul>
+<br/><br/><center><img class="img-fluid" src="../images/i_complexe_TSOL_formule_Euler.jpg" width="250"/></center>
+<h4>Représentation polaire/exponentielle</h4>
+<p>
+Si un complexe 
+\(z\in  \mathbb{C}\) est tel que \(|z|=r\) et \(\mathrm{Arg }(z)=\theta\), on peut
+maintenant
+le représenter sous forme <b>polaire/exponentielle</b> (on dira plus simplement
+<b>polaire</b>):
+\[ 
+\boxed{z=re^{\mathsf{i} \theta}\,.}
+\]
+La <b>formule de de Moivre</b> devient maintenant transparente:
+\[ 
+z^n=\bigl(re^{\mathsf{i} \theta}\bigr)^n
+=r^ne^{\mathsf{i} n\theta}
+=r^n\bigl(\cos(n\theta)+\mathsf{i} \sin(n\theta)\bigr)\,.
+\]
+</p>
+<h4>Exemples d'utilisation de la représentation exponentielle</h4>
+<p>
+Cette représentation polaire des nombres complexes est utile par exemple pour
+calculer des grandes puissances:
+</p>
+<div class="exemple">
+Si \(z=2-2\sqrt{3}\mathsf{i}\), que vaut \(z^{999}\)?
+(Un rapide coup d'oeil montre que l'on ne veut surtout pas développer la
+\(999\)ème puissance de \(z\)...)
 
-  <div class="rem">
-    Dans cette définition, la partie ''\(e^{\mathrm{Re}(z)}\)'' est
-    l'exponentielle classique (du réel \(\mathrm{Re}(z)\)),
-    et ''\(\cos\)'' et ''\(\sin\)'' sont les
-    fonctions trigonométriques usuelles.
-  </div>
-
-  <div class="pro">
-    (Propriétés de \(z\mapsto e^z\))
-    <ol>
-      <li>\(e^ze^{z'}=e^{z+z'}\)
-      <li>\(|e^z|=e^{\mathrm{Re}(z)}\)
-      <li>\(\mathrm{Arg } (e^z)=\mathrm{Im}(z)\)
-      <li>\(e^{z+2k\pi \mathsf{i}}=e^z\)
-    </ol>
-  </div>
-
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuvedesproprdelexpcomplexe" role="button" aria-expanded="false" aria-controls="preuvedesproprdelexpcomplexe">Preuve:</a>
-    <div class="collapse" id="preuvedesproprdelexpcomplexe">
-      <div class="card card-body">
-        <p>1) suit de la formule pour l'argument: si \(z=x+\mathsf{i} y\), \(z'=x'+\mathsf{i}
-        y'\), alors en utilisant la fonction \(\varphi\),
-        \[\begin{aligned}
-        e^{z+z'}
-        &=e^{(x+x')+\mathsf{i} (y+y')}\\
-        &=e^{x+x'}\bigl(\cos(y+y')+\mathsf{i} \sin(y+y')\bigr)\\
-        &=e^{x+x'}\varphi(y+y')\\
-        &=e^xe^{x'}\varphi(y)\varphi(y')\\
-        &=e^ze^{z'}\,.
-        \end{aligned}\]
-        2) Si \(z=x+\mathsf{i} y\), alors
-        \(|e^z|=|e^x\varphi(y)|=|e^x||\varphi(y)|=|e^x|=e^x\).
-
-        3) et 4) suivent immédiatement de la définition de \(e^z\).</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="info">
-    En analyse complexe, l'exponentielle est en général définie par une série
-    (après avoir introduit les séries de nombres complexes, que nous ne ferons pas
-    ici):
-    \[ \exp(z):= \sum_{n\geqslant 0}\frac{z^n}{n!}\,.\]
-  </div>
-  <h4>Exponentielle de nombres purement imaginaires, Formule d'Euler</h4>
-
-  <p>
-    L'exponentielle d'un nombre purement imaginaire \(\mathsf{i} y\) n'est donc autre
-    que \(\varphi(y)\):
-    \[
-    e^{\mathsf{i} y}= \cos y+\mathsf{i} \sin y\,.
-    \]
-    Ainsi, la fonction \(y\mapsto e^{\mathsf{i} y}\) jouit des
-    propriétés suivantes:
-  <ul>
-    <li>\(|e^{\mathsf{i} y}|=1\)
-    <li>\(\overline{e^{\mathsf{i} y}}=e^{\mathsf{i} (-y)}\)
-    <li>\(e^{\mathsf{i} y}e^{\mathsf{i} y'}=e^{\mathsf{i} (y+y')}\)
-    <li>\(\frac{e^{\mathsf{i} y}}{e^{\mathsf{i} y'}}=e^{\mathsf{i} (y-
-      y')}\)
-    <li>\(\sin y=\frac{e^{\mathsf{i} y}-e^{-\mathsf{i} y}}{2\mathsf{i} }\)
-    <li>\(\cos y=\frac{e^{\mathsf{i} y}+e^{-\mathsf{i} y}}{2}\)
-  </ul>
-  Observons \(e^{\mathsf{i} y}\) pour quelques valeurs particulières de \(y\).
-
-  <ul>
-    <li>
-      \(e^{\mathsf{i} \frac{\pi}{2}}=\mathsf{i}\),
-    <li>
-      \(e^{\mathsf{i} 2k\pi}=1\qquad \forall k\in \mathbb{Z}\),
-    <li>
-      <b>Formule d'Euler</b>: \(e^{\mathsf{i}\pi}=-1\).
-  </ul>
-  <center><img src="../images/i_complexe_TSOL_formule_Euler.jpg" class="img-fluid" width="250"></center>
-  </p>
-
-  <h4>Représentation polaire/exponentielle</h4>
-
-  <p>
-    Si un complexe
-    \(z\in \mathbb{C}\) est tel que \(|z|=r\) et \(\mathrm{Arg }(z)=\theta\), on peut
-    maintenant
-    le représenter sous forme <b>polaire/exponentielle</b> (on dira plus simplement
-    <b>polaire</b>):
-    \[
-    \boxed{z=re^{\mathsf{i} \theta}\,.}
-    \]
-    La <b>formule de de Moivre</b> devient maintenant transparente:
-    \[
-    z^n=\bigl(re^{\mathsf{i} \theta}\bigr)^n
-    =r^ne^{\mathsf{i} n\theta}
-    =r^n\bigl(\cos(n\theta)+\mathsf{i} \sin(n\theta)\bigr)\,.
-    \]
-  </p>
-
-
-  <h4>Exemples d'utilisation de la représentation exponentielle</h4>
-
-  <p>
-    Cette représentation polaire des nombres complexes est utile par exemple pour
-    calculer des grandes puissances:
-  </p>
-
-  <div class="exemple">
-    Si \(z=2-2\sqrt{3}\mathsf{i}\), que vaut \(z^{999}\)?
-    (Un rapide coup d'oeil montre que l'on ne veut surtout pas développer la
-    \(999\)ème puissance de \(z\)...)
-
-    <br><br>
-    Rappelons (voir plus haut) que sous forme polaire,
-    \[ z=4e^{\mathsf{i} (-\frac{\pi}{3})}\,. \]
-    Donc, par la formule de de Moivre,
-    \[\begin{aligned}
-    z^{999}
-    =4^{999}e^{\mathsf{i} (-999\frac{\pi}{3})}
-    =4^{999}e^{\mathsf{i} (-333 \pi)}
-    &=4^{999}e^{\mathsf{i} (-166\cdot 2 \pi-\pi)}\\
-    &=4^{999}\underbrace{e^{\mathsf{i} (-166\cdot 2 \pi)}}_{=1}
-    \underbrace{e^{\mathsf{i} (-\pi)}}_{=-1}\\
-    &=-4^{999}\,.
-    \end{aligned}\]
-  </div>
-
-  <p>
-    On peut aussi utiliser la représentation polaire et
-    s'éviter l'usage du conjugué:
-  </p>
-
-  <div class="exemple">
-    \[
-    \Bigl(
-    \frac{1-\mathsf{i}}{1+\mathsf{i}}
-    \Bigr)^4
-    =
-    \Bigl(
-    \frac{\sqrt{2}e^{\mathsf{i} (-\frac{\pi}{4})}}{\sqrt{2}e^{\mathsf{i}\frac{\pi}{4}}}
-    \Bigr)^4
-    =\bigl(e^{\mathsf{i} (-\frac{\pi}{2})}\bigr)^4
-    =e^{\mathsf{i} (-2\pi)}=1\,.
-    \]
-  </div>
-
-  <p>
-    Finalement, la notation polaire/exponentielle est utile pour résoudre des
-    équations en une variable complexe \(z\). Pour cela, on aura souvent besoin de
-    se souvenir que si
-    \(z,z'\) sont deux nombres complexes écrits sous forme polaire,
-    \(z=re^{\mathsf{i} \theta}\) et \(z'=r'e^{\mathsf{i} \theta'}\), alors
-    \[ z=z'\qquad \Leftrightarrow \qquad r=r'\text{ et }\theta=\theta'+2k\pi \]
-    pour un entier \(k\) qui peut être quelconque.
-  </p>
-
-  <div class="exemple">
-    Considérons l'équation complexe
-    \[
-    \Bigl(\frac{z}{\overline{z}}\Bigr)^2=z\,.
-    \]
-    (On se rend vite compte, en essayant de poser \(z=a+\mathsf{i} b\), que l'approche
-    cartésienne n'est pas la bonne...)
-    Cherchons \(z\) en l'écrivant \(z=re^{\mathsf{i} \theta}\). L'équation
-    devient alors
-    \[
-    \Bigl(\frac{re^{\mathsf{i} \theta}}{re^{-\mathsf{i} \theta}}\Bigr)^2=re^{\mathsf{i}
-    \theta}\,,
-    \]
-    qui est
-    \[ e^{\mathsf{i} 4\theta}=re^{\mathsf{i} \theta}\,. \]
-    On a donc (voir la remarque ci-dessus) \(r=1\), et
-    \[
-    4\theta=\theta+2k\pi\,,
-    \]
-    ce qui donne \(\theta=k\frac{2\pi}{3}\), et donc toute
-    solution est de la forme
-    \(z=e^{\mathsf{i} k\frac{2\pi}{3}}\). On obtient trois solutions
-    distinctes en prenant \(k=0,1,2\).
-  </div>
-
-  <p>
-    Dans la section suivante, nous verrons l'utilité de la notation
-    polaire/exponentielle pour trouver les <i>racines</i> d'un nombre complexe.
-  </p>
-
-
+<br/><br/> 
+Rappelons (voir plus haut) que sous forme polaire,
+\[ z=4e^{\mathsf{i} (-\frac{\pi}{3})}\,.  \]
+Donc, par la formule de de Moivre, 
+\[\begin{aligned}
+z^{999}
+=4^{999}e^{\mathsf{i} (-999\frac{\pi}{3})}
+=4^{999}e^{\mathsf{i} (-333 \pi)}
+&=4^{999}e^{\mathsf{i} (-166\cdot 2 \pi-\pi)}\\
+&=4^{999}\underbrace{e^{\mathsf{i} (-166\cdot 2 \pi)}}_{=1}
+\underbrace{e^{\mathsf{i} (-\pi)}}_{=-1}\\
+&=-4^{999}\,.
+\end{aligned}\]
+</div>
+<p>
+On peut aussi utiliser la représentation polaire et 
+s'éviter l'usage du conjugué:
+</p>
+<div class="exemple">
+\[ 
+\Bigl(
+ \frac{1-\mathsf{i}}{1+\mathsf{i}}
+\Bigr)^4
+=
+\Bigl(
+\frac{\sqrt{2}e^{\mathsf{i} (-\frac{\pi}{4})}}{\sqrt{2}e^{\mathsf{i}\frac{\pi}{4}}}
+\Bigr)^4
+=\bigl(e^{\mathsf{i} (-\frac{\pi}{2})}\bigr)^4
+=e^{\mathsf{i} (-2\pi)}=1\,.
+\]
+</div>
+<p>
+Finalement, la notation polaire/exponentielle est utile pour résoudre des
+équations en une variable complexe \(z\). Pour cela, on aura souvent besoin de
+se souvenir que si 
+\(z,z'\) sont deux nombres complexes écrits sous forme polaire,
+\(z=re^{\mathsf{i} \theta}\) et \(z'=r'e^{\mathsf{i} \theta'}\), alors
+\[ z=z'\qquad \Leftrightarrow \qquad r=r'\text{ et }\theta=\theta'+2k\pi \]
+pour un entier \(k\) qui peut être quelconque.
+</p>
+<div class="exemple">
+Considérons l'équation complexe
+\[ 
+\Bigl(\frac{z}{\overline{z}}\Bigr)^2=z\,.
+\]
+(On se rend vite compte, en essayant de poser \(z=a+\mathsf{i} b\), que l'approche
+cartésienne n'est pas la bonne...)
+Cherchons \(z\) en l'écrivant \(z=re^{\mathsf{i} \theta}\). L'équation 
+devient alors 
+\[ 
+\Bigl(\frac{re^{\mathsf{i} \theta}}{re^{-\mathsf{i} \theta}}\Bigr)^2=re^{\mathsf{i}
+\theta}\,,
+\]
+qui est 
+\[ e^{\mathsf{i} 4\theta}=re^{\mathsf{i} \theta}\,.  \]
+On a donc (voir la remarque ci-dessus) \(r=1\), et 
+\[ 
+4\theta=\theta+2k\pi\,,
+\]
+ce qui donne \(\theta=k\frac{2\pi}{3}\), et donc toute
+solution est de la forme 
+\(z=e^{\mathsf{i} k\frac{2\pi}{3}}\). On obtient trois solutions
+distinctes en prenant \(k=0,1,2\).
+</div>
+<p>
+Dans la section suivante, nous verrons l'utilité de la notation
+polaire/exponentielle pour trouver les <i>racines</i> d'un nombre complexe.
+</p>
+</div>
 </body>
-
 </html>

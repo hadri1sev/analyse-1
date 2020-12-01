@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+</head>
+<body>
+<div class="sec" id="IDs-secreglesderivation-sDI"><h3>8.2 Règles de dérivation</h3>
+
+<center>
+
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_derivee_regles" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_derivee_regles">Règles de dérivation</a>
+                    <div class="collapse" id="IDvideodiv-v_derivee_regles">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_derivee_regles.mp4" poster="../videos/v_derivee_regles_thumbnail.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
+<p>
+  Pour l'instant, la dérivée associe à une fonction \(f\) et un point \(x_0\) le
+  nombre \(f'(x_0)\). Si on sait calculer la dérivée en chaque point \(x_0\) 
+  du domaine de \(f\), la dérivée devient une nouvelle fonction, 
+  \[ x_0\mapsto f'(x_0)\,, \]
+  et comme on aimerait plutôt voir \(x_0\) comme un variable, on écrira plutôt
+  \[ x\mapsto f'(x)\,.\]
+  On dira que \(f\), définie sur un ouvert, est <b>dérivable</b> si elle est
+  dérivable en tout point \(x_0\) de son ensemble de définition.
+  </p>
+<div class="exemple">
+  La fonction \(x\mapsto f(x):= x^2\) est dérivable sur \(\mathbb{R}\), et sa
+  dérivée est donnée par \(f'(x)=2x\). En effet, pour un \(x_0\in \mathbb{R}\) fixé, 
+  \[\begin{aligned}
+   f'(x_0)
+  &=\lim_{h\to 0}\frac{(x_0+h)^2-x_0^2}{h}\\
+  &=\lim_{h\to 0}\frac{(x_0^2+2x_0h+h^2)-x_0^2}{h}\\
+  &=\lim_{h\to 0}(2x_0+h)\\
+  &=2x_0\,.
+  \end{aligned}\] 
+  </div>
+<h4>Sommes et produits</h4>
+<p>
+  Pour commencer, il 
+  est importante de comprendre comment la dérivabilité de deux fonctions se
+  transmet à leur sommes et à leur produit:
+  </p>
+<div class="pro">
+  Soient \(f,g\) dérivables en un point \(x_0\). Alors la somme et le produit de
+  \(f\) et \(g\) est dérivable en \(x_0\), et
+  <ol>
+<li>\((f+g)'(x_0)=f'(x_0)+ g'(x_0)\)
+  </li><li>\((f\cdot g)'(x_0)=f'(x_0)g(x_0)+f(x_0)g'(x_0)\)
+  </li></ol>
+</div>
+<p>
+  La deuxième propriété implique en particulier que pour toute constante \(C\),
+  \((C f(x)')=C f'(x)\).
+  </p>
+
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvereglesderivationsommeetproduit" role="button" aria-expanded="false" aria-controls="theproofpreuvereglesderivationsommeetproduit">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvereglesderivationsommeetproduit">
+                    <div class="card card-body">
+                    <p>
+  En écrivant la définition de la dérivée de \(f+ g\) en \(x_0\) et en
+  réarrangeant un peu les termes,
+  \[\begin{aligned}
+   (f+g)'(x_0)
+  &=\lim_{x\to x_0}\frac{(f+g)(x)-(f+g)(x_0)}{x-x_0}\\
+  &=\lim_{x\to x_0}\frac{f(x)+g(x)-f(x_0)-g(x_0)}{x-x_0}\\
+  &=\lim_{x\to x_0}\Bigl\{
+  \frac{f(x)-f(x_0)}{x-x_0}+ \frac{g(x)-g(x_0)}{x-x_0}\bigr\}\\
+  &=f'(x_0)+g'(x_0)\,.
+  \end{aligned}\]
+  Par définition, la dérivée de \(f\cdot g\) en \(x_0\) est 
+  \[\begin{aligned}
+  (f\cdot g)'(x_0)
+  &=\lim_{x\to x_0}\frac{(f\cdot g)(x)-(f\cdot g)(x_0)}{x-x_0}\\
+  &=\lim_{x\to x_0}\frac{f(x)g(x)-f(x_0)g(x_0)}{x-x_0}
+  \end{aligned}\]
+  En insérant \(\pm f(x_0)g(x)\) au numérateur, 
+  et en réarrangeant l'expression obtenue,
+  \[\begin{gathered}
+  \frac{f(x)g(x)-f(x_0)g(x_0)}{x-x_0}\\
+  =\frac{f(x)g(x)-f(x_0)g(x)+f(x_0)g(x)-f(x_0)g(x_0)}{x-x_0}\\
+  =\underbrace{\frac{f(x)-f(x_0)}{x-x_0}}_{\to
+  f'(x_0)}\underbrace{g(x)}_{\to g(x_0)}
+  +f(x_0)\underbrace{\frac{g(x)-g(x_0)}{x-x_0}}_{\to g'(x_0)}
+  \end{gathered}\]
+  Dans cette dernière ligne, on a utilisé le fait que \(f\) et \(g\) sont toutes
+  deux dérivables en \(x_0\). Le fait que \(g\) est dérivable implique qu'elle est
+  aussi continue en \(x_0\).
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<h4>Composées et quotients</h4>
+<div class="pro">
+  Soit \(g\) dérivable au point \(x_0\), et \(f\) dérivable au point \(a=g(x_0)\).
+  Alors \(f\circ g\) est dérivable au point \(x_0\), et 
+  \[ 
+  \boxed{(f\circ g)'(x_0)=f'(g(x_0))g'(x_0)}
+  \]
+  </div>
+
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvederiveecomposee" role="button" aria-expanded="false" aria-controls="theproofpreuvederiveecomposee">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvederiveecomposee">
+                    <div class="card card-body">
+                    <p>
+  Étudions
+  \[ (f\circ g)'(x_0)=\lim_{h\to 0}\frac{(f(g(x_0+h))-f(g(x_0))}{h}\,.
+  \]
+  </p><ul>
+<li>
+  Puisque \(g\) est dérivable en \(x_0\), il existe une fonction \(r_{x_0}\) telle
+  que 
+  \[g(x_0+h)=\underbrace{g(x_0)}_{=a}
+  +\underbrace{(g'(x_0)+r_{x_0}(h))h}_{=:H}\,.\] 
+  Remarquons que \(H\to 0\) lorsque \(h\to 0\).
+  </li><li>Puis, comme \(f\) est dérivable en \(a\), 
+  il existe une fonction \(\tilde{r}_{a}(H)\) telle que 
+  \[f(a+H)=f(a)+(f'(a)+\tilde{r}_a(H))H\,.\]
+  </li></ul><p>
+  On a donc
+  \[\begin{aligned}
+  f(g(x_0+h))=f(a+H)&=f(a)+(f'(a)+\tilde{r}_{a}(H))H\\
+  &=f(g(x_0))+f'(g(x_0))H+\tilde{r}_{a}(H)H\,,
+  \end{aligned}\]
+  ce qui permet d'écrire
+  \[\begin{aligned}
+   \frac{(f(g(x_0+h))-f(g(x_0))}{h}
+  &=\bigl(f'(g(x_0))+\tilde{r}_a(H)\bigr)\frac{H}{h}\\
+  &=\bigl(f'(g(x_0))+\tilde{r}_a(H)\bigr)(g'(x_0)+r_{x_0}(h))\\
+  \end{aligned}\]
+  Mais lorsque \(h\to 0\), \(\tilde{r}_a(H)\to 0\) et \(r_{x_0}(h)\to 0\), et donc
+  \[ 
+  \lim_{h\to 0}\frac{(f(g(x_0+h))-f(g(x_0))}{h}=f'(g(x_0))g'(x_0),
+  \]
+  ce qu'on voulait démontrer.
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<p>
+  Comme conséquence, on peut maintenant dériver d'autres types de fonctions, comme
+  des quotients:
+  </p>
+<div class="pro">
+  Soient \(f,g\) dérivables en \(x_0\). Si \(g(x_0)\neq 0\), alors \(\frac{f}{g}\)
+  est dérivable en \(x_0\), et 
+  \[ 
+  \Bigl(\frac{f}{g}\Bigr)'(x_0)
+  =\frac{f'(x_0)g(x_0)-f(x_0)g'(x_0)}{g(x_0)^2}\,.
+  \]
+  </div>
+
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvederivationquotient" role="button" aria-expanded="false" aria-controls="theproofpreuvederivationquotient">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvederivationquotient">
+                    <div class="card card-body">
+                    <p>
+  On commence par utiliser la règle de dérivation d'une composée pour dériver
+  l'inverse de \(g\) en \(x_0\):
+  \[ \Bigl(\frac{1}{g}\Bigr)'(x_0)=
+  -\frac{g'(x_0)}{g(x_0)^2}\,.
+  \]
+  On voit ensuite le quotient comme un produit, on dérive ce produit, et on met
+  tout le monde au même dénominateur:
+  \[\begin{aligned} 
+  \Bigl(\frac{f}{g}\Bigr)'(x_0)= \Bigl(f\cdot \frac{1}{g}\Bigr)'(x_0)
+  &=f'(x_0)\frac{1}{g(x_0)}+f(x_0)\Bigl(\frac{1}{g}\Bigr)'(x_0)\\
+  &=f'(x_0)\frac{1}{g(x_0)}+f(x_0)\Bigl(\frac{-g'(x_0)}{g(x_0)^2}\Bigr)\\
+  &=\frac{f'(x_0)g(x_0)-f(x_0)g'(x_0)}{g(x_0)^2}\,.
+  \end{aligned}\]
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<div class="rem">
+  Remarquons que l'on n'a pas, dans notre catalogue, de formule pour des dérivées
+  du type \((f(x)^{g(x)})'\). Pour dériver ce genre de fonctions, on prendra garde
+  à ce que \(f(x)>0\) dans le voisinage du point considéré, et on 
+  commencera toujours par 
+  <b>exponentier</b> \(f(x)\): puisque \(f(x)>0\), 
+  \[ f(x)=e^{\ln(f(x))}\,.
+  \]
+  On devrait donc considérer 
+  \[ f(x)^{g(x)}:= e^{g(x)\ln(f(x))}
+  \]
+  comme une <i>définition</i>. On calculera la dérivée de cette dernière à l'aide
+  des règles de base:
+  \[
+  (e^{g(x)\ln(f(x))})'=(g(x)\ln(f(x)))'e^{g(x)\ln(f(x))}\,.
+  \]
+  On pourra calculer cette limite une fois donnée la dérivée du logarithme
+  (section suivante).
+  </div>
+  
+  QUIZZ: si p est un polynome de degré n, alors il est n fois dérivable mais pas
+  n+1 fois
+  <div class="quiz" id="quiz8_2_1">
+  Vrai ou faux?
+  <ol>
+<li><span class="itemFULL">[  ]</span> Si \(f\) et \(g\) sont dérivables en \(x_0\), alors \(f\cdot g\) est
+  dérivable en \(x_0\).
+  </li><li><span class="itemEMPTY">[  ]</span> Si \(f\) et \(g\) ne sont pas dérivables en \(x_0\), alors
+  \(f\cdot g\) ne l'est pas non plus.
+  </li><li><span class="itemEMPTY">[  ]</span> Si \(f\) est dérivable en \(x_0\) mais \(g\) n'est pas dérivable en
+  \(x_0\), alors \(f\cdot g\) n'est pas dérivable en \(x_0\).
+  </li><li><span class="itemEMPTY">[  ]</span> Si \(f\) et \(g\) sont dérivables en \(x_0\), et si \((f\cdot
+  g)'(x_0)=0\), alors \(f'(x_0)=0\) ou \(g'(x_0)=0\).
+  </li></ol>
+<span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz8_2_1')">Solutions</button></span>
+</div><!--quizz-->
+</div>
+</body>
+</html>

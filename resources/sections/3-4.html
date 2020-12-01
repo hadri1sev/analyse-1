@@ -1,171 +1,165 @@
 <!DOCTYPE html>
 <html lang=fr>
-
 <head>
-
   <meta charset="utf-8">
   <title></title>
-
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
   </script>
-
   <!-- Bootstrap 4 & jQuery scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../content-styles.css">
-
   <!-- Custom JS -->
   <script type="text/javascript" src="../content-main.js"></script>
-
 </head>
-
 <body>
+<div class="sec" id="IDs-sectheoremetwocops-sDI"><h3>3.4 Le Théorème des deux gendarmes</h3>
 
-  <h3>3.4 Le Théorème des deux gendarmes</h3>
+<center>
 
-  <div class="video">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_gendarmes" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_gendarmes">Le Théorème des deux gendarmes</a>
-    <div class="collapse" id="IDvideodiv-v_suites_gendarmes">
-      <div class="card card-body">
-        <video class="HTMLvideo" src="../videos/v_suites_gendarmes.mp4" poster="../videos/v_suites_gendarmes_thumbnail.png" controls=true></video>
-      </div>
-    </div>
-  </div>
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_gendarmes" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_gendarmes">Le Théorème des deux gendarmes</a>
+                    <div class="collapse" id="IDvideodiv-v_suites_gendarmes">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_suites_gendarmes.mp4" poster="../videos/v_suites_gendarmes_thumbnail.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
+<div class="theo">
+<b>(Théorème des deux gendarmes)</b>
+Soient \((a_n)\), \((b_n)\) et \((x_n)\) trois suites telles que 
+\[ 
+a_n\leqslant x_n\leqslant b_n \quad\text{ pour tout n suffisamment grand.}
+\]
+Si \(\displaystyle\lim_{n\to \infty} a_n=\lim_{n\to \infty} b_n=L\), alors \((x_n)\) converge, et 
+\(\displaystyle\lim_{n\to \infty} x_n=L\).
+</div>
 
-  <div class="theo">
-    <b>(Théorème des deux gendarmes)</b>
-    Soient \((a_n)\), \((b_n)\) et \((x_n)\) trois suites telles que
-    \[
-    a_n\leqslant x_n\leqslant b_n \quad\text{ pour tout n suffisamment grand.}
-    \]
-    Si \(\displaystyle\lim_{n\to \infty} a_n=\lim_{n\to \infty} b_n=L\), alors \((x_n)\) converge, et
-    \(\displaystyle\lim_{n\to \infty} x_n=L\).
-  </div>
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvetheotwocops" role="button" aria-expanded="false" aria-controls="theproofpreuvetheotwocops">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvetheotwocops">
+                    <div class="card card-body">
+                    <p>
+Soit \(N_0\) un 
+entier tel que \(a_n\leqslant x_n\leqslant b_n\) pour tout \(n\geqslant N_0\).
+Fixons un \(\varepsilon\gt 0\).
+Soit \(N_a\) tel que \(a_n\in [L-\varepsilon,L+\varepsilon]\) pour tout \(n\geqslant N_a\).
+Soit \(N_b\) tel que \(b_n\in [L-\varepsilon,L+\varepsilon]\) pour tout \(n\geqslant N_b\).
+Soit maintenant \(N:= \max\{N_0,N_a,N_b\}\). Si \(n\geqslant N\), alors
+\(a_n\geqslant L-\varepsilon\) et \(b_n\leqslant L+\varepsilon\), donc en particulier 
+\[ L-\varepsilon\leqslant a_n\leqslant x_n\leqslant b_n\leqslant L+\varepsilon\,,
+\]
+et donc \(|x_n-L|\leqslant \varepsilon\).
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<div class="exemple">
+Considérons la suite \((x_n)_{n\geqslant 1}\), définie par
+\[x_n=\frac{2+\cos(19n^2+n^7)}{n}\,.\]
+La partie contenant \(\cos(\cdots)\) étant compliquée, on peut 
+utiliser le fait qu'elle est bornée: \(-1\leqslant \cos(\cdots)\leqslant +1\), ce qui
+permet d'écrire 
+\[ 
+\underbrace{\frac{1}{n}}_{=a_n}
+= \frac{2-1}{n}\leqslant 
+x_n\leqslant
+ \frac{2+1}{n}=\underbrace{\frac{3}{n}}_{=b_n}
+\]
+Mais, puisque 
+\[\lim_{n\to \infty} a_n=\lim_{n\to \infty} \frac1n=0\] 
+et
+\[\lim_{n\to \infty} b_n=3\lim_{n\to \infty} \frac1n=0\,,\] 
+le théorème des deux gendarmes implique que 
+\(\lim_{n\to \infty} x_n=0\).
+</div>
+<div class="exemple">
+Considérons la suite \((x_n)_{n\geqslant 1}\), définie par
+\[
+x_n=\frac{2^n}{n!}\,,\qquad  n\geqslant 1\,.
+\] 
+Comme le numérateur est un produit de \(n\) fois le même 
+nombre ''\(2\)'', alors que
+le dénominateur est un produit de \(n\) nombres dont presque tous sont 
+<i>plus grands que \(2\)</i>, le dénominateur doit croître beaucoup plus vite
+que le numérateur. Ceci suggère que \(x_n\to 0\), ce que l'on va essayer de
+montrer à l'aide du théorème des deux gendarmes.
 
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuvetheotwocops" role="button" aria-expanded="false" aria-controls="preuvetheotwocops">Preuve:</a>
-    <div class="collapse" id="preuvetheotwocops">
-      <div class="card card-body">
-        <p>Soit \(N_0\) un
-        entier tel que \(a_n\leqslant x_n\leqslant b_n\) pour tout \(n\geqslant N_0\).
-        Fixons un \(\varepsilon\gt 0\).
-        Soit \(N_a\) tel que \(a_n\in [L-\varepsilon,L+\varepsilon]\) pour tout \(n\geqslant N_a\).
-        Soit \(N_b\) tel que \(b_n\in [L-\varepsilon,L+\varepsilon]\) pour tout \(n\geqslant N_b\).
-        Soit maintenant \(N:= \max\{N_0,N_a,N_b\}\). Si \(n\geqslant N\), alors
-        \(a_n\geqslant L-\varepsilon\) et \(b_n\leqslant L+\varepsilon\), donc en particulier
-        \[ L-\varepsilon\leqslant a_n\leqslant x_n\leqslant b_n\leqslant L+\varepsilon\,,
-        \]
-        et donc \(|x_n-L|\leqslant \varepsilon\).</p>
-      </div>
-    </div>
-  </div>
+Comme \(x_n\geqslant 0\), il suffit de trouver une suite \(b_n\) telle que \(0\leqslant
+x_n\leqslant b_n\), et telle que \(b_n\to 0\).
+Si on écrit explicitement, pour tout \(n\geqslant 3\) 
+\[\begin{aligned} 
+x_n&=\frac{2\cdot 2\cdot 2\cdots 2}{n(n-1)(n-2)\cdots 3\cdot 2\cdots 1}\\
+&=
+\frac{2}{n}
+\cdot
+\underbrace{\frac{2}{n-1}}_{\leqslant 1}
+\cdot
+\underbrace{\frac{2}{n-2}}_{\leqslant 1}
+\cdots
+\underbrace{\frac{2}{3}}_{\leqslant 1}
+\cdot
+\underbrace{\frac{2}{2}}_{=1}
+\cdot \frac{2}{1}\\
+&\leqslant \frac{4}{n}=: b_n\,.
+\end{aligned}\]
+Puisque \(b_n\to 0\), ceci implique bien que \(x_n\to 0\).
+</div>
+<p>
+Voyons ensuite une conséquence utile et générale du théorème des deux gendarmes:
+</p>
+<div class="cor">
+Si \((x_n)\) est bornée et si \(y_n\to 0\), alors \(x_ny_n\to 0\).
+</div>
 
-  <div class="exemple">
-    Considérons la suite \((x_n)_{n\geqslant 1}\), définie par
-    \[x_n=\frac{2+\cos(19n^2+n^7)}{n}\,.\]
-    La partie contenant \(\cos(\cdots)\) étant compliquée, on peut
-    utiliser le fait qu'elle est bornée: \(-1\leqslant \cos(\cdots)\leqslant +1\), ce qui
-    permet d'écrire
-    \[
-    \underbrace{\frac{1}{n}}_{=a_n}
-    = \frac{2-1}{n}\leqslant
-    x_n\leqslant
-    \frac{2+1}{n}=\underbrace{\frac{3}{n}}_{=b_n}
-    \]
-    Mais, puisque
-    \[\lim_{n\to \infty} a_n=\lim_{n\to \infty} \frac1n=0\]
-    et
-    \[\lim_{n\to \infty} b_n=3\lim_{n\to \infty} \frac1n=0\,,\]
-    le théorème des deux gendarmes implique que
-    \(\lim_{n\to \infty} x_n=0\).
-  </div>
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofcorolborneefoistendverszero" role="button" aria-expanded="false" aria-controls="theproofcorolborneefoistendverszero">Preuve:</a>
+                    <div class="collapse" id="theproofcorolborneefoistendverszero">
+                    <div class="card card-body">
+                    <p>
+Comme  \((x_n)\) est bornée, il existe \(C\gt 0\) telle que \(|x_n|\leqslant C\) pour
+tout \(n\). 
+On peut donc estimer \(|x_ny_n|\) ainsi:
+\(0\leqslant |x_ny_n|=|x_n||y_n|\leqslant C|y_n|\). 
+Puisque \(y_n\to 0\), ceci implique \(C|y_n|\to 0\).
+Par le Théorème des deux gendarmes, on conclut que \(|x_ny_n|\to 0\), ce qui
+implique \(x_n y_n\to 0\).
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<div class="quiz" id="quiz3_4_1">
+Vrai ou faux?
+<ol>
+<li><span class="itemEMPTY">[  ]</span> Si \(a_n\leqslant x_n\leqslant  b_n\) pour tout \(n\) suffisamment grand, et si
+\(x_n\) ne converge pas, alors \(a_n\) et \(b_n\) ne convergent pas non plus.
+</li><li><span class="itemFULL">[  ]</span> Si \(a_n\lt x_n\lt  b_n\) pour tout \(n\) suffisamment grand, et si 
+\(a_n\to L\) et \(b_n\to L\), alors \(x_n\to L\).
+</li><li><span class="itemEMPTY">[  ]</span> Si \(a_n\leqslant x_n\leqslant  b_n\) pour tout \(n\) suffisamment grand, et si 
+\(|a_n-b_n|\to 0\), alors \(x_n\) converge.
+</li><li><span class="itemFULL">[  ]</span> 
+Si il existe \(N_1\) tel que \(x_n\geqslant a_n\) pour tout \(n\geqslant N_1\)
+et s'il existe \(N_2\) tel que \(x_n\leqslant b_n\) pour tout \(n\geqslant N_2\), 
+et si \(a_n\) et \(b_n\) convergent vers la même limite, alors \(x_n\) est
+convergente.
 
-  <div class="exemple">
-    Considérons la suite \((x_n)_{n\geqslant 1}\), définie par
-    \[
-    x_n=\frac{2^n}{n!}\,,\qquad n\geqslant 1\,.
-    \]
-    Comme le numérateur est un produit de \(n\) fois le même
-    nombre ''\(2\)'', alors que
-    le dénominateur est un produit de \(n\) nombres dont presque tous sont
-    <i>plus grands que \(2\)</i>, le dénominateur doit croître beaucoup plus vite
-    que le numérateur. Ceci suggère que \(x_n\to 0\), ce que l'on va essayer de
-    montrer à l'aide du théorème des deux gendarmes.
-
-    Comme \(x_n\geqslant 0\), il suffit de trouver une suite \(b_n\) telle que \(0\leqslant
-    x_n\leqslant b_n\), et telle que \(b_n\to 0\).
-    Si on écrit explicitement, pour tout \(n\geqslant 3\)
-    \[\begin{aligned}
-    x_n&=\frac{2\cdot 2\cdot 2\cdots 2}{n(n-1)(n-2)\cdots 3\cdot 2\cdots 1}\\
-    &=
-    \frac{2}{n}
-    \cdot
-    \underbrace{\frac{2}{n-1}}_{\leqslant 1}
-    \cdot
-    \underbrace{\frac{2}{n-2}}_{\leqslant 1}
-    \cdots
-    \underbrace{\frac{2}{3}}_{\leqslant 1}
-    \cdot
-    \underbrace{\frac{2}{2}}_{=1}
-    \cdot \frac{2}{1}\\
-    &\leqslant \frac{4}{n}=: b_n\,.
-    \end{aligned}\]
-    Puisque \(b_n\to 0\), ceci implique bien que \(x_n\to 0\).
-  </div>
-
-  <p>
-    Voyons ensuite une conséquence utile et générale du théorème des deux gendarmes:
-  </p>
-
-  <div class="cor">
-    Si \((x_n)\) est bornée et si \(y_n\to 0\), alors \(x_ny_n\to 0\).
-  </div>
-
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#corolborneefoistendverszero" role="button" aria-expanded="false" aria-controls="corolborneefoistendverszero">Preuve:</a>
-    <div class="collapse" id="corolborneefoistendverszero">
-      <div class="card card-body">
-        <p>Comme \((x_n)\) est bornée, il existe \(C\gt 0\) telle que \(|x_n|\leqslant C\) pour
-        tout \(n\).
-        On peut donc estimer \(|x_ny_n|\) ainsi:
-        \(0\leqslant |x_ny_n|=|x_n||y_n|\leqslant C|y_n|\).
-        Puisque \(y_n\to 0\), ceci implique \(C|y_n|\to 0\).
-        Par le Théorème des deux gendarmes, on conclut que \(|x_ny_n|\to 0\), ce qui
-        implique \(x_n y_n\to 0\).</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="quiz" id="quiz3_4_1">
-    Vrai ou faux?
-    <ol>
-      <li><span class="itemEMPTY">[ ]</span> Si \(a_n\leqslant x_n\leqslant b_n\) pour tout \(n\) suffisamment grand, et si
-        \(x_n\) ne converge pas, alors \(a_n\) et \(b_n\) ne convergent pas non plus.
-      <li><span class="itemFULL">[ ]</span> Si \(a_n\lt x_n\lt b_n\) pour tout \(n\) suffisamment grand, et si
-        \(a_n\to L\) et \(b_n\to L\), alors \(x_n\to L\).
-      <li><span class="itemEMPTY">[ ]</span> Si \(a_n\leqslant x_n\leqslant b_n\) pour tout \(n\) suffisamment grand, et si
-        \(|a_n-b_n|\to 0\), alors \(x_n\) converge.
-      <li><span class="itemFULL">[ ]</span>
-        Si il existe \(N_1\) tel que \(x_n\geqslant a_n\) pour tout \(n\geqslant N_1\)
-        et s'il existe \(N_2\) tel que \(x_n\leqslant b_n\) pour tout \(n\geqslant N_2\),
-        et si \(a_n\) et \(b_n\) convergent vers la même limite, alors \(x_n\) est
-        convergente.
-      <li><span class="itemEMPTY">[ ]</span>
-        Si \(|x_n|\leqslant n\) et si \(y_n\to 0\), alors \(x_ny_n\to 0\).
-      <li><span class="itemEMPTY">[ ]</span>
-        Si \(e^{x_n}\) est bornée et si \(y_n\to 0\), alors \(x_ny_n\to 0\).
-    </ol>
-    <span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_4_1')">Solutions</button></span>
-  </div>
-
+</li><li><span class="itemEMPTY">[  ]</span> 
+Si \(|x_n|\leqslant n\) et si \(y_n\to 0\), alors \(x_ny_n\to 0\).
+</li><li><span class="itemEMPTY">[  ]</span>
+Si \(e^{x_n}\) est bornée et si \(y_n\to 0\), alors \(x_ny_n\to 0\).
+</li></ol>
+<span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_4_1')">Solutions</button></span>
+</div><!--quizz-->
+</div>
 </body>
-
 </html>

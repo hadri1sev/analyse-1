@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+</head>
+<body>
+<div class="sec" id="IDs-secintroserietaylor-sDI"><h3>10.1 Introduction</h3>
+  Supposons qu'une fonction \(f\) possède des développements limités en \(x_0\), 
+  <i>de tous les ordres</i>:
+  \[\begin{aligned} 
+  f(x)&=a_0 +a_1(x-x_0) +R_1(x)\\
+  f(x)&=a_0 +a_1(x-x_0) +a_2(x-x_0)^2  +R_2(x)\\
+  f(x)&=a_0 +a_1(x-x_0) +a_2(x-x_0)^2+a_3(x-x_0)^3+ R_3(x)\\
+  \vdots&\\
+  f(x)&=a_0 +a_1(x-x_0) +a_2(x-x_0)^2 \cdots +a_n(x-x_0)^n +R_n(x)\\
+  \vdots &
+  \end{aligned}\]  
+  <p>
+  On a fait attention de nommer le reste différemment en fonction de l'ordre du
+  \(DL\).
+  On a aussi vu (premier corollaire, dans les propriétés de base) 
+  pourquoi ci-dessus, d'une ligne à l'autre, les coefficients
+  \(a_k\) restaient les mêmes.
+  
+  <br/><br/>
+  Dans cette suite de développements limités, 
+  la partie principale fournit une approximation de \(f(x)\) toujours 
+  meilleure que celle de la ligne précédente. 
+  
+  <br/><br/>
+  Se pose alors naturellement la question de savoir si il est possible  de prendre
+  une limite ''\(n\to \infty\)'', c'est-à-dire d'observer ce qui se passe quand on
+  calcule la valeur de la
+  fonction à l'aide d'une suite de développements limités d'ordres toujours plus
+  grands.
+  
+  <br/><br/>
+  Plus précisément:
+  <i>Fixons</i> un point \(x\) dans le voisinage de \(x_0\).
+  Pour que la limite \(n\to \infty\) ait un sens, deux choses doivent pouvoir être
+  vérifiées:
+  </p><ol>
+<li>D'abord, à mesure que \(n\) devient plus grand, le polynôme de la partie
+  principale contient toujours plus de termes. Dans la limite \(n\to \infty\) il
+  devient une <i>série de puissances</i> (un ''polynôme de degré infini''):
+  \[ 
+  a_0+a_1(x-x_0)+a_2(x-x_0)^2+\dots=\sum_{k=0}^\infty a_k(x-x_0)^k\,,
+  \]
+  et pour que la limite fasse du sens, il faut pouvoir montrer 
+  que cette série converge pour le \(x\) qu'on a fixé.
+  </li><li>Ensuite, il faut s'assurer 
+  que la suite de restes, au point \(x\) qu'on a fixé, tend vers zéro: 
+  \[R_n(x)\to 0\,\qquad \text{ lorsque }n\to \infty\] (Attention: ici \(x\) est
+  fixé, c'est \(n\) qui tend vers l'infini!)
+  </li></ol>
+  Si on peut vérifier ces deux conditions, cela signifie que 
+  la valeur de \(f\) en \(x\) peut se calculer à l'aide de la série:
+  \[ 
+  f(x)=\sum_{k=0}^\infty a_k(x-x_0)^k\,.
+  \]
+  On verra plus tard que 
+  ce programme est possible, sous certaines hypothèses. 
+  
+  <br/><br/>
+  Mais avant
+  cela, nous allons introduire et étudier plus systématiquement 
+  les séries de puissance du type ci-dessus.
+  
+  
+  <div class="info">
+  Pouvoir représenter une fonction à l'aide d'une série est un résultat tout à
+  fait <i>non-trivial</i>, et un des résultats centraux de l'analyse!
+  </div>
+</div>
+</body>
+</html>

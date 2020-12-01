@@ -1,272 +1,265 @@
 <!DOCTYPE html>
 <html lang=fr>
-
 <head>
-
   <meta charset="utf-8">
   <title></title>
-
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
   </script>
-
   <!-- Bootstrap 4 & jQuery scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../content-styles.css">
-
   <!-- Custom JS -->
   <script type="text/javascript" src="../content-main.js"></script>
-
 </head>
-
 <body>
-
-  <h3>1.3 Preuves par récurrence</h3>
-  <p>
-    La méthode de <i>preuve par récurrence</i> (appelée aussi
-    <i>preuve par induction</i>) est une technique de démonstration qui, quand elle
-    s'applique, permet de démontrer une infinité d'affirmations en seulement deux
-    étapes.
-
-  <div class="video">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_recurrence_NEW" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_recurrence_NEW">Preuves par récurrence</a>
-    <div class="collapse" id="IDvideodiv-v_recurrence_NEW">
-      <div class="card card-body">
-        <video src="../videos/v_recurrence_NEW.mp4" poster="../videos/v_recurrence_thumbnail.png" controls=true></video>
-      </div>
-    </div>
-  </div>
-
-  Supposons que l'on définisse,
-  pour chaque entier \(n\geqslant 1\), une certaine propriété
-  \(\mathcal{P}(n)\). Pour chaque \(n\), \(\mathcal{P}(n)\) est soit vraie, soit fausse.
-  </p>
-
-  <div class="exemple"> Soit
-    \(\mathcal{P}(n)=\)''le nombre entier \(n\) est divisible par \(2\)''.
-    Alors \(\mathcal{P}(1)\) est fausse, \(\mathcal{P}(2)\) est vraie, \(\mathcal{P}(3)\) est fausse,
-    etc. Donc on peut tout de suite résoudre tous les cas:
-    \(\mathcal{P}(n)\) est vraie si \(n\) est pair, fausse si \(n\) est impair.
-  </div>
-
-  <p>
-    Supposons ensuite
-    que dans un cas concret, on ait des raisons de penser
-    que <i>toutes</i> les propriétés sont vraies:
-    \(\mathcal{P}(1)\) est vraie,
-    \(\mathcal{P}(2)\) est vraie,
-    \(\mathcal{P}(3)\) est vraie, etc.
+<div class="sec" id="IDs-secrecurrence-sDI"><h3>1.3 Preuves par récurrence</h3>
+<p>
+La méthode de <i>preuve par récurrence</i> (appelée aussi 
+<i>preuve par induction</i>) est une technique de démonstration qui, quand elle
+s'applique, permet de démontrer une infinité d'affirmations en seulement deux
+étapes.
 
 
-    <br><br>
-    Si ces propriétés \(\mathcal{P}(n)\) n'ont rien à voir les unes avec les autres, on
-    n'a d'autre alternative que de les vérifier les unes après les autres.
-  </p>
+</p>
+<center>
 
-  <div class="exemple">
-    Supposons qu'un certain
-    univers soit infini, et contienne une infinité de galaxies.
-    Soit \(\mathcal{P}(n)\) la propriété ''il existe, dans cet univers, une
-    galaxie dans laquelle on peut trouver
-    exactement \(n\) planètes sur lesquelles on trouve la vie''.
-    Dans ce cas, si on fixe un \(n\) et qu'on se pose la question de savoir si
-    \(\mathcal{P}(n)\) est vraie ou fausse, on n'a qu'un seul moyen: parcourir tout
-    l'univers jusqu'à trouver une galaxie contenant exactement \(n\) planètes sur
-    lesquelles on trouve la vie. Il n'y a aucune <i>corrélation</i> entre les
-    propriétés \(\mathcal{P}(n)\) pour des \(n\) différents. Par exemple,
-    savoir que
-    \(\mathcal{P}(n-1)\) et \(\mathcal{P}(n+1)\) son vraies n'implique pas forcément que
-    \(\mathcal{P}(n)\) soit vraie aussi.
-  </div>
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_recurrence_NEW" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_recurrence_NEW">Preuves par récurrence</a>
+                    <div class="collapse" id="IDvideodiv-v_recurrence_NEW">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_recurrence_NEW.mp4" poster="../videos/v_recurrence_thumbnail.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
 
-  <p>
-    Mais, si on a de la chance, il se pourrait qu'il existe une relation
-    entre ces propriétés qui permette de gagner du temps.
-    Plus particulièrement, il
-    se pourrait qu'on remarque qu'à chaque fois qu'une de ces propriétés
-    est vraie, disons la \(n\)-ème, alors la \((n+1)\)-ème est automatiquement
-    vraie aussi.
-  </p>
+Supposons que l'on définisse, 
+pour chaque entier \(n\geqslant 1\), une certaine propriété
+\(\mathcal{P}(n)\). Pour chaque \(n\), \(\mathcal{P}(n)\) est soit vraie, soit fausse.
 
-  <div class="exemple">
-    Supposons que l'on ait devant nous une très longue table sur laquelle sont posés
-    une infinité d'ordinateurs, numérotés \(1,2,3,\dots\). Sur chacune de ces
-    machines est installé un système opérationnel non-libre
-    issu d'une grande compagnie.
 
-    <center><img src="../images/i_recurrence_Ruindows.png" class="img-fluid" width="350"></center>
+<div class="exemple"> Soit 
+\(\mathcal{P}(n)=\)''le nombre entier \(n\) est divisible par \(2\)''. 
+Alors \(\mathcal{P}(1)\) est fausse, \(\mathcal{P}(2)\) est vraie, \(\mathcal{P}(3)\) est fausse, 
+etc. Donc on peut tout de suite résoudre tous les cas: 
+\(\mathcal{P}(n)\) est vraie si \(n\) est pair, fausse si \(n\) est impair.
+</div>
+<p>
+Supposons ensuite 
+que dans un cas concret, on ait des raisons de penser
+que <i>toutes</i> les propriétés sont vraies:
+\(\mathcal{P}(1)\) est vraie,
+\(\mathcal{P}(2)\) est vraie,
+\(\mathcal{P}(3)\) est vraie, etc.
 
-    On suppose que ces ordinateurs sont tous allumés, et que pour tout \(n\), le
-    \(n\)-ème ordinateur envoie constamment des données non-cryptées
-    vers son voisin \(n+1\).
-    Dans ce cas, il est absolument certain
-    que si l'ordinateur \(n\) est infecté par un virus,
-    alors l'ordinateur \(n+1\) est infecté
-    aussi. En d'autres termes, si on définit la propriété
-    \(\mathcal{P}(n)=\)''le \(n\)ème ordinateur est infecté par un virus'', on garantit
-    donc que
-    si \(\mathcal{P}(n)\) est vraie, alors \(\mathcal{P}(n+1)\) est vraie aussi.
 
-    <br><br>
-    Ceci a l'embarrassante conséquence
-    suivante: on peut affirmer avec certitude que si
-    <i>un seul</i> de ces ordinateurs est infecté, alors
-    tous les suivants le sont aussi!
-    En particulier, si le premier est infecté, alors tous sont infectés.
-  </div>
+<br/><br/>
+Si ces propriétés \(\mathcal{P}(n)\) n'ont rien à voir les unes avec les autres, on
+n'a d'autre alternative que de les vérifier les unes après les autres. 
+</p>
+<div class="exemple">
+Supposons qu'un certain 
+univers soit infini, et contienne une infinité de galaxies.
+Soit \(\mathcal{P}(n)\) la propriété ''il existe, dans cet univers, une 
+galaxie dans laquelle on peut trouver
+exactement \(n\) planètes sur lesquelles on trouve la vie''.
+Dans ce cas, si on fixe un \(n\) et qu'on se pose la question de savoir si
+\(\mathcal{P}(n)\) est vraie ou fausse, on n'a qu'un seul moyen: parcourir tout
+l'univers jusqu'à trouver une galaxie contenant exactement \(n\) planètes sur
+lesquelles on trouve la vie. Il n'y a aucune <i>corrélation</i> entre les
+propriétés \(\mathcal{P}(n)\) pour des \(n\) différents. Par exemple, 
+savoir que 
+\(\mathcal{P}(n-1)\) et \(\mathcal{P}(n+1)\) son vraies n'implique pas forcément que
+\(\mathcal{P}(n)\) soit vraie aussi.
+</div>
+<p>
+Mais, si on a de la chance, il se pourrait qu'il existe une relation
+entre ces propriétés qui permette de gagner du temps. 
+Plus particulièrement, il
+se pourrait qu'on remarque qu'à chaque fois qu'une de ces propriétés
+est vraie, disons la \(n\)-ème, alors la \((n+1)\)-ème est automatiquement
+vraie aussi.
+</p>
+<div class="exemple">
+Supposons que l'on ait devant nous une très longue table sur laquelle sont posés
+une infinité d'ordinateurs, numérotés \(1,2,3,\dots\). Sur chacune de ces
+machines est installé un système opérationnel non-libre 
+issu d'une grande compagnie.
 
-  <p>
-    La méthode de <i>démonstration par récurrence</i> consiste à donner
-    une démonstration dans laquelle on parvient à faire
-    apparaître une structure semblable à celle de
-    ce dernier exemple. On la résume comme suit:
+<br/><br/><center><img class="img-fluid" src="../images/i_recurrence_Ruindows.png" width="350"/></center>
 
-    <br><br>
-    Montrer <b>par récurrence</b>
-    qu'une infinité de propriétés \(\mathcal{P}(n)\) (\(n=1,2,3,\dots\)) sont vraies,
-    cela consiste
-  <ol>
-    <li>à
-      vérifier que la première propriété \(\mathcal{P}(1)\) est vraie,
-      (<b>initialisation</b>), puis
-    <li>à vérifier que quel que soit l'indice \(n\geqslant 1\),
-      si \(\mathcal{P}(n)\) est vraie, alors \(\mathcal{P}(n+1)\) est
-      vraie aussi (<b>pas d'induction</b>).
-  </ol>
-  Si on peut effectivement vérifier
-  ces deux étapes, alors 1. implique que \(\mathcal{P}(1)\) est vraie,
-  mais alors 2. implique que \(\mathcal{P}(2)\) est vraie aussi,
-  mais alors 2. implique que \(\mathcal{P}(3)\) est vraie aussi, etc.
-  Ainsi, on a bien vérifié toutes les propriétés.
-  </p>
+On suppose que ces ordinateurs sont tous allumés, et que pour tout \(n\), le
+\(n\)-ème ordinateur envoie constamment des données non-cryptées 
+vers son voisin \(n+1\). 
+Dans ce cas, il est absolument certain 
+que si l'ordinateur \(n\) est infecté par un virus, 
+alors l'ordinateur \(n+1\) est infecté
+aussi. En d'autres termes, si on définit la propriété 
+\(\mathcal{P}(n)=\)''le \(n\)ème ordinateur est infecté par un virus'', on garantit
+donc que
+si \(\mathcal{P}(n)\) est vraie, alors \(\mathcal{P}(n+1)\) est vraie aussi.
 
-  <div class="info">
-    Pour que le pas d'induction ait une chance de fonctionner,
-    il faut évidemment que les propriétés \(\mathcal{P}(n)\) et
-    \(\mathcal{P}(n+1)\) puissent être mises en relation! Et là, la difficulté
-    est de travailler avec un \(n\) quelconque, dont on ne spécifie pas
-    la valeur; dans les situations concrètes,
-    ceci implique en général un calcul <i>littéral</i>, dans lequel on
-    manipule ce \(n\) inconnu.
-  </div>
+<br/><br/>
+Ceci a l'embarrassante conséquence 
+suivante: on peut affirmer avec certitude que si 
+<i>un seul</i> de ces ordinateurs est infecté, alors 
+tous les suivants le sont aussi! 
+En particulier, si le premier est infecté, alors tous sont infectés.
+</div>
+<p>
+La méthode de <i>démonstration par récurrence</i> consiste à donner
+une démonstration dans laquelle on parvient à faire 
+apparaître une structure semblable à celle de
+ce dernier exemple. On la résume comme suit:
 
-  <div class="exemple">
-    Supposons que l'on veuille montrer la jolie formule suivante, valable
-    pour tout \(n\in \mathbb{N}^*\):
-    \[
-    \boxed{1+2+3+4+\cdots +n=\frac{n(n+1)}{2}\,.}
-    \]
-    Commençons par nommer les deux membres de l'identité ci-dessus, en posant
-    \[
-    a_n:=
-    1+2+3+4+\cdots +n\,,\qquad\text{ et }\qquad
-    b_n:=\frac{n(n+1)}{2}\,.
-    \]
-    Notre but est donc de vérifier que \(a_n=b_n\) pour tout \(n\geqslant 1\).
+<br/><br/>
+Montrer <b>par récurrence</b> 
+qu'une infinité de propriétés \(\mathcal{P}(n)\) (\(n=1,2,3,\dots\)) sont vraies,
+cela consiste
+</p><ol>
+<li>à
+vérifier que la première propriété \(\mathcal{P}(1)\) est vraie, 
+(<b>initialisation</b>), puis
+</li><li>à vérifier que quel que soit l'indice \(n\geqslant 1\), 
+si \(\mathcal{P}(n)\) est vraie, alors \(\mathcal{P}(n+1)\) est
+vraie aussi (<b>pas d'induction</b>).
+</li></ol>
+Si on peut effectivement vérifier 
+ces deux étapes, alors 1. implique que \(\mathcal{P}(1)\) est vraie,
+mais alors 2. implique que \(\mathcal{P}(2)\) est vraie aussi, 
+mais alors 2. implique que \(\mathcal{P}(3)\) est vraie aussi, etc.
+Ainsi, on a bien vérifié toutes les propriétés.
 
-    <br><br>
-    Pour un \(n\) spécifique pas trop grand, on peut toujours le vérifier
-    en calculant \(a_n\) et \(b_n\). Par exemple,
-    <ul>
-      <li>
-        pour \(n=1\), \(a_1=1\) et \(b_1=\frac{1\cdot 2}{2}=1\),
-      <li>
-        pour \(n=2\), on a \(a_2=1+2=3\) et \(b_2=\frac{2\cdot 3}{2}=3\).
-    </ul>
-    On voit donc que \(a_1=b_1\) et \(a_2=b_2\).
 
-    <br><br>
-    On pourrait continuer à vérifier la relation ''\(a_n=b_n\)'' pour des \(n\)
-    toujours plus grands, en calculant les nombres
-    \(a_n\) et \(b_n\) ''à la main'', et en vérifiant qu'ils sont effectivement
-    égaux.
-    Mais ceci n'exclut pas
-    qu'il existe un \(n\), éventuellement très grand, pour lequel \(a_n\neq
-    b_n\)!
+<div class="info">
+Pour que le pas d'induction ait une chance de fonctionner, 
+il faut évidemment que les propriétés \(\mathcal{P}(n)\) et
+\(\mathcal{P}(n+1)\) puissent être mises en relation! Et là, la difficulté 
+est de travailler avec un \(n\) quelconque, dont on ne spécifie pas
+la valeur; dans les situations concrètes, 
+ceci implique en général un calcul <i>littéral</i>, dans lequel on
+manipule ce \(n\) inconnu.
+</div>
+<div class="exemple">
+Supposons que l'on veuille montrer la jolie formule suivante, valable 
+pour tout \(n\in \mathbb{N}^*\):
+\[ 
+\boxed{1+2+3+4+\cdots +n=\frac{n(n+1)}{2}\,.}
+\]
+Commençons par nommer les deux membres de l'identité ci-dessus, en posant
+\[ 
+a_n:= 
+1+2+3+4+\cdots +n\,,\qquad\text{ et }\qquad
+b_n:=\frac{n(n+1)}{2}\,.
+\]
+Notre but est donc de vérifier que \(a_n=b_n\) pour tout \(n\geqslant 1\).
 
-    <br><br>
-    Définissons donc, pour tout \(n\geqslant 1\),
-    <center>
-      \(\mathcal{P}(n)\):=''pour l'entier \(n\), \(a_n=b_n\)''
-    </center>
-    Montrons, par récurrence, que pour tout \(n\geqslant 1\),
-    la propriété \(\mathcal{P}(n)\) est vraie.
-    <ol>
-      <li>
-        Initialisation: on a déjà vérifié plus haut, ''à la main'',
-        que \(a_1=b_1\), et donc que \(\mathcal{P}(1)\) est vraie.
-      <li>Pas d'induction: supposons que pour un \(n\) donné (dont on n'a pas besoin
-        de spécifier la valeur!),
-        \(\mathcal{P}(n)\) est vraie, c'est-à-dire que
-        \[
-        a_n=b_n\,.
-        \]
-        Pour montrer que ceci entraîne que \(\mathcal{P}(n+1)\) est vraie, on va faire un
-        calcul, à l'issue duquel on obtiendra que
-        \(a_{n+1}=b_{n+1}\). Or la structure du problème fait que \(a_{n+1}\)
-        peut être
-        relié à \(a_n\). En effet,
-        \[ a_{n+1}=1+2+3+4+\cdots+ n+(n+1)=a_n+(n+1)\,.
-        \]
-        Mais, puisque l'on est en train de supposer
-        que \(a_n=b_n\), on peut l'utiliser et faire un peu d'arithmétique:
-        \[\begin{aligned}
-        a_{n+1}=b_n+(n+1)&=\frac{n(n+1)}{2}+(n+1)\\
-        &=\frac{n(n+1)+2(n+1)}{2}
-        =\frac{(n+1)(n+2)}{2}\,.
-        \end{aligned}\]
-        Mais comme
-        \[
-        b_{n+1}=\frac{(n+1)((n+1)+1)}{2}=\frac{(n+1)(n+2)}{2}\,,
-        \]
-        on a bien montré que \(a_{n+1}=b_{n+1}\).
-        Ceci montre que <i>si</i> \(\mathcal{P}(n)\) est vraie,
-        alors \(\mathcal{P}(n+1)\) est vraie aussi.
-        Mais comme l'initialisation a été vérifiée, on a donc bien montré que \(\mathcal{P}(n)\)
-        est vraie pour tout \(n\geqslant 1\).
-    </ol>
-  </div>
+<br/><br/>
+Pour un \(n\) spécifique pas trop grand, on peut toujours le vérifier
+en calculant \(a_n\) et \(b_n\). Par exemple, 
+<ul>
+<li>
+pour \(n=1\), \(a_1=1\) et \(b_1=\frac{1\cdot 2}{2}=1\),
+</li><li>
+pour \(n=2\), on a \(a_2=1+2=3\) et \(b_2=\frac{2\cdot 3}{2}=3\).
+</li></ul>
+On voit donc que \(a_1=b_1\) et \(a_2=b_2\).
 
-  <div class="exemple">
-    En utilisant la même technique, on peut montrer
-    que pour tout \(n\in \mathbb{N}\),
-    \[
-    1^2+2^2+3^2+4^2+\cdots +n^2=\frac{n(n+1)(2n+1)}{6}\,.
-    \]
-    (On utilisera cette formule dans le chapitre sur l'intégration.)
-  </div>
+<br/><br/>
+On pourrait continuer à vérifier la relation ''\(a_n=b_n\)'' pour des \(n\)
+toujours plus grands, en calculant les nombres 
+\(a_n\) et \(b_n\) ''à la main'', et en vérifiant qu'ils sont effectivement
+égaux.
+Mais ceci n'exclut pas 
+qu'il existe un \(n\), éventuellement très grand, pour lequel \(a_n\neq
+b_n\)!
 
-  Faire: l'importance de bien vérifier l'initialisation.
+<br/><br/>
+Définissons donc, pour tout \(n\geqslant 1\),
+<center>
+\(\mathcal{P}(n)\):=''pour l'entier \(n\), \(a_n=b_n\)''
+</center>
+Montrons, par récurrence, que pour tout \(n\geqslant 1\),
+la propriété \(\mathcal{P}(n)\) est vraie.
+<ol>
+<li>
+Initialisation: on a déjà vérifié plus haut, ''à la main'', 
+que \(a_1=b_1\), et donc que \(\mathcal{P}(1)\) est vraie.
+</li><li>Pas d'induction: supposons que pour un \(n\) donné (dont on n'a pas besoin
+de spécifier la valeur!), 
+\(\mathcal{P}(n)\) est vraie, c'est-à-dire que 
+\[ 
+a_n=b_n\,.
+\]
+Pour montrer que ceci entraîne que \(\mathcal{P}(n+1)\) est vraie, on va faire un
+calcul, à l'issue duquel on obtiendra que 
+\(a_{n+1}=b_{n+1}\).  Or la structure du problème fait que \(a_{n+1}\) 
+peut être
+relié à \(a_n\). En effet,
+\[ a_{n+1}=1+2+3+4+\cdots+ n+(n+1)=a_n+(n+1)\,.
+\]
+Mais, puisque l'on est en train de supposer 
+que \(a_n=b_n\), on peut l'utiliser et faire un peu d'arithmétique:
+\[\begin{aligned}
+a_{n+1}=b_n+(n+1)&=\frac{n(n+1)}{2}+(n+1)\\
+&=\frac{n(n+1)+2(n+1)}{2}
+=\frac{(n+1)(n+2)}{2}\,.
+\end{aligned}\]
+Mais comme 
+\[ 
+b_{n+1}=\frac{(n+1)((n+1)+1)}{2}=\frac{(n+1)(n+2)}{2}\,,
+\]
+on a bien montré que \(a_{n+1}=b_{n+1}\).
+Ceci montre que <i>si</i> \(\mathcal{P}(n)\) est vraie, 
+alors \(\mathcal{P}(n+1)\) est vraie aussi.
+Mais comme l'initialisation a été vérifiée, on a donc bien montré que \(\mathcal{P}(n)\)
+est vraie pour tout \(n\geqslant 1\).
+</li></ol>
+</div>
+<div class="exemple">
+En utilisant la même technique, on peut montrer 
+que pour tout \(n\in \mathbb{N}\), 
+\[ 
+1^2+2^2+3^2+4^2+\cdots +n^2=\frac{n(n+1)(2n+1)}{6}\,.
+\]
+(On utilisera cette formule dans le chapitre sur l'intégration.)
+</div>
 
-  <h4>La formule du binôme de Newton</h4>
 
-  <p>
-  </p>
 
-  <div class="lem">(formule du binôme de Newton)
-    Soient \(x,y\in \mathbb{R}\). Alors pour tout entier \(n\geqslant 1\),
-    \[
-    (x+y)^n=\sum_{k=0}^n\binom{n}{k}x^{n-k}y^k\,.
-    \]
-  </div>
 
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuveformulebinomenewton" role="button" aria-expanded="false" aria-controls="preuveformulebinomenewton">Preuve:</a>
-    <div class="collapse" id="preuveformulebinomenewton">
-      <div class="card card-body">
-        <p>(Voir la vidéo)</p>
-      </div>
-    </div>
-  </div>
 
+Faire: l'importance de bien vérifier l'initialisation.
+
+<h4>La formule du binôme de Newton</h4>
+<p>
+</p>
+<div class="lem">(formule du binôme de Newton)
+Soient \(x,y\in \mathbb{R}\). Alors pour tout entier \(n\geqslant 1\),
+\[ 
+(x+y)^n=\sum_{k=0}^n\binom{n}{k}x^{n-k}y^k\,.
+\]
+</div>
+
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuveformulebinomenewton" role="button" aria-expanded="false" aria-controls="theproofpreuveformulebinomenewton">Preuve:</a>
+                    <div class="collapse" id="theproofpreuveformulebinomenewton">
+                    <div class="card card-body">
+                    <p>
+(Voir la vidéo)
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+</div>
 </body>
-
 </html>

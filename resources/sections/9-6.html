@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+</head>
+<body>
+<div class="sec" id="IDs-seccompositiondeDL-sDI"><h3>9.6 Composition de DL</h3>
+<p>
+  Supposons qu'on veuille un \(DL(n)\) d'une fonction \(f\) autour d'un point 
+  \(x_0\), et que 
+  cette fonction soit en fait une composée:
+  \[ f(x)=(g\circ h)(x)=g(h(x))\,.  \]
+  On supposera, pour simplifier l'exposition, 
+  que les fonctions \(g\) et \(h\) possèdent des dérivées de tous les
+  ordres.
+  </p>
+<div class="info">
+  A priori, on pourrait
+  utiliser la formule de Taylor, qui permet d'obtenir un développement limité 
+  pour \(f\) en passant par les dérivées \(f^{(1)}(x_0), \dots, f^{(k)}(x_0)\).
+  Mais comme \(f\) est une composée, le calcul de \(f^{(k)}(x)\), pour \(k\),
+  risque bien d'être compliqué...
+  </div>
+<h4>Cas simples</h4>
+<p>
+  Voyons un exemple simple de composée 
+  dans lequel on peut éviter de passer par le calcul des grandes 
+  dérivées de \(f\).
+  </p>
+<div class="exemple">
+  Fixons un entier \(n\), grand, et cherchons un \(DL(n)\) de 
+  \[f(x)=\frac{1}{1+x^2}\,,\]
+  autour de \(x=0\). Cette fonction rappelle une fonction déjà rencontrée plus
+  tôt, \(g(x)=\frac{1}{1-x}\), dont on a déjà calculé le \(DL(n)\)
+  autour de \(x_0=0\),
+  \[ 
+  g(x)=1+x+x^2+x^3+\cdots +x^n+R(x)\,,
+  \]
+  où \(R(x)=x^n\varepsilon(x)\).
+  Écrivons donc
+  \[ f(x)=\frac{1}{1-(-x^2)}=g(h(x))\,,
+  \]
+  où \(h(x)=-x^2\). 
+  Comme \(h\) est proche de \(0\) lorsque \(x\) est proche de \(x_0=0\), 
+  on peut l'injecter directement 
+  dans le \(DL\) de \(g\), ce qui donne le \(DL\) de \(f=g\circ h\):
+  \[\begin{aligned}
+  g(h(x))
+  &=1+h(x)+h(x)^2+h(x)^3+\cdots +h(x)^n+R(h(x))\\
+  &= 1-x^2+x^4-x^6+\dots+(-1)^nx^{2n}+R(-x^2)\\
+  \end{aligned}\]
+  Si on regarde le reste de plus près,
+  \[R(-x^2)=(-x^2)^n\varepsilon(-x^2)=x^{2n}\tilde\varepsilon(x)\,,\]
+  où on a posé \(\tilde\varepsilon(x):= (-1)^n\varepsilon(-x^2)\), qui tend bien
+  vers zéro lorsque \(x\to 0\).
+  
+  <br/><br/> 
+  On a donc
+  \[f(x)=
+  1-x^2+x^4-x^6+\dots+(-1)^nx^{2n}+x^{2n}\tilde\varepsilon(x)\,.
+  \]
+  </div>
+<p>
+  On peut utiliser une idée semblable pour des développements qui ne sont pas
+  forcément autour de \(x=0\):
+  </p>
+<div class="exemple">
+  Soit 
+  \[f(x)=\frac{1}{x}\,.\] 
+  Cherchons un \(DL(n)\) de \(f\) autour de \(x_0=3\).
+  Ici aussi, on pourrait facilement calculer les dérivées de \(f\) d'ordre
+  quelconque (voir plus bas), mais on peut aussi récrire \(f\) en utilisant le fait
+  qu'on l'étudie autour de \(x_0=3\):
+  \[\begin{aligned}
+  \frac{1}{x}
+  &=\frac{1}{3+(x-3)}\\
+  &=\frac13\frac{1}{1+\frac{x-3}{3}}\\
+  &=\frac13 g(h(x))\,,
+  \end{aligned}\]
+  où \(g(x)=\frac{1}{1-x}\) et \(h(x)=-\frac{x-3}{3}\).
+  Quand \(x\) est proche de \(x_0=3\), \(h(x)\) est proche de zéro; on peut donc
+  directement injecter \(h(x)\) dans le \(DL(n)\):
+  \[\begin{aligned}
+   f(x)&=\frac13\Bigl\{1+h(x)+h(x)^2+h(x)^3+\cdots+h(x)^n+R(h(x))\Bigr\}\\
+  &={\scriptsize \frac13\Bigl\{1-\frac13(x-3)+\frac{1}{3^2}(x-3)^2-\frac{1}{3^3}(x-3)^3
+  +\cdots+\frac{(-1)^n}{3^{n}}(x-3)^n+R(-\frac{x-3}{3})\Bigr\} }\\
+  &={\scriptsize \frac13-\frac1{3^2}(x-3)+\frac{1}{3^3}(x-3)^2-\frac{1}{3^4}(x-3)^3
+  +\cdots+\frac{(-1)^n}{3^{n+1}}(x-3)^n+\tilde R(x) }
+  \end{aligned}\]
+  Remarquons que l'on retrouve bien ce qu'on aurait en passant par la formule de
+  Taylor, puisque pour \(f(x)=\frac1x\), \(f^{(n)}(x)=(-1)^nn!x^{-(n+1)}\), et
+  donc
+  \[ 
+  \frac{f^{(n)}(3)}{n!}(x-3)^n=\frac{(-1)^n}{3^{n+1}}(x-3)^n\,.
+  \]
+  </div>
+<h4>Cas plus compliqués</h4>
+<p>
+  Dans les deux 
+  exemples ci-dessus, \(h(x)\) était un petit polynôme, que l'on a pu
+  directement injecter dans le \(DL\) de \(g\), pour obtenir le \(DL\) de \(g\circ
+  h\). Que faire, alors, si \(h\) n'est plus un polynôme?
+  </p>
+<div class="info">
+  Par exemple, comment calculer un \(DL(n)\) de 
+  \[ f(x)=\ln(1+\sin(x))
+  \]
+  autour de \(x_0=0\)? 
+  L'idée est que l'on connaît le \(DL(n)\) de \(\ln(1+z)\) pour \(z\) autour de zéro:
+  \[ 
+  \ln(1+z)=z-\frac{z^2}{2}+\frac{z^3}{3}-\frac{z^4}{4}+\cdots
+  +\frac{(-1)^{n+1}z^n}{n}+R(z)\,,
+  \]
+  Comme \(\sin(x)\) est petit lorsque \(x\) 
+  est proche de \(0\),
+  on aimerait utiliser cette expression pour \(z=\sin(x)\):
+  \[\begin{aligned} 
+  \ln(1&+\sin(x))\\
+  &={\small \sin(x)-\frac{(\sin(x))^2}{2}+\frac{(\sin(x))^3}{3}+\cdots
+  +\frac{(-1)^{n+1}(\sin(x))^n}{n}+R((\sin(x)))\,.}
+  \end{aligned}\]
+  Cette jolie formule est correcte, mais ce n'est pas un développement limité
+  (''partie principale\(+\)reste'')! Donc ce qu'on peut faire ensuite, 
+  c'est utiliser le \(DL\) du sinus et l'injecter dans cette expression...
+  </div>
+<p>
+  Soit donc \(f\) une composée: 
+  \[f(x)=g(h(x))\,.\]
+  </p>
+<div class="pro"> Soient
+  <ol>
+<li>
+  \(h(x)\) une fonction possédant un \(DL(n)\) autour de \(x_0\), et 
+  </li><li>
+  \(g(z)\) une fonction possédant un \(DL(n)\) autour de \(z_0=h(x_0)\). 
+  </li></ol>
+  Alors 
+  \(f(x):= g(h(x))\) possède un \(DL(n)\) autour de \(x_0\), dont la partie
+  principale s'obtient comme suit: on injecte la partie principale du
+  développement de \(z=h(x)\) dans la partie principale du développement de
+  \(g(z)\), on développe, et 
+  <b>on ne garde que le terme constant, et les termes contenant \((x-x_0)^k\), avec \(k \leqslant n\)</b>.
+  </div>
+
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvecomposeeDLhorrible" role="button" aria-expanded="false" aria-controls="theproofpreuvecomposeeDLhorrible">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvecomposeeDLhorrible">
+                    <div class="card card-body">
+                    <p>
+  (Omise, même si c'est un calcul direct sans difficulté.)
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<div class="info">
+  Ce qui est surprenant, c'est qu'on n'a besoin de se concentrer que sur
+  les parties principales, on peut n'a pas besoin de regarder les restes de trop
+  près!
+  </div>
+<div class="exemple">
+  Cherchons le
+  \(DL(3)\) de \(f(x)=\ln(1+\sin(x))\) autour de \(x_0=0\).
+  On commence par identifier la composition: \(f(x)=g(h(x))\), où
+  \(g(z)=\ln(1+z)\), \(h(x)=\sin (x)\).
+  Prenons un \(DL(3)\) pour \(h(x)\),
+  \[ 
+  \sin(x)=x-\frac{x^3}{3!}+x^3\varepsilon_s(x)\,.
+  \]
+  et un \(DL(3)\) pour \(g(z)\):
+  \[
+  \ln(1+z)=z-\frac{z^2}{2}+\frac{z^3}{3}+z^3\varepsilon_{log}(z)\,.
+  \]
+  Maintenant, on ne regarde <i>que les parties principales</i>:
+  on injecte la partie principale du \(DL(3)\) du sinus dans la partie principale 
+  du \(DL(3)\) du logarithme, on développe, 
+  on regroupe les puissances en ordre croissant, et on
+  ne garde que les puissances \(\leqslant 3\):
+  \[\begin{aligned}
+  z-\frac{z^2}{2}+\frac{z^3}{3}\Big|_{z=x-\frac{x^3}{3!}}
+  &=
+  \Bigl\{
+  x-\frac{x^3}{3!}
+  \Bigr\}
+  -\frac12
+  \Bigl\{
+  x-\frac{x^3}{3!}
+  \Bigr\}^2
+  +\frac13
+  \Bigl\{
+  x-\frac{x^3}{3!}
+  \Bigr\}^3\\
+  &=\underbrace{x-\frac12 x^2+\frac16 x^3}_{\text{puissances}\leqslant
+  3}+\underbrace{\cdots}_{\text{puissances }>3} 
+  \end{aligned}\]
+  Donc le \(DL(3)\) est donné par
+  \[ 
+  \ln(1+\sin(x))=
+  x-\frac12 x^2+\frac16 x^3+x^3\varepsilon(x)\,.
+  \]
+  </div>
+</div>
+</body>
+</html>

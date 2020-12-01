@@ -1,171 +1,154 @@
 <!DOCTYPE html>
 <html lang=fr>
-
 <head>
-
   <meta charset="utf-8">
   <title></title>
-
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
   </script>
-
   <!-- Bootstrap 4 & jQuery scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../content-styles.css">
-
   <!-- Custom JS -->
   <script type="text/javascript" src="../content-main.js"></script>
-
 </head>
-
 <body>
+<div class="sec" id="IDs-secsommesfinies-sDI"><h3>1.1 Sommes finies</h3>
+<h4>Le symbole ''somme''</h4>
 
-  <h3>1.1 Sommes finies</h3>
+<center>
 
-  <h4>Le symbole ''somme''</h4>
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_elementaire_sommes" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_elementaire_sommes">Sommes finies</a>
+                    <div class="collapse" id="IDvideodiv-v_elementaire_sommes">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_elementaire_sommes.mp4" poster="../videos/v_elementaire_sommes_thumbnail.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
+<p>
+Lorsqu'on considère des sommes de beaucoup de nombres, 
+on a avantage à utiliser
+une notation compacte, qui évite d'écrire explicitement tous les termes de la
+somme:
+\[ 
+\boxed{x_1+x_2+\cdots+x_N\equiv \sum_{k=1}^Nx_k\,.}
+\]
+On lit ce dernier symbole
+''<i>somme des \(x_k\), pour \(k\) allant de \(1\) à \(N\)</i>, et on
+appelle \(x_k\) le <b>terme général</b> de la somme.
 
-  <div class="video">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_elementaire_sommes" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_elementaire_sommes">Sommes finies</a>
-    <div class="collapse" id="IDvideodiv-v_elementaire_sommes">
-      <div class="card card-body">
-        <video src="../videos/v_elementaire_sommes.mp4" poster="../videos/v_elementaire_sommes_thumbnail.png" controls=true></video>
-      </div>
-    </div>
-  </div>
+<br/><br/>
+Remarquons que 
+l'indice \(k\) utilisé ci-dessus est <b>muet</b>, dans le sens où il n'est
+utilisé que pour nommer l'entier sur lequel on somme. On pourrait donc aussi le
+nommer différemment:
+\[ 
+\sum_{k=1}^Nx_k =\sum_{j=1}^Nx_j =\sum_{n=1}^Nx_n\,.
+\]
+</p>
+<div class="lem">
+La somme satisfait aux propriétés suivantes.
+<ul>
+<li>Pour toute constante \(\lambda\in \mathbb{R}\), 
+\(\displaystyle \sum_{k=1}^N(\lambda a_k)=\lambda\sum_{k=1}^Na_k\).
+</li><li>
+\(\displaystyle 
+\sum_{k=1}^N(a_k+b_k)=\Bigl(\sum_{k=1}^Na_k\Bigr)+\Bigl(\sum_{k=1}^Nb_k\Bigr)\).
+</li></ul>
+</div>
+<p>
+Il existe certains cas où le terme général est assez simple pour que la 
+valeur de la somme puisse être calculée explicitement en fonction de \(N\):
+</p>
+<div class="exemple">
+Si le terme général est constant, \(x_k=C\), alors
+\[ 
+\sum_{k=1}^Nx_k=\underbrace{C+C+C+\cdots +C}_{n\text{ fois}}=CN\,.
+\]
+</div>
+<div class="exemple">
+Si \(x_k=k\), on montrera plus tard par récurrence que
+\[
+\sum_{k=1}^Nx_k=
+ 1+2+3+\dots+N=\frac{N(N+1)}{2}\,.
+\]
+</div>
+<div class="exemple">
+La <b>somme harmonique</b> a pour terme général \(x_k=\frac1k\):
+\[ 
+\sum_{k=1}^N\frac1k
+=1+\frac12+\frac13+\frac14+\dots+\frac1N\,.
+\]
+On ne peut hélàs pas la calculer exactement en fonction de \(N\), mais nous
+verrons plus tard qu'elle se comporte, lorsque \(N\) est grand, essentiellement
+comme \(\ln N\).
+</div>
+<p>
+Il y a un autre type de sommes que l'on sait sommer exactement, et qui sera
+d'importance capitale pour la suite:
+</p>
+<h4>Les sommes géométriques</h4>
+<p>
+Soit \(r\in \mathbb{R}\) un réel fixé, appelé <b>raison</b>.
+La somme de terme général \(x_k=r^k\), pour \(k\) allant de \(0\) à \(N\), 
+\[ 
+\boxed{S_N := \sum_{k=0}^Nr^k =1+r+r^2+r^3+\dots +r^N
+\,,}
+\]
+est appelée <b>somme géométrique</b>. 
 
-  <p>
-    Lorsqu'on considère des sommes de beaucoup de nombres,
-    on a avantage à utiliser
-    une notation compacte, qui évite d'écrire explicitement tous les termes de la
-    somme:
-    \[
-    \boxed{x_1+x_2+\cdots+x_N\equiv \sum_{k=1}^Nx_k\,.}
-    \]
-    On lit ce dernier symbole
-    ''<i>somme des \(x_k\), pour \(k\) allant de \(1\) à \(N\)</i>, et on
-    appelle \(x_k\) le <b>terme général</b> de la somme.
+<br/><br/>
+On peut calculer \(S_N\) 
+exactement, quelle que soit la valeur de \(N\).
+Si \(r=1\), alors \(S_N=N+1\) (puisque la somme \(S_N\) contient \(N+1\) termes
+constants égaux à \(1\)). 
+Pour les autres valeurs de \(r\):
+</p>
+<div class="lem">
+Soit une raison \(r\in \mathbb{R}\), \(r\neq 1\). Alors 
+\[
+\boxed{S_N=\frac{1-r^{N+1}}{1-r}\,.}
+\]
+</div>
 
-    <br><br>
-    Remarquons que
-    l'indice \(k\) utilisé ci-dessus est <b>muet</b>, dans le sens où il n'est
-    utilisé que pour nommer l'entier sur lequel on somme. On pourrait donc aussi le
-    nommer différemment:
-    \[
-    \sum_{k=1}^Nx_k =\sum_{j=1}^Nx_j =\sum_{n=1}^Nx_n\,.
-    \]
-  </p>
-
-  <div class="lem">
-    La somme satisfait aux propriétés suivantes.
-    <ul>
-      <li>Pour toute constante \(\lambda\in \mathbb{R}\),
-        \(\displaystyle \sum_{k=1}^N(\lambda a_k)=\lambda\sum_{k=1}^Na_k\).
-      <li>
-        \(\displaystyle
-        \sum_{k=1}^N(a_k+b_k)=\Bigl(\sum_{k=1}^Na_k\Bigr)+\Bigl(\sum_{k=1}^Nb_k\Bigr)\).
-    </ul>
-  </div>
-
-  <p>
-    Il existe certains cas où le terme général est assez simple pour que la
-    valeur de la somme puisse être calculée explicitement en fonction de \(N\):
-  </p>
-
-  <div class="exemple">
-    Si le terme général est constant, \(x_k=C\), alors
-    \[
-    \sum_{k=1}^Nx_k=\underbrace{C+C+C+\cdots +C}_{n\text{ fois}}=CN\,.
-    \]
-  </div>
-
-  <div class="exemple">
-    Si \(x_k=k\), on montrera plus tard par récurrence que
-    \[
-    \sum_{k=1}^Nx_k=
-    1+2+3+\dots+N=\frac{N(N+1)}{2}\,.
-    \]
-  </div>
-
-  <div class="exemple">
-    La <b>somme harmonique</b> a pour terme général \(x_k=\frac1k\):
-    \[
-    \sum_{k=1}^N\frac1k
-    =1+\frac12+\frac13+\frac14+\dots+\frac1N\,.
-    \]
-    On ne peut hélàs pas la calculer exactement en fonction de \(N\), mais nous
-    verrons plus tard qu'elle se comporte, lorsque \(N\) est grand, essentiellement
-    comme \(\ln N\).
-  </div>
-
-  <p>
-    Il y a un autre type de sommes que l'on sait sommer exactement, et qui sera
-    d'importance capitale pour la suite:
-  </p>
-
-  <h4>Les sommes géométriques</h4>
-
-  <p>
-    Soit \(r\in \mathbb{R}\) un réel fixé, appelé <b>raison</b>.
-    La somme de terme général \(x_k=r^k\), pour \(k\) allant de \(0\) à \(N\),
-    \[
-    \boxed{S_N := \sum_{k=0}^Nr^k =1+r+r^2+r^3+\dots +r^N
-    \,,}
-    \]
-    est appelée <b>somme géométrique</b>.
-
-    <br><br>
-    On peut calculer \(S_N\)
-    exactement, quelle que soit la valeur de \(N\).
-    Si \(r=1\), alors \(S_N=N+1\) (puisque la somme \(S_N\) contient \(N+1\) termes
-    constants égaux à \(1\)).
-    Pour les autres valeurs de \(r\):
-  </p>
-
-  <div class="lem">
-    Soit une raison \(r\in \mathbb{R}\), \(r\neq 1\). Alors
-    \[
-    \boxed{S_N=\frac{1-r^{N+1}}{1-r}\,.}
-    \]
-  </div>
-
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuveExemple" role="button" aria-expanded="false" aria-controls="preuveExemple">Preuve:</a>
-    <div class="collapse" id="preuveExemple">
-      <div class="card card-body">
-        <p>
-          En multipliant \(S_N\) par \(r\),
-          \[\begin{aligned}
-          rS_N&=r(1+r+r^2+\dots+r^{N-1}+r^N)\\
-          &=r+r^2+\dots+r^N+r^{N+1}\\
-          &=(1+r+r^2+\dots+r^N)+r^{N+1}-1=S_N+r^{N+1}-1\,.
-          \end{aligned}\]
-          Comme \(rS_N=S_N+r^{N+1}-1\), on peut isoler
-          \(S_N\) et diviser par \(1-r\) (qui
-          est différent de zéro), et obtenir la formule.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="exemple">
-    On peut par exemple calculer,
-    \[\begin{aligned}
-    7^{100}+7^{101}+7^{102}+\dots+7^{1000}
-    &=7^{100}\bigl(1+7+7^2+\dots+7^{900}\bigr)\\
-    &=7^{100}\sum_{k=0}^{900}7^k\\
-    &=7^{100}\frac{1-7^{901}}{1-7}\\
-    &=\frac{7^{1001}-7^{100}}{6}\,.
-    \end{aligned}\]
-
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuveformulesommegeometrique" role="button" aria-expanded="false" aria-controls="theproofpreuveformulesommegeometrique">Preuve:</a>
+                    <div class="collapse" id="theproofpreuveformulesommegeometrique">
+                    <div class="card card-body">
+                    <p>
+En multipliant \(S_N\) par \(r\), 
+\[\begin{aligned} 
+rS_N&=r(1+r+r^2+\dots+r^{N-1}+r^N)\\
+&=r+r^2+\dots+r^N+r^{N+1}\\
+&=(1+r+r^2+\dots+r^N)+r^{N+1}-1=S_N+r^{N+1}-1\,.
+\end{aligned}\]
+Comme \(rS_N=S_N+r^{N+1}-1\), on peut isoler 
+\(S_N\) et diviser par \(1-r\) (qui
+est différent de zéro), et obtenir la formule.
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<div class="exemple">
+On peut par exemple calculer, 
+\[\begin{aligned}
+ 7^{100}+7^{101}+7^{102}+\dots+7^{1000}
+&=7^{100}\bigl(1+7+7^2+\dots+7^{900}\bigr)\\
+&=7^{100}\sum_{k=0}^{900}7^k\\
+&=7^{100}\frac{1-7^{901}}{1-7}\\
+&=\frac{7^{1001}-7^{100}}{6}\,.
+\end{aligned}\]
+</div>
+</div>
 </body>
-
 </html>

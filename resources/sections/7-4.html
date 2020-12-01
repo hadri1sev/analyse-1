@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+</head>
+<body>
+<div class="sec" id="IDs-secTVI-sDI"><h3>7.4 Le théorème de la valeur intermédiaire</h3>
+
+<center>
+
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_fonctions_continuite_TVI" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_fonctions_continuite_TVI">Le Théorème de la valeur intermédiaire</a>
+                    <div class="collapse" id="IDvideodiv-v_fonctions_continuite_TVI">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_fonctions_continuite_TVI.mp4" poster="../videos/v_fonctions_continuite_TVI.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
+<p>
+  Une propriété essentielle des fonctions continues sur un intervalle compact:
+  </p>
+<div class="theo">
+  (Théorème de la valeur intermédiaire)
+  Soit \(f:[a,b]\to \mathbb{R}\) continue. Si \(f(a)\lt  f(b)\), alors pour toute valeur
+  intermédiaire \(h\),
+  \(f(a)\lt h\lt  f(b)\), il existe \(c\in ]a,b[\) tel que \(f(c)=h\).
+  (Affirmation semblable dans le cas où \(f(a)\geqslant f(b)\).)
+  </div>
+<br/><br/><center><img class="img-fluid" src="../images/i_fonctions_continuite_theoreme_valeur_intermediaire.jpg" width="400"/></center>
+<div class="info">
+  En termes plus graphiques: Pour une fonction \(f\) 
+  continue sur \([a,b]\) et telle que \(f(a)\lt f(b)\), 
+  tout droite horizontale à hauteur \(f(a)\lt h\lt f(b)\)
+  coupe le graphe de \(f\) en au moins un point. Remarquons, comme sur l'image
+  ci-dessus, que la droite peut couper le graphe en plusieurs points.
+  </div>
+
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvetheoTVI" role="button" aria-expanded="false" aria-controls="theproofpreuvetheoTVI">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvetheoTVI">
+                    <div class="card card-body">
+                    <p>
+  On démontre le résultat en implémentant un <b>Algorithme de bissection</b>.
+  
+  <br/><br/>
+  L'idée est de construire deux suites convergentes \((a_n)_{n\geqslant 0}\) et
+  \((b_n)_{n\geqslant 0}\). 
+  Celles-ci sont construites par récurrence:
+  </p><ol>
+<li>Posons \(a_0:= a\), \(b_0:= b\). Par définition,
+  \(f(a_0)\lt h\lt f(b_0)\).
+  </li><li>Pour \(n\geqslant 0\), supposons que  \(a_n\) et \(b_n\) ont déjà été définis,
+  et que \(f(a_n)\leqslant h\leqslant f(b_n)\).
+  Considérons alors le point milieu de \(a_n\) et \(b_n\): 
+  \[c_n:= \frac{a_n+b_n}{2}\,.  \]
+  </p><ul>
+<li>Si \(f(c_n)\leqslant h\), on pose \(a_{n+1}:= c_n\), \(b_{n+1}:=
+  b_n\).
+  </li><li>Si \(f(c_n)\gt h\), on pose \(a_{n+1}:= a_n\), \(b_{n+1}:=
+  c_n\).
+  Par définition de \(a_{n+1}\) et \(b_{n+1}\), 
+  \(f(a_{n+1})\leqslant h\leqslant f(b_{n+1})\).
+  </li></ul><p>
+</li></ol><p>
+  Maintenant que les suites 
+  \((a_n)_{n\geqslant 0}\) et \((b_n)_{n\geqslant 0}\) ont été construites, regardons-les de
+  plus près:
+  </p><ul>
+<li>À chaque étape de l'algorithme ci-dessus, \(a_{n+1}\) est soit \(a_n\),
+  soit \(c_n\). Comme \(c_n\gt a_n\), ceci implique que dans tous les cas,
+  \(a_{n+1}\geqslant a_n\). De plus, chaque \(a_n\) est inférieur à \(b\). 
+  Par conséquent, \((a_n)_{n\geqslant 0}\) est croissante et majorée, donc elle
+  converge: notons sa limite 
+  \[c_-:= \lim_{n\to \infty} a_n\,.\]
+  </li><li>À chaque étape de l'algorithme ci-dessus, \(b_{n+1}\) est soit \(b_n\),
+  soit \(c_n\). Comme \(c_n\lt b_n\), ceci implique que dans tous les cas,
+  \(b_{n+1}\leqslant b_n\). De plus, chaque \(b_n\) est supérieur à \(a\). 
+  Par conséquent, \((b_n)_{n\geqslant 0}\) est décroissante et minorée, donc elle
+  converge: notons sa limite 
+  \[c_+:= \lim_{n\to \infty} b_n\,.\]
+  </li><li>Comme à chaque étape exactement un des points devient le point milieu, 
+  on a 
+  \[
+  |a_{n+1}-b_{n+1}|=\frac12
+  |a_n-b_n|=\cdots=\frac{1}{2^{n+1}}|a-b|\to 0\,.
+  \]
+  Par l'inégalité triangulaire, on a donc que 
+  \[ |c_--c_+|\leqslant |c_--a_n|+|a_n-b_n|+|b_n-c_+| \to 0\,,
+  \]
+  ce qui implique que \(c_-=c_+\), que l'on peut donc écrire simplement \(c\).
+  </li></ul><p>
+  
+  On utilise maintenant de manière essentielle la continuité de \(f\):
+  </p><ol>
+<li>D'une part, comme \(a_n\to c_-\) et 
+  \(f(a_n)\leqslant h\) pour tout \(n\), on a que
+  \[ f(c)=f(c_-)=\lim_{n\to \infty} f(a_n)\leqslant h\,.  \]
+  </li><li>D'autre part, comme \(b_n\to c_+\) et 
+  \(f(b_n)\geqslant h\) pour tout \(n\), on a que
+  \[ f(c)=f(c_+)=\lim_{n\to \infty} f(b_n)\geqslant h\,.  \]
+  </li></ol><p>
+  Ceci implique bien que \(f(c)=h\).
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<h4>Application: existence de solutions pour certaines équations non-linéaires</h4>
+<p>
+  Voyons une première conséquence du théorème de la valeur intermédiaire, que l'on
+  a déjà rencontrée. (Dans le chapitre sur les nombres complexes, on a vu ce
+  résultat comme une conséquence du Théorème Fondamental de l'Algèbre.)
+  </p>
+<div class="cor">
+  (Existence de racines pour polynômes réels de degré impair)
+  Un polynôme à coefficients réels de degré impair possède au moins une racine
+  réelle.
+  </div>
+
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvecorolTVIracines" role="button" aria-expanded="false" aria-controls="theproofpreuvecorolTVIracines">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvecorolTVIracines">
+                    <div class="card card-body">
+                    <p>
+  Considérons un polynôme de degré impair, à coefficients réels:
+  \[
+  P(x)=a_0+a_1x+a_2x^2+\dots a_nx^n\,
+  \] 
+  où \(n\) est impair, et \(a_n\neq 0\).
+  
+  Sans perte de généralité, supposons que \(a_n\gt 0\).
+  Comme \(n\) est impair, on a 
+  \[ 
+  \lim_{x\to+\infty}P(x)=+\infty\,,\qquad
+  \lim_{x\to-\infty}P(x)=-\infty\,.
+  \]
+  Il existe donc un réel \(N_a\lt  0\) tel que \(P(N_a)\lt 0\), 
+  et un réel \(N_b\gt 0\) tel que \(P(N_b)\gt 0\). 
+  <br/><br/></p><center><img class="img-fluid" src="../images/i_fonctions_continuite_polynome_impair.jpg" width="400"/></center><p>
+  En appliquant le
+  Théorème de la valeur intermédiaire sur l'intervalle \([N_a,N_b]\),
+  avec \(h=0\), on conclut: il existe \(c\in ]N_a,N_b[\) tel que \(P(c)=0\).
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<p>
+  Le théorème permet aussi de montrer l'existence de solutions pour des 
+  équations non-linéaires pas forcément polynomiales:
+  </p>
+<div class="exemple">
+  Montrons que l'équation
+  \[ 
+  \cos(x)=x 
+  \]
+  possède au moins une solution:
+  Pour ce faire, définissons \(f(x):= \cos (x)-x\), que l'on considère sur
+  l'intervalle  fermé et borné
+  \([0,\tfrac{\pi}{2}]\). On a \(f(0)=1-0=1\gt 0\), \(f(\tfrac{\pi}{2})=0-\tfrac{\pi}{2}\lt 0\).
+  Donc, par le Théorème de la valeur intermédiaire, il existe \(c\in
+  ]0,\tfrac{\pi}{2}[\) tel que \(f(c)=0\).
+  <br/><br/><center><img class="img-fluid" src="../images/i_fonctions_continuite_intersection_cosinus_diagonale.jpg" width="250"/></center>
+</div>
+<h4>Application: sur l'ensemble image d'une fonction continue</h4>
+<div class="theo">
+  Soit \(f:[a,b]\to \mathbb{R}\) continue. Alors son ensemble image 
+  \(\mathrm{Im} (f)\) est un intervalle fermé et borné.
+  </div>
+<br/><br/><center><img class="img-fluid" src="../images/i_fonctions_continuite_image_d_un_ferme.jpg" width="370"/></center>
+
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuveimagefermeferme" role="button" aria-expanded="false" aria-controls="theproofpreuveimagefermeferme">Preuve:</a>
+                    <div class="collapse" id="theproofpreuveimagefermeferme">
+                    <div class="card card-body">
+                    <p>
+  On sait que \(f\) atteint son minimum et son maximum: 
+  \[
+  f(x^*)=\max_{x\in [a,b]}f(x)\,,\qquad
+  f(x_*)=\min_{x\in [a,b]}f(x)\,.
+  \]
+  Si \(x_*=x^*\), alors \(f\) est constante et donc \(\mathrm{Im} (f)\) ne contient
+  qu'un point (qu'on peut considérer comme un intervalle fermé et borné).
+  
+  Sinon, supposons sans perte de généralité que \(x_*\lt x^*\). 
+  On a donc \(\mathrm{Im} (f)\subset [f(x_*),f(x^*)]\).
+  Par le Théorème de la
+  valeur intermédiaire, on sait que \(f\) doit prendre au moins une fois chaque
+  valeur \(h\in [f(x_*),f(x^*)]\), ce qui implique \([f(x_*),f(x^*)]
+  \subset \mathrm{Im} (f)\). 
+  
+  <br/><br/>
+  On a donc \(\mathrm{Im} (f)=[f(x_*),f(x^*)]\), qui est bien un intervalle fermé et borné.
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<div class="quiz" id="quiz7_4_1">
+  Vrai ou faux?
+  <ol>
+<li><span class="itemEMPTY">[  ]</span> Si \(f:[a,b]\to \mathbb{R}\), alors \(f\) est strictement 
+  monotone sur au moins un sous-intervalle de \([a,b]\).
+  </li><li><span class="itemEMPTY">[  ]</span> Soit \(f:[a,b]\to \mathbb{R}\) telle que \(f(a)\lt f(b)\). Si pour
+  tout \(h\in ]f(a),f(b)[\) il existe un \(c\in ]a,b[\) tel que \(f(c)=h\), alors
+  \(f\) est continue.
+  </li><li><span class="itemFULL">[  ]</span> Soit \(f:[a,+\infty[\to \mathbb{R}_+^*\) continue, 
+  telle que \(\lim_{x\to+\infty}f(x)=0\). 
+  Alors pour tout \(h\in ]0,f(a)[\) il existe \(c\gt a\) tel que \(f(c)=h\).
+  </li><li><span class="itemEMPTY">[  ]</span> 
+  Soit \(f:[a,b]\to \mathbb{R}\), continue en tout point \(x_0\in ]a,b[\), 
+  telle que \(f(a)\lt f(b)\).
+  Alors pour tout \(h\in ]f(a),f(b)[\) il existe \(c\in ]a,b[\) tel que 
+  \(f(c)=h\).
+  </li><li><span class="itemEMPTY">[  ]</span> 
+  Soit \(f:[a,b]\to \mathbb{R}\), continue en tout point \(x_0\in ]a,b[\), 
+  telle que \(\lim_{x\to a^+}f(x)\) et \(\lim_{x\to b^-}f(x)\) existent.
+  Alors pour tout \(h\in ]f(a),f(b)[\) il existe \(c\in ]a,b[\) tel que 
+  \(f(c)=h\).
+  </li><li><span class="itemFULL">[  ]</span> 
+  Soit \(f:[a,b]\to \mathbb{R}\) continue, non-constante, telle que \(f(a)=f(b)\). Alors
+  il existe une suite \(x_n\in [a,b]\) telle que \(f(x_n)\) soit strictement
+  croissante.
+  </li><li><span class="itemFULL">[  ]</span> 
+  Soit \(f:]a,b[\to \mathbb{R}\) continue, telle que 
+  \(\lim_{x\to a^+}f(x)=-\infty\),
+  \(\lim_{x\to b^-}f(x)=+\infty\). Alors \(\mathrm{Im} (f)=\mathbb{R}\).
+  </li><li><span class="itemFULL">[  ]</span>
+  Soit \(f:\mathbb{R}\to \mathbb{R}\) continue, telle que 
+  \(\lim_{x\to -\infty}f(x)=+\infty\),
+  \(\lim_{x\to +\infty}f(x)=+\infty\). 
+  Alors il existe \(h\) tel que \(\mathrm{Im} (f)=[h,+\infty[\).
+  </li></ol>
+<span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz7_4_1')">Solutions</button></span>
+</div><!--quizz-->
+<div class="quiz" id="quiz7_4_2">
+  Vrai ou faux?
+  <ol>
+<li><span class="itemEMPTY">[  ]</span>
+  Si \(f:[\alpha,\beta]\to\mathbb{R}\) est continue
+  pour tout \(a\lt \alpha\lt \beta\lt b\), alors \(f:[a,b]\to\mathbb{R}\) est continue.
+  </li><li><span class="itemEMPTY">[  ]</span> Si \(f:]a,b[\to \mathbb{R}\) est continue, alors elle n'est pas bornée.
+  </li><li><span class="itemEMPTY">[  ]</span>
+  Si \(f:]a,b[\to\mathbb{R}\) est continue, alors \(\mathrm{Im} (f)\) est un
+  intervalle ouvert.
+  </li><li><span class="itemFULL">[  ]</span>
+  Si \(f:]a,b[\to\mathbb{R}\) est continue, alors \(\lim_{x\to x_0}f(x)=f(x_0)\)
+  pour tout \(x_0\in ]a,b[\).
+  </li><li><span class="itemEMPTY">[  ]</span>
+  Si \(f:]a,b[\to\mathbb{R}\) est continue, alors 
+  \(\lim_{x\to a^+}f(x)\) et \(\lim_{x\to b^-}f(x)\) existent.
+  </li></ol>
+<span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz7_4_2')">Solutions</button></span>
+</div><!--quizz-->
+</div>
+</body>
+</html>

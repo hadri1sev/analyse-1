@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Analyse réelle | S. Friedli</title>
-
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
   </script>
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
-
-</head>
-
+</head
 <body>
-
   <!-- Header -->
   <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap shadow">
     <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" id="siteTitle" href="resources/welcome-page.html" onclick="return loadIframe('ifrm', this.href)">Analyse 1</a>
@@ -31,7 +23,6 @@
     </button>
     <h2 id="rightNav" class="navbar-brand mr-0">S. Friedli, EPFL</h2>
   </nav>
-
   <!-- Sidebar -->
   <div class="container-fluid">
     <div class="row">
@@ -41,189 +32,318 @@
             <h5>Tables des matières</h5>
           </div>
           <ul class="nav flex-column">
-            <li class="nav item">
-              <a href="#introSub" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">0. Introduction</a>
-              <ul class="collapse list-unstyled sidebarContent" id="introSub">
-                <li>
-                  <a href="resources/sections/0-1.html" onclick="return loadIframe('ifrm', this.href)">0.1 Présentation</a>
+							<li class="nav item">
+            <a href="#chapitre0" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">0. Introduction</a>
+            <ul class="collapse list-unstyled sidebarContent" id="chapitre0">
+            <li>
+                <a href="resources/sections/0-1.html" onclick="return loadIframe('ifrm', this.href)">0.1 Présentation</a>
                 </li>
                 <li>
-                  <a href="resources/sections/0-2.html" onclick="return loadIframe('ifrm', this.href)">0.2 Conventions</a>
+                <a href="resources/sections/0-2.html" onclick="return loadIframe('ifrm', this.href)">0.2 Conventions</a>
                 </li>
                 <li>
-                  <a href="resources/sections/0-3.html" onclick="return loadIframe('ifrm', this.href)">0.3 À propos du format de ce cours</a>
+                <a href="resources/sections/0-3.html" onclick="return loadIframe('ifrm', this.href)">0.3 À propos du format de ce cours</a>
                 </li>
                 <li>
-                  <a href="resources/sections/0-4.html" onclick="return loadIframe('ifrm', this.href)">0.4 Sur les différents environnements</a>
+                <a href="resources/sections/0-4.html" onclick="return loadIframe('ifrm', this.href)">0.4 Sur les différents environnements</a>
                 </li>
-              </ul>
-            </li>
-            <li class="nav item">
-              <a href="#notionsSub" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">1. Notions élémentaires</a>
-              <ul class="collapse list-unstyled sidebarContent" id="notionsSub">
-                <li>
-                  <a href="resources/sections/1-1.html" onclick="return loadIframe('ifrm', this.href)">1.1 Sommes finies</a>
-                </li>
-                <li>
-                  <a href="resources/sections/1-2.html" onclick="return loadIframe('ifrm', this.href)">1.2 Fonctions</a>
+                </ul>
+							<li class="nav item">
+            <a href="#chapitre1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">1. Notions élémentaires</a>
+            <ul class="collapse list-unstyled sidebarContent" id="chapitre1">
+            <li>
+                <a href="resources/sections/1-1.html" onclick="return loadIframe('ifrm', this.href)">1.1 Sommes finies</a>
                 </li>
                 <li>
-                  <a href="resources/sections/1-3.html" onclick="return loadIframe('ifrm', this.href)">1.3 Preuves par récurrence</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav item">
-              <a href="#reelsSub" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">2. Nombres réels: \(\mathbb{R}\)</a>
-              <ul class="collapse list-unstyled sidebarContent" id="reelsSub">
-                <li>
-                  <a href="resources/sections/2-1.html" onclick="return loadIframe('ifrm', this.href)">2.1 Introduction</a>
+                <a href="resources/sections/1-2.html" onclick="return loadIframe('ifrm', this.href)">1.2 Fonctions</a>
                 </li>
                 <li>
-                  <a href="resources/sections/2-2.html" onclick="return loadIframe('ifrm', this.href)">2.2 Règles de calcul: \(+,-,\cdot,\div\)</a>
+                <a href="resources/sections/1-3.html" onclick="return loadIframe('ifrm', this.href)">1.3 Preuves par récurrence</a>
+                </li>
+                </ul>
+							<li class="nav item">
+            <a href="#chapitre2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">2. Nombres réels: \(\mathbb{R}\)</a>
+            <ul class="collapse list-unstyled sidebarContent" id="chapitre2">
+            <li>
+                <a href="resources/sections/2-1.html" onclick="return loadIframe('ifrm', this.href)">2.1 Introduction</a>
                 </li>
                 <li>
-                  <a href="resources/sections/2-3.html" onclick="return loadIframe('ifrm', this.href)">2.3 Ordre: \(\leqslant,\geqslant,\lt,\gt\)</a>
+                <a href="resources/sections/2-2.html" onclick="return loadIframe('ifrm', this.href)">2.2 Règles de calcul: \(+,-,\cdot,\div\)</a>
                 </li>
                 <li>
-                  <a href="resources/sections/2-4.html" onclick="return loadIframe('ifrm', this.href)">2.4 Intervalles</a>
+                <a href="resources/sections/2-3.html" onclick="return loadIframe('ifrm', this.href)">2.3 Ordre: \(\leqslant,\geqslant,\lt,\gt\)</a>
                 </li>
                 <li>
-                  <a href="resources/sections/2-5.html" onclick="return loadIframe('ifrm', this.href)">2.5 Valeur absolue et distance</a>
+                <a href="resources/sections/2-4.html" onclick="return loadIframe('ifrm', this.href)">2.4 Intervalles</a>
                 </li>
                 <li>
-                  <a href="resources/sections/2-6.html" onclick="return loadIframe('ifrm', this.href)">2.6 Supremum et infimum</a>
+                <a href="resources/sections/2-5.html" onclick="return loadIframe('ifrm', this.href)">2.5 Valeur absolue et distance</a>
                 </li>
                 <li>
-                  <a href="resources/sections/2-7.html" onclick="return loadIframe('ifrm', this.href)">2.7 Solutions réelles pour \(x^2=2\)</a>
+                <a href="resources/sections/2-6.html" onclick="return loadIframe('ifrm', this.href)">2.6 Supremum et infimum</a>
                 </li>
                 <li>
-                  <a href="resources/sections/2-8.html" onclick="return loadIframe('ifrm', this.href)">2.8 Densité des rationnels dans \(\mathbb{R}\)</a>
+                <a href="resources/sections/2-7.html" onclick="return loadIframe('ifrm', this.href)">2.7 Solutions réelles pour \(x^2=2\)</a>
                 </li>
                 <li>
-                  <a href="resources/sections/2-9.html" onclick="return loadIframe('ifrm', this.href)">2.9 Topologie de la droite réelle</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav item">
-              <a href="#suitesSub" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">3. Suites réelles</a>
-              <ul class="collapse list-unstyled sidebarContent" id="suitesSub">
-                <li>
-                  <a href="resources/sections/3-1.html" onclick="return loadIframe('ifrm', this.href)">3.1 Introduction, exemples</a>
+                <a href="resources/sections/2-8.html" onclick="return loadIframe('ifrm', this.href)">2.8 Densité des rationnels dans \(\mathbb{R}\)</a>
                 </li>
                 <li>
-                  <a href="resources/sections/3-2.html" onclick="return loadIframe('ifrm', this.href)">3.2 Définition de la limite: \(a_n\to L\)</a>
+                <a href="resources/sections/2-9.html" onclick="return loadIframe('ifrm', this.href)">2.9 Topologie de la droite réelle</a>
+                </li>
+                </ul>
+							<li class="nav item">
+            <a href="#chapitre3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">3. Suites réelles</a>
+            <ul class="collapse list-unstyled sidebarContent" id="chapitre3">
+            <li>
+                <a href="resources/sections/3-1.html" onclick="return loadIframe('ifrm', this.href)">3.1 Introduction, exemples</a>
                 </li>
                 <li>
-                  <a href="resources/sections/3-3.html" onclick="return loadIframe('ifrm', this.href)">3.3 Propriétés de la limite</a>
+                <a href="resources/sections/3-2.html" onclick="return loadIframe('ifrm', this.href)">3.2 Définition de la limite: \(a_n\to L\)</a>
                 </li>
                 <li>
-                  <a href="resources/sections/3-4.html" onclick="return loadIframe('ifrm', this.href)">3.4 Le Théorème des deux gendarmes</a>
+                <a href="resources/sections/3-3.html" onclick="return loadIframe('ifrm', this.href)">3.3 Propriétés de la limite</a>
                 </li>
                 <li>
-                  <a href="resources/sections/3-5.html" onclick="return loadIframe('ifrm', this.href)">3.5 Les suites monotones et bornées</a>
+                <a href="resources/sections/3-4.html" onclick="return loadIframe('ifrm', this.href)">3.4 Le Théorème des deux gendarmes</a>
                 </li>
                 <li>
-                  <a href="resources/sections/3-6.html" onclick="return loadIframe('ifrm', this.href)">3.6 Suites qui tendent vers l'infini</a>
+                <a href="resources/sections/3-5.html" onclick="return loadIframe('ifrm', this.href)">3.5 Les suites monotones et bornées</a>
                 </li>
                 <li>
-                  <a href="resources/sections/3-7.html" onclick="return loadIframe('ifrm', this.href)">3.7 Comportements polynômiaux, logarithmiques, exponentiels</a>
+                <a href="resources/sections/3-6.html" onclick="return loadIframe('ifrm', this.href)">3.6 Suites qui tendent vers l'infini</a>
                 </li>
                 <li>
-                  <a href="resources/sections/3-8.html" onclick="return loadIframe('ifrm', this.href)">3.8 Calculs de limites et indéterminations</a>
+                <a href="resources/sections/3-7.html" onclick="return loadIframe('ifrm', this.href)">3.7 Comportements polynômiaux, logarithmiques, exponentiels</a>
                 </li>
                 <li>
-                  <a href="resources/sections/3-9.html" onclick="return loadIframe('ifrm', this.href)">3.9 Série géométrique et applications</a>
+                <a href="resources/sections/3-8.html" onclick="return loadIframe('ifrm', this.href)">3.8 Calculs de limites et indéterminations</a>
                 </li>
                 <li>
-                  <a href="resources/sections/3-10.html" onclick="return loadIframe('ifrm', this.href)">3.10 Critère de d'Alembert pour les suites</a>
+                <a href="resources/sections/3-9.html" onclick="return loadIframe('ifrm', this.href)">3.9 Série géométrique et applications</a>
                 </li>
                 <li>
-                  <a href="resources/sections/3-11.html" onclick="return loadIframe('ifrm', this.href)">3.11 Le Théorème de Bolzano-Weierstrass</a>
+                <a href="resources/sections/3-10.html" onclick="return loadIframe('ifrm', this.href)">3.10 Critère de d'Alembert pour les suites</a>
                 </li>
                 <li>
-                  <a href="resources/sections/3-12.html" onclick="return loadIframe('ifrm', this.href)">3.12 Suites de Cauchy</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav item">
-              <a href="#complexesSub" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">4. Nombres complexes: \(\mathbb{C}\)</a>
-              <ul class="collapse list-unstyled sidebarContent" id="complexesSub">
-                <li>
-                  <a href="resources/sections/4-1.html" onclick="return loadIframe('ifrm', this.href)">4.1 Introduction</a>
+                <a href="resources/sections/3-11.html" onclick="return loadIframe('ifrm', this.href)">3.11 Le Théorème de Bolzano-Wierstrass</a>
                 </li>
                 <li>
-                  <a href="resources/sections/4-2.html" onclick="return loadIframe('ifrm', this.href)">4.2 Définition</a>
+                <a href="resources/sections/3-12.html" onclick="return loadIframe('ifrm', this.href)">3.12 Suites de Cauchy</a>
+                </li>
+                </ul>
+							<li class="nav item">
+            <a href="#chapitre4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">4. Nombres complexes: \(\mathbb{C}\)</a>
+            <ul class="collapse list-unstyled sidebarContent" id="chapitre4">
+            <li>
+                <a href="resources/sections/4-1.html" onclick="return loadIframe('ifrm', this.href)">4.1 Introduction</a>
                 </li>
                 <li>
-                  <a href="resources/sections/4-3.html" onclick="return loadIframe('ifrm', this.href)">4.3 Le plan complexe</a>
+                <a href="resources/sections/4-2.html" onclick="return loadIframe('ifrm', this.href)">4.2 Définition</a>
                 </li>
                 <li>
-                  <a href="resources/sections/4-4.html" onclick="return loadIframe('ifrm', this.href)">4.4 Exponentielle complexe</a>
+                <a href="resources/sections/4-3.html" onclick="return loadIframe('ifrm', this.href)">4.3 Le plan complexe</a>
                 </li>
                 <li>
-                  <a href="resources/sections/4-5.html" onclick="return loadIframe('ifrm', this.href)">4.5 Racines de nombres complexes</a>
+                <a href="resources/sections/4-4.html" onclick="return loadIframe('ifrm', this.href)">4.4 Exponentielle complexe</a>
                 </li>
                 <li>
-                  <a href="resources/sections/4-6.html" onclick="return loadIframe('ifrm', this.href)">4.6 Polynômes complexes et factorisation</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav item">
-              <a href="#seriesSub" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">5. Séries numériques</a>
-              <ul class="collapse list-unstyled sidebarContent" id="seriesSub">
-                <li>
-                  <a href="resources/sections/5-1.html" onclick="return loadIframe('ifrm', this.href)">5.1 Définitions et exemples</a>
+                <a href="resources/sections/4-5.html" onclick="return loadIframe('ifrm', this.href)">4.5 Racines de nombres complexes</a>
                 </li>
                 <li>
-                  <a href="resources/sections/5-2.html" onclick="return loadIframe('ifrm', this.href)">5.2 Propriétés des séries convergentes</a>
+                <a href="resources/sections/4-6.html" onclick="return loadIframe('ifrm', this.href)">4.6 Polynômes complexes et factorisation</a>
+                </li>
+                </ul>
+							<li class="nav item">
+            <a href="#chapitre5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">5. Séries numériques</a>
+            <ul class="collapse list-unstyled sidebarContent" id="chapitre5">
+            <li>
+                <a href="resources/sections/5-1.html" onclick="return loadIframe('ifrm', this.href)">5.1 Définitions et exemples</a>
                 </li>
                 <li>
-                  <a href="resources/sections/5-3.html" onclick="return loadIframe('ifrm', this.href)">5.3 Le critère de comparaison</a>
+                <a href="resources/sections/5-2.html" onclick="return loadIframe('ifrm', this.href)">5.2 Propriétés des séries convergentes</a>
                 </li>
                 <li>
-                  <a href="resources/sections/5-4.html" onclick="return loadIframe('ifrm', this.href)">5.4 Le critère de Leibniz</a>
+                <a href="resources/sections/5-3.html" onclick="return loadIframe('ifrm', this.href)">5.3 Le critère de comparaison</a>
                 </li>
                 <li>
-                  <a href="resources/sections/5-5.html" onclick="return loadIframe('ifrm', this.href)">5.5 Séries téléscopiques</a>
+                <a href="resources/sections/5-4.html" onclick="return loadIframe('ifrm', this.href)">5.4 Le critère de Leibniz</a>
                 </li>
                 <li>
-                  <a href="resources/sections/5-6.html" onclick="return loadIframe('ifrm', this.href)">5.6 Séries \(\sum_n\frac{1}{n^p}\)</a>
+                <a href="resources/sections/5-5.html" onclick="return loadIframe('ifrm', this.href)">5.5 Séries téléscopiques</a>
                 </li>
                 <li>
-                  <a href="resources/sections/5-7.html" onclick="return loadIframe('ifrm', this.href)">5.7 Séries absolument convergentes</a>
+                <a href="resources/sections/5-6.html" onclick="return loadIframe('ifrm', this.href)">5.6 Séries \(\sum_n\frac{1}{n^p}\)</a>
                 </li>
                 <li>
-                  <a href="resources/sections/5-8.html" onclick="return loadIframe('ifrm', this.href)">5.8 Le critère de d'Alembert</a>
+                <a href="resources/sections/5-7.html" onclick="return loadIframe('ifrm', this.href)">5.7 Séries absolument convergentes</a>
                 </li>
                 <li>
-                  <a href="resources/sections/5-9.html" onclick="return loadIframe('ifrm', this.href)">5.9 Le critère de Cauchy</a>
+                <a href="resources/sections/5-8.html" onclick="return loadIframe('ifrm', this.href)">5.8 Le critère de d'Alembert</a>
                 </li>
                 <li>
-                  <a href="resources/sections/5-10.html" onclick="return loadIframe('ifrm', this.href)">5.10 Le critère de la limite du quotient</a>
+                <a href="resources/sections/5-9.html" onclick="return loadIframe('ifrm', this.href)">5.9 Le critère de Cauchy</a>
                 </li>
                 <li>
-                  <a href="resources/sections/5-11.html" onclick="return loadIframe('ifrm', this.href)">5.11 Séries dépendant d'un paramètre</a>
+                <a href="resources/sections/5-10.html" onclick="return loadIframe('ifrm', this.href)">5.10 Le critère de la limite du quotient</a>
                 </li>
-              </ul>
-            </li>
-          </ul>
+                <li>
+                <a href="resources/sections/5-11.html" onclick="return loadIframe('ifrm', this.href)">5.11 Séries dépendant d'un paramètre</a>
+                </li>
+                </ul>
+							<li class="nav item">
+            <a href="#chapitre6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">6. Fonctions et limites</a>
+            <ul class="collapse list-unstyled sidebarContent" id="chapitre6">
+            <li>
+                <a href="resources/sections/6-1.html" onclick="return loadIframe('ifrm', this.href)">6.1 Introduction</a>
+                </li>
+                <li>
+                <a href="resources/sections/6-2.html" onclick="return loadIframe('ifrm', this.href)">6.2 Monotonie</a>
+                </li>
+                <li>
+                <a href="resources/sections/6-3.html" onclick="return loadIframe('ifrm', this.href)">6.3 Parité</a>
+                </li>
+                <li>
+                <a href="resources/sections/6-4.html" onclick="return loadIframe('ifrm', this.href)">6.4 Périodicité</a>
+                </li>
+                <li>
+                <a href="resources/sections/6-5.html" onclick="return loadIframe('ifrm', this.href)">6.5 Max/min, sup/inf de fonctions</a>
+                </li>
+                <li>
+                <a href="resources/sections/6-6.html" onclick="return loadIframe('ifrm', this.href)">6.6 Limite \(x\to x_0\)</a>
+                </li>
+                <li>
+                <a href="resources/sections/6-7.html" onclick="return loadIframe('ifrm', this.href)">6.7 Le théorème des deux gendarmes</a>
+                </li>
+                <li>
+                <a href="resources/sections/6-8.html" onclick="return loadIframe('ifrm', this.href)">6.8 Limites latérales \(x\to x_0^\pm\)</a>
+                </li>
+                <li>
+                <a href="resources/sections/6-9.html" onclick="return loadIframe('ifrm', this.href)">6.9 Propriétés de la limite</a>
+                </li>
+                <li>
+                <a href="resources/sections/6-10.html" onclick="return loadIframe('ifrm', this.href)">6.10 Quelques indéterminations ''\(\frac00\)''</a>
+                </li>
+                <li>
+                <a href="resources/sections/6-11.html" onclick="return loadIframe('ifrm', this.href)">6.11 Limites infinies en un point</a>
+                </li>
+                <li>
+                <a href="resources/sections/6-12.html" onclick="return loadIframe('ifrm', this.href)">6.12 Limites \(x\to\pm\infty\)</a>
+                </li>
+                </ul>
+							<li class="nav item">
+            <a href="#chapitre7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">7. Fonctions continues</a>
+            <ul class="collapse list-unstyled sidebarContent" id="chapitre7">
+            <li>
+                <a href="resources/sections/7-1.html" onclick="return loadIframe('ifrm', this.href)">7.1 Définition de la continuité</a>
+                </li>
+                <li>
+                <a href="resources/sections/7-2.html" onclick="return loadIframe('ifrm', this.href)">7.2 Prolongement par continuité</a>
+                </li>
+                <li>
+                <a href="resources/sections/7-3.html" onclick="return loadIframe('ifrm', this.href)">7.3 Continuité sur un intervalle compact</a>
+                </li>
+                <li>
+                <a href="resources/sections/7-4.html" onclick="return loadIframe('ifrm', this.href)">7.4 Le théorème de la valeur intermédiaire</a>
+                </li>
+                <li>
+                <a href="resources/sections/7-5.html" onclick="return loadIframe('ifrm', this.href)">7.5 Continuité et calcul de limites</a>
+                </li>
+                </ul>
+							<li class="nav item">
+            <a href="#chapitre8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">8. Dérivée et calcul différentiel</a>
+            <ul class="collapse list-unstyled sidebarContent" id="chapitre8">
+            <li>
+                <a href="resources/sections/8-1.html" onclick="return loadIframe('ifrm', this.href)">8.1 Définition de la dérivée, exemples</a>
+                </li>
+                <li>
+                <a href="resources/sections/8-2.html" onclick="return loadIframe('ifrm', this.href)">8.2 Règles de dérivation</a>
+                </li>
+                <li>
+                <a href="resources/sections/8-3.html" onclick="return loadIframe('ifrm', this.href)">8.3 Dérivées des fonctions élémentaires</a>
+                </li>
+                <li>
+                <a href="resources/sections/8-4.html" onclick="return loadIframe('ifrm', this.href)">8.4 Dérivée d'une fonction réciproque</a>
+                </li>
+                <li>
+                <a href="resources/sections/8-5.html" onclick="return loadIframe('ifrm', this.href)">8.5 Dérivée et approximation</a>
+                </li>
+                <li>
+                <a href="resources/sections/8-6.html" onclick="return loadIframe('ifrm', this.href)">8.6 Dérivées latérales</a>
+                </li>
+                <li>
+                <a href="resources/sections/8-7.html" onclick="return loadIframe('ifrm', this.href)">8.7 Fonctions continûment dérivables, dérivées d'ordres supérieurs</a>
+                </li>
+                <li>
+                <a href="resources/sections/8-8.html" onclick="return loadIframe('ifrm', this.href)">8.8 Extréma locaux et le Théorème de Rolle</a>
+                </li>
+                <li>
+                <a href="resources/sections/8-9.html" onclick="return loadIframe('ifrm', this.href)">8.9 Le Théorème des accroissements finis</a>
+                </li>
+                <li>
+                <a href="resources/sections/8-10.html" onclick="return loadIframe('ifrm', this.href)">8.10 Une généralisation</a>
+                </li>
+                <li>
+                <a href="resources/sections/8-11.html" onclick="return loadIframe('ifrm', this.href)">8.11 La règle de Bernoulli-l'Hôpital</a>
+                </li>
+                <li>
+                <a href="resources/sections/8-12.html" onclick="return loadIframe('ifrm', this.href)">8.12 Sur la recherche des extrema d'une fonction sur un intervalle \([a,b]\)</a>
+                </li>
+                <li>
+                <a href="resources/sections/8-13.html" onclick="return loadIframe('ifrm', this.href)">8.13 Fonctions convexes/concaves</a>
+                </li>
+                </ul>
+							<li class="nav item">
+            <a href="#chapitre9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">9. Développements limités (DL)</a>
+            <ul class="collapse list-unstyled sidebarContent" id="chapitre9">
+            <li>
+                <a href="resources/sections/9-1.html" onclick="return loadIframe('ifrm', this.href)">9.1 Introduction</a>
+                </li>
+                <li>
+                <a href="resources/sections/9-2.html" onclick="return loadIframe('ifrm', this.href)">9.2 Définition et unicité</a>
+                </li>
+                <li>
+                <a href="resources/sections/9-3.html" onclick="return loadIframe('ifrm', this.href)">9.3 Propriétés de base</a>
+                </li>
+                <li>
+                <a href="resources/sections/9-4.html" onclick="return loadIframe('ifrm', this.href)">9.4 La formule de Taylor</a>
+                </li>
+                <li>
+                <a href="resources/sections/9-5.html" onclick="return loadIframe('ifrm', this.href)">9.5 Utilisation de DL pour le calcul de limites</a>
+                </li>
+                <li>
+                <a href="resources/sections/9-6.html" onclick="return loadIframe('ifrm', this.href)">9.6 Composition de DL</a>
+                </li>
+                </ul>
+							<li class="nav item">
+            <a href="#chapitre10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">10. Séries entières et séries de Taylor</a>
+            <ul class="collapse list-unstyled sidebarContent" id="chapitre10">
+            <li>
+                <a href="resources/sections/10-1.html" onclick="return loadIframe('ifrm', this.href)">10.1 Introduction</a>
+                </li>
+                <li>
+                <a href="resources/sections/10-2.html" onclick="return loadIframe('ifrm', this.href)">10.2 Séries entières</a>
+                </li>
+                <li>
+                <a href="resources/sections/10-3.html" onclick="return loadIframe('ifrm', this.href)">10.3 Séries de Taylor pour représenter des fonctions</a>
+                </li>
+                <li>
+                <a href="resources/sections/10-4.html" onclick="return loadIframe('ifrm', this.href)">10.4 Exemples</a>
+                </li>
+                </ul>
+            </ul>
         </div>
       </nav>
     </div>
-
     <!-- Content -->
     <div id="content" class="col-9 offset-3">
       <iframe name="ifrm" id="ifrm" src="resources/welcome-page.html"></iframe>
     </div>
   </div>
-
   <!-- Bootstrap 4 & jQuery scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
   <!-- Custom JS -->
   <script type="text/javascript" src="main.js"></script>
-
 </body>
-
 </html>

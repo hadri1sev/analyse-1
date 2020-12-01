@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+</head>
+<body>
+<div class="sec" id="IDs-seccontinuitesurcompact-sDI"><h3>7.3 Continuité sur un intervalle compact</h3>
+<p>
+  Les fonctions continues définies sur un intervalle <b>compact</b>, c'est-à-dire
+  fermé et borné, jouissent de plusieurs propriétés remarquables.
+  Commençons par définir ce que signifie être continue sur un intervalle fermé et
+  borné:
+  </p>
+<div class="defin">
+  Une fonction \(f:[a,b]\to \mathbb{R}\) est <b>continue</b> si 
+  <ul>
+<li>elle est continue en tout \(x_0\in ]a,b[\), 
+  </li><li>elle est continue à droite en \(x_0=a\),
+  </li><li>elle est continue à gauche en \(x_0=b\).
+  </li></ul>
+</div>
+<div class="info">
+  Une fonction continue sur \([a,b]\) est donc une fonction dont le graphe est une
+  courbe ''traçable sans lever le crayon'',
+  reliant le point \(A=(a,f(a))\) au point \(B=(b,f(b))\):
+  </div>
+<br/><br/><center><img class="img-fluid" src="../images/i_fonctions_continue_sur_compact.jpg" width="400"/></center>
+<p>
+  Une première propriété importante est qu'une fonction continue sur un compact ne
+  peut pas prendre de valeurs arbitrairement grandes:
+  </p>
+<div class="theo">
+  Soit \(f:[a,b]\to \mathbb{R}\) continue.
+  Alors \(f\) est bornée.
+  </div>
+
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofcontinuitecompactimpliquebornee" role="button" aria-expanded="false" aria-controls="theproofcontinuitecompactimpliquebornee">Preuve:</a>
+                    <div class="collapse" id="theproofcontinuitecompactimpliquebornee">
+                    <div class="card card-body">
+                    <p>
+  Supposons que \(f\) n'est pas bornée. Alors pour tout \(n\gt 0\) il existe
+  \(x_n\in [a,b]\) tel que \(f(x_n)\gt  n\), et donc \(f(x_n)\to +\infty\).
+  
+  <br/><br/>
+  Par construction, \((x_n)_n\) est bornée. 
+  Par le Théorème de
+  Bolzano-Weierstrass, il existe une sous-suite \((x_{n_k})_k\) 
+  et \(x^*\in [a,b]\)
+  telle que \(\lim_{k\to\infty}x_{n_k}= x^*\). Mais donc, puisque \(f\) est
+  continue, elle est en particulier continue en \(x^*\), et donc
+  \[
+  f(x^*)=\lim_{k\to\infty}f(x_{n_k})=\lim_{n\to \infty} f(x_n)=+\infty\,,
+  \]
+  ce qui est impossible (puisque \(f(x^*)\) doit être un nombre fini!). 
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<p>
+  Une deuxième propriété, très utile dans les problèmes d'optimisation: si une
+  fonction est continue sur un compact, elle possède un minimum et un maximum:
+  </p>
+<div class="theo">
+  Soit \(f:[a,b]\to \mathbb{R}\) continue. Alors
+  \(f\) atteint son minimum et son maximum: il existe \(x_*\) et 
+  \(x^*\in[a,b]\) tels que 
+  \[ 
+  \min_{x\in [a,b]}f(x)=f(x_*)\,,\qquad
+  \max_{x\in [a,b]}f(x)=f(x^*)\,.
+  \]
+  </div>
+
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvecontinuitesurcompact" role="button" aria-expanded="false" aria-controls="theproofpreuvecontinuitesurcompact">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvecontinuitesurcompact">
+                    <div class="card card-body">
+                    <p>
+  Par le théorème précédent, \(f\) est bornée, et donc
+  \(S:= \sup_{x\in [a,b]}f(x)\) est fini.
+  Considérons la suite \(\varepsilon_n:= \frac1n\).
+  Par définition du supremum, pour tout \(n\) il existe \(x_n\in [a,b]\) tel que
+  \[ 
+  S-\varepsilon_n\leqslant f(x_n)\leqslant S\,.
+  \]
+  Par construction, \(f(x_n)\to S\).
+  Mais comme \((x_n)_n\) est bornée, par le Théorème de
+  Bolzano-Weierstrass, il existe une sous suite \((x_{n_k})_k\) et \(x^*\in [a,b]\)
+  telle que \(\lim_{k\to\infty}x_{n_k}=x^*\). En particulier, 
+  \[
+  f(x^*)=\lim_{k\to\infty}f(x_{n_k})=\lim_{n\to \infty} f(x_n)=S\,.
+  \]
+  Ainsi, \(f\) atteint son maximum en \(x^*\).
+  
+  <br/><br/>
+  On procède de même pour la construction d'un point \(x_*\) où \(f\) atteint son
+  minimum.
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<br/><br/><center><img class="img-fluid" src="../images/i_fonctions_continue_sur_a_b.jpg" width="400"/></center>
+<div class="info">
+  Le théorème dit que \(x_*\) et \(x^*\) existent toujours, mais il ne dit pas
+  comment les trouver! 
+  (D'ailleurs, en général, on ne sait pas les trouver...)
+  </div>
+<div class="exemple">
+  Sur \([0,2]\) (qui est compact), la fonction \(f(x)=x^3\sin(x^2+\cos(x))\) est
+  continue (c'est un produit de composées de fonctions continues).
+  Par le théorème, il existe \(x_*\in [0,2]\) et \(x^*\in [0,2]\) tels que 
+  \[ 
+  f(x_*)=\min_{x\in [0,2]}f(x)\,,\qquad
+  f(x^*)=\max_{x\in [0,2]}f(x)\,,
+  \]
+  même si on ne peut probablement pas les calculer exactement.
+  </div>
+<p>
+  Pour souligner l'importance des hypothèses dans le théorème ci-dessus,
+  voyons comme le résultat n'est plus vrai en général lorsqu'une 
+  des hypothèses n'est pas vérifiée:
+  </p>
+<div class="exemple">
+  (Une fonction sur un intervalle compact, mais 
+  qui n'est pas continue en un point.)
+  Soit \(f:[0,1]\to \mathbb{R}\) définie par
+  \[ 
+  f(x):= 
+  \begin{cases}
+  x&\text{ si }0\leqslant x\lt \frac12\,,\\
+  0&\text{ si } x=\frac12\,,\\
+  x-1&\text{ si }\frac12\lt x\leqslant 1\,.\\
+  \end{cases}
+  \]
+  Cette fonction est continue partout sauf en \(\frac12\), et elle ne possède ni
+  de maximum ni de minimum:
+  <br/><br/><center><img class="img-fluid" src="../images/i_fonctions_continuite_sur_ferme_pas_continue.jpg" width="300"/></center>
+</div>
+<div class="exemple">
+  (Une fonction continue, sur un intervalle borné mais pas fermé.)
+  Considérons
+  \[f(x)=\frac{1}{1-x^2}\,,\qquad \text{sur  } ]-1,1[\,.\] 
+  Alors \(f\) possède un minimum,
+  atteint en \(x_*=0\), mais pas de maximum:
+  <br/><br/><center><img class="img-fluid" src="../images/i_fonctions_continuite_sur_ouvert_pas_demax.jpg" width="300"/></center>
+</div>
+<div class="exemple">
+  (Une fonction continue sur un intervalle fermé mais pas borné.)
+  Soit 
+  \[f(x)=\frac{1}{x}\,,\qquad \text{ sur  } [1,+\infty[\,.\] 
+  Alors \(f\) possède un maximum,
+  atteint sur le bord en \(x^*=1\), mais pas de minimum:
+  <br/><br/><center><img class="img-fluid" src="../images/i_fonctions_continuite_sur_pas_borne_continue.jpg" width="300"/></center>
+</div>
+<div class="quiz" id="quiz7_3_1">
+  Vrai ou faux?
+  <ol>
+<li><span class="itemEMPTY">[  ]</span> Si \(f:[a,b]\to \mathbb{R}\) n'est pas continue, alors elle n'atteint pas 
+  son minimum ni son maximum.
+  </li><li><span class="itemEMPTY">[  ]</span> Si \(f:[a,b]\to \mathbb{R}\) atteint son minimum et son maximum, alors elle
+  est continue.
+  </li><li><span class="itemFULL">[  ]</span> Si \(f:[a,b]\to \mathbb{R}\) atteint son minimum ou son maximum, mais pas
+  les deux, alors elle n'est pas continue.
+  </li><li><span class="itemFULL">[  ]</span> Si \(f:[a,b]\to \mathbb{R}\) est minorée mais pas majorée, 
+  alors elle n'est pas continue.
+  </li></ol>
+<span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz7_3_1')">Solutions</button></span>
+</div><!--quizz-->
+</div>
+</body>
+</html>

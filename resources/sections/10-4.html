@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+</head>
+<body>
+<div class="sec" id="IDs-secexemplesseriestaylormclaurin-sDI"><h3>10.4 Exemples</h3>
+<div class="exemple">
+  Considérons la fonction exponentielle,
+  \(f(x)=e^x\), et étudions son développement de MacLaurin, c'est-à-dire autour de
+  \(x_0=0\). 
+  
+  <br/><br/>
+  Puisque \(f^{(k)}(x)=e^x\) pour tout \(k\), \(f\) est bien
+  infiniment dérivable sur tout \(I=\mathbb{R}\). 
+  Rappelons que pour un \(n\) fixé, son \(DL(n)\) autour de \(0\) est 
+  donné par 
+  \[
+  e^{x}=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots+\frac{x^n}{n!}
+  +R_n(x)\,,
+  \]
+  où \(R_n(x)=x^n\varepsilon_n(x)\), avec
+  \[ \varepsilon_n(x)=x\frac{e^u}{(n+1)!}\,,
+  \]
+  où \(u\) est un nombre entre \(0\) et \(x\).
+  Voyons si on peut prendre la limite \(n\to\infty\), en vérifiant les deux étapes
+  décrites plus haut.
+  
+  <ol>
+<li>D'abord, la série de MacLaurin associée est 
+  \[ 
+  \sum_{k\geqslant 0}\frac{1}{k!}x^k\,.
+  \]
+  On a vu précédemment que cette série a un rayon de convergence infini, elle
+  converge donc pour tout \(x\in \mathbb{R}\).
+  Donc ici on a \(I_s=\mathbb{R}\).
+  </li><li>
+  Ensuite, pour calculer la limite du reste, on commence par l'estimer comme suit:
+  \(\forall x\in \mathbb{R}\),
+  \[\begin{aligned} 
+  |R_n(x)|=|x^n\varepsilon_n(x)|&=\Bigl|x^{n+1}\frac{e^u}{(n+1)!}
+  \Bigr|\\
+  &\leqslant |x|^{n+1}\frac{e^{|u|}}{(n+1)!}\\
+  &\leqslant e^{|x|}\frac{|x|^{n+1}}{(n+1)!}
+  \end{aligned}\]
+  Dans cette dernière inégalité, on a utilisé le fait que \(u\) est entre \(0\) et
+  \(x\), et donc \(|u|\leqslant |x|\). Maintenant, puisque \(x\) est fixé, le critère
+  de d'Alembert (pour les suites) implique que
+  \[\lim_{n\to\infty}\frac{|x|^{n+1}}{(n+1)!}=0\,,\]
+  on a donc bien que le reste tend vers zéro: \(\lim_{n\to \infty}R_n(x)=0\), pour
+  tout \(x\in I_r=\mathbb{R}\).
+  </li></ol>
+  Ceci implique que l'exponentielle peut être écrite à l'aide de sa série de
+  MacLaurin pour n'importe quel réel \(x\in I'=I\cap I_s\cap I_r=\mathbb{R}\):
+  \[ 
+  \boxed{e^x=\sum_{k\geqslant 0}\frac{1}{k!}x^k\,\,.}
+  \]
+  </div>
+<div class="rem">
+  En général, dans les livres d'analyse, la fonction exponentielle est 
+  <b>définie</b> par sa série de MacLaurin, ce qui représente toutes sortes
+  d'avantages.
+  Mais bien-sûr, si on la définit par sa série, il faut ensuite démontrer que des
+  propriétés classiques, comme par exemple
+  \(e^{x+y}=e^xe^y\) ou \((e^x)'=e^x\), sont effectivement vérifiées.
+  </div>
+<p>
+  On peut montrer de façon tout à fait similaire que les fonctions sinus et
+  cosinus possèdent des développements de MacLaurin convergents sur tout \(\mathbb{R}\):
+  </p>
+  
+  \[ 
+  \boxed{
+  \sin(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots=\sum_{n\geqslant
+  0}\frac{(-1)^n}{(2n+1)!}x^{2n+1}\,,\qquad \forall x\in \mathbb{R}
+  }
+  \]
+  \[ 
+  \boxed{
+  \cos(x)=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\cdots=\sum_{n\geqslant
+  0}\frac{(-1)^n}{(2n)!}x^{2n}\,,\qquad \forall x\in \mathbb{R}
+  }
+  \]
+  
+  
+  <p>
+  Voyons un exemple où on est forcé de restreindre les valeurs de \(x\) pour
+  pouvoir implémenter notre programme:
+  </p>
+<div class="exemple">
+  Considérons
+  \(f(x)=\ln(1+x)\), définie sur \(I=]-1,+\infty[\).
+  Sur \(I\), \(f\) est infiniment dérivable, et on a déjà calculé ses
+  dérivées: 
+  \[
+  f^{(k)}(x)=(-1)^{k+1}(k-1)!(1+x)^{-k}\,.
+  \] 
+  Ainsi, sa série de MacLaurin est 
+  \[ 
+  \sum_{k\geqslant 1}\frac{(-1)^{k+1}}{k}x^k\,.
+  \]
+  On a aussi vu que
+  l'intervalle de convergence de cette série entière est \(I_s:= 
+  ]-1,1]\), 
+  
+  <br/><br/>
+  ⚡
+  Étudions le reste, pour des \(x\in I_s\):
+  \[\begin{aligned}
+   |R_n(x)|&=|x^n\varepsilon_n(x)|\\
+  &=\Bigl|
+  x^{n+1}
+  \frac{f^{(k+1)(u)}}{(n+1)!}
+  \Bigr|\\
+  &=\frac{1}{n+1}
+  \Bigl|\frac{x}{1+u}\Bigr|^{n+1}
+  \end{aligned}\]
+  On voit que pour tendre vers zéro, il faut s'assurer que \(|\frac{x}{1+u}|\leqslant
+  1\).
+  Distinguons les cas. D'une part, si 
+  \(x\geqslant 0\), alors \(u\geqslant 0\), \(|\frac{x}{1+u}|=\frac{x}{1+u}\leqslant
+  x\leqslant 1\), et donc 
+  \[ 
+  |R_n(x)|\leqslant \frac{1}{n+1}\to 0\quad \text{ lorsque }n\to\infty\,.
+  \]
+  D'autre part, si \(-1\lt x\leqslant 0\) alors \(1+u\geqslant 1+x \gt 0\) et donc
+  \(|\frac{x}{1+u}|=\frac{-x}{1+u}\leqslant\frac{-x}{1+x}\). 
+  Donc la contrainte \(|\frac{x}{1+u}|\leqslant 1\) devient \(\frac{-x}{1+x}\leqslant 1\),
+  qui est équivalente à \(x\geqslant -\frac12\).
+  Donc \(R_n(x)\to 0\) dès que \(x\in I_r:= [-\frac12,1]\).
+  Ainsi, on a montré que
+  \[ 
+  \boxed{\ln(1+x)=
+  \sum_{k\geqslant 1}\frac{(-1)^{k+1}}{k}x^k\,,\quad \forall x\in [-\tfrac12,1]}
+  \]
+  <br/><br/><center><img class="img-fluid" src="../images/i_Taylor_logdeunplusx.jpeg" width="350"/></center>
+  On ne le fera pas ici, mais on peut en fait montrer que la série de MacLaurin
+  représente la fonction sur tout l'intervalle \(]-1,1]\).
+  </div>
+<div class="info">
+  Si on utilise le développement ci-dessus en \(x=1\) (juste sur le bord de
+  l'intervalle où on a le droit de l'utiliser!), on peut écrire
+  \[ 
+  \ln(2)=\ln(1+1)=1-\frac12+\frac13-\frac14+\frac15\cdots
+  \]
+  <br/><br/><center><img class="img-fluid" src="../images/i_series_Taylor_TSOL_log_de_deux.jpg" width="400"/></center>
+</div>
+<div class="exemple">
+  On peut montrer que pour tout \(x\in \mathbb{R}\),
+  \[ 
+  \boxed{
+  \arctan(x)=x-\frac{x^3}{3}+\frac{x^5}{5}-\frac{x^7}{7}+\cdots=
+  \sum_{k\geqslant 0}(-1)^{k+1}\frac{x^{2k+1}}{2k+1}\,.
+  }
+  \]
+  Puisque \(\arctan(1)=\tfrac{\pi}{4}\), on peut utiliser cette série de Taylor pour
+  représenter \(\pi\):
+  \[ \pi=4\frac{\pi}{4}
+  =4\arctan(1)
+  =4\Bigl(
+  1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\frac{1}{9}\cdots
+  \Bigr)
+  \]
+  Mais chaque somme partielle de cette série fournit une approximation du nombre
+  \(\pi\).
+  Par exemple, en allant jusqu'à l'ordre \(7\),
+  \[\begin{aligned} 
+  \pi&\simeq
+  4 \Bigl(
+  1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}
+  \Bigr)\\
+  &=4\frac{105-35+21-15}{105}\\
+  &=4\frac{76}{105}\\
+  &=2.89\,,
+  \end{aligned}\]
+  ce qui n'est pas très bon!
+  On voit le problème: cette série ne converge pas très vite. En fait il faudrait
+  garder les 300 premiers termes pour avoir \(3.14\)...
+  </div>
+<div class="info">
+  D'autres séries ont des sommes partielles 
+  beaucoup plus efficaces pour approximer \(\pi\).
+  Par exemple (Wiki), la formule de <b>Chudnovsky</b> (1987),
+  \[ \pi=
+  2\sum_{k\geqslant 0}\frac{2^k(k!)^2}{(2k+1)!}\,.
+  \]
+  Par exemple, en ne gardant que les trois premiers termes de la somme,
+  \(k=0,1,2\),
+  FAIRE.
+  </div>
+<h4>Des fonctions lisses que n'ont peut pas représenter par une série de Taylor</h4>
+<p>
+  Voyons maintenant un exemple d'une fonction qui est infiniment dérivable en un
+  point mais qui ne peut <i>pas</i> être représentée par une série entière en ce
+  point:
+  </p>
+<div class="exemple">
+  Considérons
+  \[
+  f(x)=
+  \begin{cases}
+  e^{-\frac1{x^2}}&\text{ si }x\neq 0\\
+  0&\text{ si }x=0\,.
+  \end{cases}
+  \]
+  Clairement, \(f\) est infiniment dérivable partout en dehors de \(x=0\). 
+  Ce qui requiert un peu plus de travail, c'est de montrer que \(f\) est également
+  infiniment dérivable en \(x=0\) (laissé en exercice), et que ses dérivées en ce
+  point sont toutes nulles:
+  \[ f^{(k)}(0)=0\qquad \forall k\geqslant 1\,.  \]
+  On en déduit que sa série de MacLaurin est la série entière dont 
+  <i>tous les termes sont nuls</i>; elle ne peut donc pas représenter la fonction,
+  même très proche de \(x=0\). 
+  <br/><br/><center><img class="img-fluid" src="../images/i_Taylor_epuissancemoinsunsurxcarre.jpeg" width="350"/></center>
+  Ce qui se passe, ici, c'est que le reste est <i>égal</i> à la fonction
+  elle-même, et donc pour tout \(x\neq 0\),
+  \(\lim_{n\to\infty}R_n(x)\neq 0\).
+  </div>
+</div>
+</body>
+</html>

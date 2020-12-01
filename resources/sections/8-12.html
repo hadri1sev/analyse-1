@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+</head>
+<body>
+<div class="sec" id="IDs-secrechercheextremas-sDI"><h3>8.12 Sur la recherche des extrema d'une fonction sur un intervalle \([a,b]\)</h3>
+<p>
+  Passons maintenant à l'utilisation de la dérivée dans la recherche des extrema
+  d'une fonction. 
+  
+  <br/><br/>
+  On sait que lorsque \(f:[a,b]\to \mathbb{R}\) est continue, elle atteint
+  son minimum et son maximum:
+  <br/><br/></p><center><img class="img-fluid" src="../images/i_fonctions_continue_sur_a_b.jpg" width="300"/></center>
+  Dans cette section, on propose un algorithme qui permet (en principe) de
+  <i>trouver</i> ces extrema par le calcul.
+  
+  <br/><br/>
+  Considérons, pour fixer les idées, 
+  la recherche du <b>maximum global</b> d'une fonction \(f:[a,b]\to
+  \mathbb{R}\). 
+  Par simple observation, puisqu'on <i>sait</i> qu'il est atteint quelque part sur
+  \([a,b]\), on peut facilement lister toutes les possibilités:
+  
+  
+  <ol>
+<li>Il peut être atteint sur les bords, en \(x=a\) ou en \(x=b\).
+  </li><li>Il peut être atteint à l'intérieur de l'intervalle, c.-à-d. dans 
+  \(]a,b[\). Mais comme c'est un maximum 
+  global, il est aussi local. Donc si \(f\) est dérivable en ce point, sa dérivée
+  s'y annule. Et si elle n'est pas dérivable, on traite le cas séparément.
+  </li></ol>
+<p>
+  Cette simple distinction des cas nous mène directement à un algorithme 
+  pour la recherche du minimum et du maximum de \(f\):
+  </p>
+<ol>
+<li>On commencera par chercher les
+  <b>points stationnaires</b>, c'est-à-dire  les points
+   \(x\in ]a,b[\) où \(f\) est dérivable et s'annule: \(f'(x)=0\), ainsi que les
+  points de \(]a,b[\) où \(f\) n'est pas dérivable.
+  </li><li>On regardera les valeurs de la fonction sur le bord de
+  l'intervalle, en \(x=a\) et \(x=b\), et on les comparera avec
+  les valeurs en chacun des points trouvés à l'étape précédente.
+  </li><li>Après avoir listé toutes ces valeurs, on garde la plus grande, et la plus
+  petite.
+  </li></ol>
+<div class="exemple">
+  Cherchons les extremas de la fonction
+  \(f(x)=3x^4+4x^3-12x^2\) sur \([-1,2]\).
+  <ol>
+<li>Points stationnaires: 
+  \[f'(x)=12(x^3+x^2-2x)=12x(x^2+x-2)=12x(x+2)(x-1)\,,\]
+  donc la dérivée est nulle en \(-2\not \in [-1,2]\), en \(0\in [1,2]\)
+   et en \(1\in [-1,2]\). On
+  garde:
+  \[ 
+  \boxed{f(0)=0\,\quad f(1)=-5}
+  \] 
+  </li><li>Sur les bords:
+  \[ \boxed{f(-1)=-13,\,\quad f(2)=32}
+  \]
+  </li></ol>
+  En comparant les quatre valeurs encadrées ci-dessus, on voit que
+  <ul>
+<li>\(f\) atteint son maximum global en \(x=2\) (sur le bord) 
+  </li><li>\(f\) atteint son minimum global en \(x=-1\) (sur le bord) 
+  </li></ul>
+<br/><br/><center><img class="img-fluid" src="../images/i_fonctions_derivee_extremas_polynome.jpg" width="300"/></center>
+</div>
+<div class="exemple">
+  Considérons \(f(x)=|x^2(x-2)|\) sur l'intervalle \([1,3]\).
+  Comme \(f:[1,3]\to \mathbb{R}\)  est
+  continue, elle atteint son minimum et son maximum.
+  On commence par écrire 
+  \[ 
+  |x^2(x-2)|=
+  \begin{cases}
+  -x^2(x-2)&\text{ si }x\in [1,2]\,,\\
+  x^2(x-2)&\text{ si }x\in ]2,3]\,.
+  \end{cases}
+  \]
+  <ol>
+<li>Points stationnaires: Sur \(]1,2[\), \(f'(x)=x(4-3x)\), donc deux points
+  où la dérivée s'annule, en \(0\not \in ]1,2[\) et en \(\frac43\in]1,2[\):
+  \[ 
+  \boxed{f(\tfrac43)=\frac{32}{27}}
+  \]
+  Sur \(]2,3[\), \(f'(x)=x(3x-4)\), donc ne s'annule pas.
+  </li><li>Points où \(f\) n'est pas dérivable? Seul candidat: \(x=2\).
+  En effet, 
+  \[\begin{aligned} 
+  \lim_{x\to 2^-}f'(x)&=\lim_{x\to 2^-}(x(4-3x))=-4\\
+  \lim_{x\to 2^+}f'(x)&=\lim_{x\to 2^+}(x(3x-4))=+4
+  \end{aligned}\]
+  Donc on garde 
+  \[ 
+  \boxed{f(2)=0}
+  \]
+  </li><li>Sur les bords:
+  \[
+  \boxed{f(1)=1\,\quad f(3)=9} 
+  \]
+  </li></ol>
+  On conclut que \(f\)
+  <ul>
+<li>atteint son minimum en \(x=2\),
+  </li><li>atteint son maximum en \(x=3\) (sur le bord). 
+  </li></ul>
+<br/><br/><center><img class="img-fluid" src="../images/i_fonctions_derivee_extremas_machin_valabs.jpg" width="300"/></center>
+  Remarquons qu'en 
+  \(x=\frac43\), \(f\) possède un maximum, qui est local mais pas global.
+  </div>
+</div>
+</body>
+</html>

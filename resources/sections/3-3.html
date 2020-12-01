@@ -1,186 +1,178 @@
 <!DOCTYPE html>
 <html lang=fr>
-
 <head>
-
   <meta charset="utf-8">
   <title></title>
-
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
   </script>
-
   <!-- Bootstrap 4 & jQuery scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../content-styles.css">
-
   <!-- Custom JS -->
   <script type="text/javascript" src="../content-main.js"></script>
-
 </head>
-
 <body>
+<div class="sec" id="IDs-secproprietesdelalimite-sDI"><h3>3.3 Propriétés de la limite</h3>
 
-  <h3>3.3 Propriétés de la limite</h3>
+<center>
 
-  <div class="video">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_proprietes" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_proprietes">Propriétés de la limite \(~a_n\to L\)</a>
-    <div class="collapse" id="IDvideodiv-v_suites_proprietes">
-      <div class="card card-body">
-        <video class="HTMLvideo" src="../videos/v_suites_proprietes.mp4" poster="../videos/v_suites_proprietes_thumbnail.png" controls=true></video>
-      </div>
-    </div>
-  </div>
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_proprietes" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_proprietes">Propriétés de la limite \(a_n\to L\)</a>
+                    <div class="collapse" id="IDvideodiv-v_suites_proprietes">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_suites_proprietes.mp4" poster="../videos/v_suites_proprietes_thumbnail.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
+<p>
+Listons les propriétés principales de la limite.
+La première peut peut-être paraître évidente:
+</p>
+<div class="lem">
+La limite d'une suite convergente est unique.
+</div>
 
-  <p>
-    Listons les propriétés principales de la limite.
-    La première peut peut-être paraître évidente:
-  </p>
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofsilalimiteexisteelleestunique" role="button" aria-expanded="false" aria-controls="theproofsilalimiteexisteelleestunique">Preuve:</a>
+                    <div class="collapse" id="theproofsilalimiteexisteelleestunique">
+                    <div class="card card-body">
+                    <p>
+Supposons que \(a_n\to L\) et \(a_n\to L'\), avec \(L\neq L'\). Supposons par
+exemple que \(L\lt L'\).
+Soit \(\varepsilon\gt 0\) pris suffisamment petit, de manière à ce que
+\([L-\varepsilon,L+\varepsilon]\) et \([L'-\varepsilon,L'+\varepsilon]\) soient disjoints.
+Par exemple \(\varepsilon:= \frac{L'-L}{3}\):
+<br/><br/></p><center><img class="img-fluid" src="../images/i_suites_preuve_limite_unique.jpg" width="400"/></center><p>
+Comme \(a_n\to L\), il existe \(N\)
+tel que \(a_n\in [L-\varepsilon,L+\varepsilon ]\) pour tout \(n\geqslant N\).
+Comme \(a_n\to L'\), il existe \(N'\)
+tel que \(a_n\in [L'-\varepsilon,L'+\varepsilon]\) pour tout \(n\geqslant N'\).
+Mais ceci est une contradiction puisque 
+\([L-\varepsilon,L+\varepsilon]\) et \([L'-\varepsilon,L'+\varepsilon]\) sont disjoints.
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<p>
+La deuxième est que les valeurs des termes d'une suite convergente ne peuvent
+pas devenir trop grands:
+</p>
+<div class="lem">
+Si une suite \((a_n)\) converge, alors elle est bornée.
+</div>
 
-  <div class="lem">
-    La limite d'une suite convergente est unique.
-  </div>
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofsisuiteconvergealorsbornee" role="button" aria-expanded="false" aria-controls="theproofsisuiteconvergealorsbornee">Preuve:</a>
+                    <div class="collapse" id="theproofsisuiteconvergealorsbornee">
+                    <div class="card card-body">
+                    <p>
+Il faut montrer qu'il existe \(C\geqslant 0\) tel que \(|a_n|\leqslant C\) pour tout
+\(n\). Or si la suite converge, disons \(a_n\to L\), on peut prendre
+\(\varepsilon:= 1\) et considérer l'entier \(N\) tel que \(a_n\in
+[L-1,L+1]\) pour tout \(n\geqslant N\). 
+<br/><br/></p><center><img class="img-fluid" src="../images/i_suite_converge_donc_bornee_ggb.jpg" width="400"/></center><p>
+En particulier on a, pour tout \(n\geqslant N\), 
+\(|a_n|\leqslant |a_n-L|+|L|\leqslant |L|+1\).
+Soit 
+\[
+C:= \max\{|a_1|,\dots,|a_N|,|L|+1\}\,.
+\]
+On a clairement \(|a_n|\leqslant C\) pour tout \(n\leqslant N\), mais aussi \(|a_n|\leqslant
+|L|+1\leqslant C\) pour tout \(n\geqslant N\).
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<p>
+Finalement, listons quelques propriétés, qui permettent de calculer des limites
+à l'aide d'autres limites connues.
+</p>
+<div class="lem"> (Opérations sur les limites)
+Soient \((a_n)\) et \((b_n)\) deux suites convergentes: \(a_n\to L_1\), \(b_n\to
+L_2\). Alors
+<ol>
+<li>\(\displaystyle\lim_{n\to \infty}(a_n+b_n)=\lim_{n\to \infty} a_n+ \lim_{n\to \infty} b_n=L_1+L_2\)
+</li><li>\(\displaystyle\lim_{n\to \infty}(a_n\cdot b_n)=(\lim_{n\to \infty} a_n)\cdot(\lim_{n\to \infty} b_n)=L_1L_2\)
+</li><li>Si \(L_2\neq 0\), alors
+\(\displaystyle\lim_{n\to \infty}\frac{a_n}{b_n}=\frac{\lim_{n\to \infty} a_n}{\lim_{n\to \infty} b_n}=\frac{L_1}{L_2}\)
+</li><li>Si \(a_n\leqslant b_n\) pour tout \(n\) suffisamment grand, alors \(L_1\leqslant L_2\). 
+</li></ol>
+</div>
 
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#silalimiteexisteelleestunique" role="button" aria-expanded="false" aria-controls="silalimiteexisteelleestunique">Preuve:</a>
-    <div class="collapse" id="silalimiteexisteelleestunique">
-      <div class="card card-body">
-        <p>Supposons que \(a_n\to L\) et \(a_n\to L'\), avec \(L\neq L'\). Supposons par
-          exemple que \(L\lt L'\).
-          Soit \(\varepsilon\gt 0\) pris suffisamment petit, de manière à ce que
-          \([L-\varepsilon,L+\varepsilon]\) et \([L'-\varepsilon,L'+\varepsilon]\) soient disjoints.
-          Par exemple \(\varepsilon:= \frac{L'-L}{3}\): </p>
-          <center><img src="../images/i_suites_preuve_limite_unique.jpg" class="img-fluid" width="400"></center>
-          <p>Comme \(a_n\to L\), il existe \(N\)
-          tel que \(a_n\in [L-\varepsilon,L+\varepsilon ]\) pour tout \(n\geqslant N\).
-          Comme \(a_n\to L'\), il existe \(N'\)
-          tel que \(a_n\in [L'-\varepsilon,L'+\varepsilon]\) pour tout \(n\geqslant N'\).
-          Mais ceci est une contradiction puisque
-          \([L-\varepsilon,L+\varepsilon]\) et \([L'-\varepsilon,L'+\varepsilon]\) sont disjoints.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <p>
-    La deuxième est que les valeurs des termes d'une suite convergente ne peuvent
-    pas devenir trop grands:
-  </p>
-
-  <div class="lem">
-    Si une suite \((a_n)\) converge, alors elle est bornée.
-  </div>
-
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#sisuiteconvergealorsbornee" role="button" aria-expanded="false" aria-controls="sisuiteconvergealorsbornee">Preuve:</a>
-    <div class="collapse" id="sisuiteconvergealorsbornee">
-      <div class="card card-body">
-        <p>Il faut montrer qu'il existe \(C\geqslant 0\) tel que \(|a_n|\leqslant C\) pour tout
-          \(n\). Or si la suite converge, disons \(a_n\to L\), on peut prendre
-          \(\varepsilon:= 1\) et considérer l'entier \(N\) tel que \(a_n\in
-          [L-1,L+1]\) pour tout \(n\geqslant N\).</p>
-          <center><img src="../images/i_suite_converge_donc_bornee_ggb.jpg" class="img-fluid" width="400"></center>
-          <p>En particulier on a, pour tout \(n\geqslant N\),
-          \(|a_n|\leqslant |a_n-L|+|L|\leqslant |L|+1\).
-          Soit
-          \[
-          C:= \max\{|a_1|,\dots,|a_N|,|L|+1\}\,.
-          \]
-          On a clairement \(|a_n|\leqslant C\) pour tout \(n\leqslant N\), mais aussi \(|a_n|\leqslant
-          |L|+1\leqslant C\) pour tout \(n\geqslant N\).
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <p>
-    Finalement, listons quelques propriétés, qui permettent de calculer des limites
-    à l'aide d'autres limites connues.
-  </p>
-
-  <div class="lem"> (Opérations sur les limites)
-    Soient \((a_n)\) et \((b_n)\) deux suites convergentes: \(a_n\to L_1\), \(b_n\to
-    L_2\). Alors
-    <ol>
-      <li>\(\displaystyle\lim_{n\to \infty}(a_n+b_n)=\lim_{n\to \infty} a_n+ \lim_{n\to \infty} b_n=L_1+L_2\)
-      <li>\(\displaystyle\lim_{n\to \infty}(a_n\cdot b_n)=(\lim_{n\to \infty} a_n)\cdot(\lim_{n\to \infty} b_n)=L_1L_2\)
-      <li>Si \(L_2\neq 0\), alors
-        \(\displaystyle\lim_{n\to \infty}\frac{a_n}{b_n}=\frac{\lim_{n\to \infty} a_n}{\lim_{n\to \infty} b_n}=\frac{L_1}{L_2}\)
-      <li>Si \(a_n\leqslant b_n\) pour tout \(n\) suffisamment grand, alors \(L_1\leqslant L_2\).
-    </ol>
-  </div>
-
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofproprietesalacon" role="button" aria-expanded="false" aria-controls="theproofproprietesalacon">Preuve:</a>
-    <div class="collapse" id="theproofproprietesalacon">
-      <div class="card card-body">
-        <p>1. Par l'inégalité triangulaire,
-          \[\begin{aligned}
-          |(a_n+b_n)-(L_1+L_2)|&=|(a_n-L_1)+(b_n-L_2)|\\
-          &\leqslant |a_n-L_1|+|b_n-L_2|\,.
-          \end{aligned}\]
-          Fixons un \(\varepsilon\gt 0\), et posons \(\varepsilon':= \varepsilon/2\).
-          Comme \(a_n\to L_1\), il existe
-          \(N_a\) tel que \(|a_n-L_1|\leqslant \varepsilon'\) pour tout \(n\geqslant N_a\).
-          Comme \(b_n\to L_2\), il existe
-          \(N_b\) tel que \(|b_n-L_2|\leqslant \varepsilon'\) pour tout \(n\geqslant N_b\).
-          On a donc, pour tout \(n\geqslant N:= \max{N_a,N_b}\),
-          \[
-          |(a_n+b_n)-(L_1+L_2)|\leqslant |a_n-L_1|+|b_n-L_2|\leqslant 2\varepsilon'=\varepsilon\,.
-          \]
-          2. Comme \(a_n\) converge, elle est bornée: il
-          existe \(C\gt 0\) telle que \(|a_n|\leqslant C\) pour tout \(n\). On peut donc écrire
-          \[\begin{aligned}
-          |a_nb_n-L_1L_2|&=|a_nb_n-a_nL_2+a_nL_2-L_1L_2|\\
-          &\leqslant |a_n||b_n-L_2|+|L_2||a_n-L_1|\\
-          &\leqslant C|b_n-L_2|+|L_2||a_n-L_1|\,.
-          \end{aligned}\]
-          Soit \(\varepsilon\gt 0\).
-          Soit \(N_a\) tel que \(|a_n-L_1|\leqslant \frac{\varepsilon}{2|L_2|}\) pour tout \(n\geqslant
-          N_a\) (serait dommage que \(L_2=0\)!), et
-          soit \(N_b\) tel que \(|b_n-L_2|\leqslant \frac{\varepsilon}{2C}\) pour tout \(n\geqslant
-          N_b\). On a alors que pour tout \(n\geqslant N:= \max\{N_a,N_b\}\),
-          \[\begin{aligned} |a_nb_n-L_1L_2|&\leqslant C|b_n-L_2|+|L_2||a_n-L_1|\\
-          &\leqslant C\frac{\varepsilon}{2C}+|L_2|\frac{\varepsilon}{2|L_2|}=\varepsilon\,.
-          \end{aligned}\]
-          Les propriétés 3. et 4. sont laissées en exercice.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="rem">
-    Remarquons que dans la dernière propriété, les ''\(\leqslant\)'' ne peuvent pas être
-    remplacés par des ''\(\lt\)''!
-    En effet, on peut très bien avoir deux suites convergentes telles que
-    \(a_n\lt b_n\) pour tout \(n\) suffisamment grand,
-    mais telles que \(\lim_{n\to \infty} a_b=\lim_{n\to \infty} b_n\).
-    Comme exemple simple, on peut considérer les suites définies par
-    \(a_n=-\frac1n\), \(b_n=\frac1n\).
-  </div>
-
-  <div class="quiz" id="quiz3_3_1">
-    Vrai ou faux?
-    <ol>
-      <li><span class="itemEMPTY">[ ]</span> Si \(a_n+b_n\to L_1+L_2\), alors \(a_n\to L_1\) et \(b_n\to L_2\).
-      <li><span class="itemEMPTY">[ ]</span> Si \(a_nb_n\) converge, alors \(a_n\) et \(b_n\) convergent toutes
-        les deux.
-      <li><span class="itemEMPTY">[ ]</span> Si \(\frac{a_n}{b_n}\to L\), alors \(b_n\) ne tend pas vers zéro.
-      <li><span class="itemEMPTY">[ ]</span> Si \(a_n\lt b_n\) pour tout \(n\) suffisamment grand, et si \(a_n\to
-        L_1\), \(b_n\to L_2\), alors \(L_1\lt L_2\).
-      <li><span class="itemFULL">[ ]</span> Si \(a_n\leqslant b_n\) pour une infinité d'indices \(n\),
-        et si \(a_n\to L_1\), \(b_n\to L_2\), alors \(L_1\leqslant L_2\).
-    </ol>
-    <span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_3_1')">Solutions</button></span>
-  </div>
-
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofproprietesalacon" role="button" aria-expanded="false" aria-controls="theproofproprietesalacon">Preuve:</a>
+                    <div class="collapse" id="theproofproprietesalacon">
+                    <div class="card card-body">
+                    <p>
+1. Par l'inégalité triangulaire,
+\[\begin{aligned} 
+|(a_n+b_n)-(L_1+L_2)|&=|(a_n-L_1)+(b_n-L_2)|\\
+&\leqslant |a_n-L_1|+|b_n-L_2|\,.
+\end{aligned}\]
+Fixons un \(\varepsilon\gt 0\), et posons \(\varepsilon':= \varepsilon/2\). 
+Comme \(a_n\to L_1\), il existe 
+\(N_a\) tel que \(|a_n-L_1|\leqslant \varepsilon'\) pour tout \(n\geqslant N_a\).
+Comme \(b_n\to L_2\), il existe 
+\(N_b\) tel que \(|b_n-L_2|\leqslant \varepsilon'\) pour tout \(n\geqslant N_b\). 
+On a donc, pour tout \(n\geqslant N:= \max{N_a,N_b}\),
+\[ 
+|(a_n+b_n)-(L_1+L_2)|\leqslant |a_n-L_1|+|b_n-L_2|\leqslant 2\varepsilon'=\varepsilon\,.
+\]
+2. Comme \(a_n\) converge, elle est bornée: il
+existe \(C\gt 0\) telle que \(|a_n|\leqslant C\) pour tout \(n\). On peut donc écrire
+\[\begin{aligned} 
+|a_nb_n-L_1L_2|&=|a_nb_n-a_nL_2+a_nL_2-L_1L_2|\\
+&\leqslant |a_n||b_n-L_2|+|L_2||a_n-L_1|\\
+&\leqslant C|b_n-L_2|+|L_2||a_n-L_1|\,.
+\end{aligned}\]
+Soit \(\varepsilon\gt 0\). 
+Soit \(N_a\) tel que \(|a_n-L_1|\leqslant \frac{\varepsilon}{2|L_2|}\) pour tout \(n\geqslant
+N_a\) (serait dommage que \(L_2=0\)!), et
+soit \(N_b\) tel que \(|b_n-L_2|\leqslant \frac{\varepsilon}{2C}\) pour tout \(n\geqslant
+N_b\). On a alors que pour tout \(n\geqslant N:= \max\{N_a,N_b\}\), 
+\[\begin{aligned} |a_nb_n-L_1L_2|&\leqslant C|b_n-L_2|+|L_2||a_n-L_1|\\
+&\leqslant C\frac{\varepsilon}{2C}+|L_2|\frac{\varepsilon}{2|L_2|}=\varepsilon\,.
+\end{aligned}\]
+Les propriétés 3. et 4. sont laissées en exercice.
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<div class="rem">
+Remarquons que dans la dernière propriété, les ''\(\leqslant\)'' ne peuvent pas être
+remplacés par des ''\(\lt\)''! 
+En effet, on peut très bien avoir deux suites convergentes telles que
+\(a_n\lt b_n\) pour tout \(n\) suffisamment grand, 
+mais telles que \(\lim_{n\to \infty} a_b=\lim_{n\to \infty} b_n\).
+Comme exemple simple, on peut considérer les suites définies par
+\(a_n=-\frac1n\), \(b_n=\frac1n\).
+</div>
+<div class="quiz" id="quiz3_3_1">
+Vrai ou faux?
+<ol>
+<li><span class="itemEMPTY">[  ]</span> Si \(a_n+b_n\to L_1+L_2\), alors \(a_n\to L_1\) et \(b_n\to L_2\).
+</li><li><span class="itemEMPTY">[  ]</span> Si \(a_nb_n\) converge, alors \(a_n\) et \(b_n\) convergent toutes
+les deux.
+</li><li><span class="itemEMPTY">[  ]</span> Si \(\frac{a_n}{b_n}\to L\), alors \(b_n\) ne tend pas vers zéro.
+</li><li><span class="itemEMPTY">[  ]</span> Si \(a_n\lt b_n\) pour tout \(n\) suffisamment grand, et si \(a_n\to
+L_1\), \(b_n\to L_2\), alors \(L_1\lt L_2\).
+</li><li><span class="itemFULL">[  ]</span> Si \(a_n\leqslant b_n\) pour une infinité d'indices \(n\), 
+et si \(a_n\to L_1\), \(b_n\to L_2\), alors \(L_1\leqslant L_2\).
+</li></ol>
+<span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_3_1')">Solutions</button></span>
+</div><!--quizz-->
+</div>
 </body>
-
 </html>

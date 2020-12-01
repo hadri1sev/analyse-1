@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
+  </script>
+  <!-- Bootstrap 4 & jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../content-styles.css">
+  <!-- Custom JS -->
+  <script type="text/javascript" src="../content-main.js"></script>
+</head>
+<body>
+<div class="sec" id="IDs-secderiveesfonctionselementaires-sDI"><h3>8.3 Dérivées des fonctions élémentaires</h3>
+
+<center>
+
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_derivee_fondamentales" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_derivee_fondamentales">Dérivées des fonctions élémentaires</a>
+                    <div class="collapse" id="IDvideodiv-v_derivee_fondamentales">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_derivee_fondamentales.mp4" poster="../videos/v_derivee_fondamentales_thumbnail.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
+<p>
+  Les règles de dérivation vues dans la section précédente permettent de calculer,
+  en principe, la dérivée de n'importe quelle fonction, tant que celle-ci est
+  obtenue par combinaisons 
+  (sommes ou différences, produits ou quotients, composées) 
+  d'autres fonctions plus simples que l'on sait déjà
+  dériver. Il est donc important de
+  connaître les dérivées des fonctions élémentaires.
+  
+  <br/><br/>
+  Ci-dessous, \((\dots)'\) indique la dérivation par rapport à la variable \(x\).
+  </p>
+<ul>
+<li>Les fonctions constantes ont une dérivée nulle: \(C'=0\)
+  </li><li>Pour tout \(n\in \mathbb{N}\), \((x^n)'=nx^{n-1}\)
+  
+  
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvederiveexpuissancen" role="button" aria-expanded="false" aria-controls="theproofpreuvederiveexpuissancen">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvederiveexpuissancen">
+                    <div class="card card-body">
+                    <p>
+  On démontre la formule par récurrence sur \(n\).
+  La formule est valide pour \(n=1\) et \(n=2\) (voir plus haut). 
+  Si on suppose la formule valide pour \(n\), alors par la règle de dérivation
+  d'un produit,
+  \[ (x^{n+1})'=(x\cdot x^{n})'=1\cdot x^n+x\cdot nx^{n-1}=(n+1)x^n\,.
+  \]
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+</li><li>Si \(P(x)=\sum_{k=0}^na_kx^k\), alors \(P'(x) =\sum_{k=1}^nka_kx^{k-1}\).
+  </li><li>\((\sin x)'=\cos x\)
+  
+  
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofladeriveedusinuscestlecosinus" role="button" aria-expanded="false" aria-controls="theproofladeriveedusinuscestlecosinus">Preuve:</a>
+                    <div class="collapse" id="theproofladeriveedusinuscestlecosinus">
+                    <div class="card card-body">
+                    <p>
+  Montrons que 
+  \[\lim_{h\to 0}\frac{\sin(x_0+h)-\sin(x_0)}{h}=\cos (x_0)\,.
+  \]
+  En utilisant la formule de trigonométrique pour le sinus d'une somme, 
+  \[
+  \sin(\alpha+\beta)=\sin(\alpha)\cos(\beta)+\cos(\alpha)\sin(\beta)\,,
+  \]
+  on peut écrire
+  \[\begin{aligned}
+  \frac{\sin(x_0+h)-\sin(x_0)}{h}
+  &=\frac{\bigl(\sin(x_0)\cos(h)+\cos(x_0)\sin(h)\bigr)-\sin(x_0)}{h}\\
+  &=\sin(x_0)\underbrace{\frac{\cos(h)-1}{h}}_{\to 1}
+  +\underbrace{\frac{\sin(h)}{h}}_{\to 0}\cos(x_0)
+  \end{aligned}\]
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+</li><li>\((\cos x)'=-\sin x\)
+  
+  
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofladeriveeducoscestmoinsinus" role="button" aria-expanded="false" aria-controls="theproofladeriveeducoscestmoinsinus">Preuve:</a>
+                    <div class="collapse" id="theproofladeriveeducoscestmoinsinus">
+                    <div class="card card-body">
+                    <p>
+  On utilise le fait que \(\cos(x)=\sin(\tfrac{\pi}{2}-x)\), et la formule pour la
+  dérivée d'une composée:
+  \[
+  (\cos(x))'
+  =(\sin(\tfrac{\pi}{2}-x))'
+  =\cos(\tfrac{\pi}{2}-x)\cdot (-x)'
+  =\sin(x)\cdot (-1)
+  \]
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+</li><li>\((\tan x)'=1+\tan^2x=\frac{1}{\cos(x)^2}\)
+  
+  
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofderiveetangenteestunplustgcarre" role="button" aria-expanded="false" aria-controls="theproofderiveetangenteestunplustgcarre">Preuve:</a>
+                    <div class="collapse" id="theproofderiveetangenteestunplustgcarre">
+                    <div class="card card-body">
+                    <p>
+  \[(\tan (x))'=\Bigl(\frac{\sin(x)}{\cos(x)}\Bigr)'
+  =\frac{\cos(x)^2+\sin(x)^2}{\cos(x)^2} 
+  \]
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+</li><li>\((\ln x)'=\frac1x\) (\(x>0\))
+  
+  
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofderiveelncestunsurx" role="button" aria-expanded="false" aria-controls="theproofderiveelncestunsurx">Preuve:</a>
+                    <div class="collapse" id="theproofderiveelncestunsurx">
+                    <div class="card card-body">
+                    <p>
+  (Attention: On propose un argument indiquant que la dérivée doit être
+  \(\frac{1}{x}\), mais qui ne constitue pas une preuve complète.)
+  Rappelons que
+  \[ e
+  =\lim_{n\to \infty}\Bigl(1+\frac1n\Bigr)^n
+  =\lim_{y\to \infty}\Bigl(1+\frac1y\Bigr)^y\,.
+  \]
+  On calcule, pour tout \(x>0\),
+  \[\begin{aligned}
+   (\ln(x))'
+  &=\lim_{h\to 0}\frac{\ln(x+h)-\ln(x)}{h}\\
+  &=\lim_{h\to 0}\frac{\ln(x(1+\frac{h}{x}))-\ln(x)}{h}\\
+  &=\lim_{h\to 0}\frac{(\ln(x)+\ln(1+\frac{h}{x}))-\ln(x)}{h}\\
+  &=\lim_{h\to 0}\frac{\ln(1+\frac{h}{x})}{h}\\
+  &=\frac{1}{x}\Bigl\{\lim_{h\to 0}\frac{\ln(1+\frac{h}{x})}{\frac{h}{x}}\Bigr\}\\
+  &=\frac{1}{x}\Bigl\{\lim_{t\to 0}\frac{\ln(1+t)}{t}\Bigr\}
+  \end{aligned}\]
+  Dans cette dernière ligne, on a posé
+  \(t=\frac{h}{x}\); \(h\to 0\) implique \(t\to
+  0\). 
+  Pour voir que cette dernière limite doit être égale à \(1\), 
+  calculons les limites
+  \(t\to 0^\pm\) le long des suites particulières \(t_n=\pm\frac{1}{n}\):
+  \[\begin{aligned}
+  \lim_{t\to 0^\pm}\frac{\ln(1+t)}{t}
+  =\lim_{n\to \infty}\frac{\ln(1\pm \frac{1}{n})}{\pm\frac1n}
+  &=\pm\lim_{n\to \infty}n\ln(1\pm\tfrac{1}{n})\\
+  &=\pm\lim_{n\to \infty}\ln((1\pm\tfrac{1}{n})^n)=\pm\ln(e^{\pm 1})=1\,.
+  \end{aligned}\]
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+</li><li>\((e^x)'=e^x\)
+  
+  
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofladeriveedeepuissancexcestepuissancex" role="button" aria-expanded="false" aria-controls="theproofladeriveedeepuissancexcestepuissancex">Preuve:</a>
+                    <div class="collapse" id="theproofladeriveedeepuissancexcestepuissancex">
+                    <div class="card card-body">
+                    <p>
+  \[\begin{aligned}
+   (e^x)'
+  &=\lim_{h\to 0}\frac{e^{x+h}-e^x}{h}\\
+  &=\lim_{h\to 0}\frac{e^{x}e^{h}-e^x}{h}\\
+  &=e^x\lim_{h\to 0}\frac{e^{h}-1}{h}\\
+  (\text{poser }t=e^h-1)&=e^x\lim_{t\to 0}\frac{t}{\ln(1+t)}\\
+  &=e^x\frac{1}{\lim_{t\to 0}\frac{\ln(1+t)}{t}}\\
+  &=e^x
+  \end{aligned}\]
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+</li><li>\((a^x)'=\ln(a)a^x\)
+  
+  
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvedeladeriveedeapuissancex" role="button" aria-expanded="false" aria-controls="theproofpreuvedeladeriveedeapuissancex">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvedeladeriveedeapuissancex">
+                    <div class="card card-body">
+                    <p>
+  En exponentiant, \(a=e^{\ln(a)}\),
+  \[\begin{aligned}
+   (a^x)'
+  &=(e^{x\ln(a)})'\\
+  &=\ln(a) e^{x\ln(a)}\\
+  &=\ln(a) a^x\,.
+  \end{aligned}\]
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+</li><li>\((\log_a(x))'=\frac{1}{x\ln(a)}\)
+  
+  
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvederiveelogdansautrebase" role="button" aria-expanded="false" aria-controls="theproofpreuvederiveelogdansautrebase">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvederiveelogdansautrebase">
+                    <div class="card card-body">
+                    <p>
+  Par la formule du changement de base pour le logarithme, 
+  \[ 
+  (\log_a(x))'
+  =\Bigl(\frac{\ln(x)}{\ln(a)}\Bigr)'
+  =\frac{1}{\ln(a)}(\ln(x))'
+  =\frac{1}{\ln(a)}\cdot\frac1x\,.
+  \]
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+</li><li>Pour tout \(\alpha\in \mathbb{R}\), \((x^\alpha)'=\alpha x^{\alpha-1}\),
+  (\(x>0\))
+  
+  
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvederiveepuissancequelconque" role="button" aria-expanded="false" aria-controls="theproofpreuvederiveepuissancequelconque">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvederiveepuissancequelconque">
+                    <div class="card card-body">
+                    <p>
+  En exponentiant, \(x=e^{\ln(x)}\) (\(x>0\)), 
+  \[ (x^\alpha)'=(e^{\alpha\ln(x)})'
+  =e^{\alpha\ln(x)}(\alpha\ln(x))'
+  =x^\alpha\frac{\alpha}{x}
+  =\alpha x^{\alpha-1}
+  \]
+  </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+</li></ul>
+<div class="exemple">
+  Considérons, pour \(x>0\),  la fonction
+  \[h(x):= x^x\,.\] 
+  Remarquons que \(h(x)\) 
+  n'est ni de la forme \(x^\alpha\), ni de la forme \(a^x\), mais bien du type
+  \(f(x)^{g(x)}\), on doit donc la considérer comme définie à l'aide d'une
+  exponentiation: \(h(x)=e^{x\ln(x)}\). On la dérive alors en utilisant 
+  les règles de dérivation:
+  \[ 
+  h'(x)=(x\ln x)'e^{x\ln x}=(\ln(x)+x\tfrac{1}{x})e^{x\ln x}=(\ln (x)+1)x^x\,.
+  \]
+  </div>
+</div>
+</body>
+</html>

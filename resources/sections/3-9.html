@@ -1,253 +1,251 @@
 <!DOCTYPE html>
 <html lang=fr>
-
 <head>
-
   <meta charset="utf-8">
   <title></title>
-
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
   </script>
-
   <!-- Bootstrap 4 & jQuery scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../content-styles.css">
-
   <!-- Custom JS -->
   <script type="text/javascript" src="../content-main.js"></script>
-
 </head>
-
 <body>
+<div class="sec" id="IDs-secseriegeometrique-sDI"><h3>3.9 Série géométrique et applications</h3>
 
-  <h3>3.9 Série géométrique et applications</h3>
+<center>
 
-  <div class="video">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_serie_geometrique" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_serie_geometrique">La série géométrique</a>
-    <div class="collapse" id="IDvideodiv-v_suites_serie_geometrique">
-      <div class="card card-body">
-        <video class="HTMLvideo" src="../videos/v_suites_serie_geometrique.mp4" poster="../videos/v_suites_serie_geometrique_thumbnail.png" controls=true></video>
-      </div>
-    </div>
-  </div>
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_serie_geometrique" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_serie_geometrique">La série géométrique</a>
+                    <div class="collapse" id="IDvideodiv-v_suites_serie_geometrique">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_suites_serie_geometrique.mp4" poster="../videos/v_suites_serie_geometrique_thumbnail.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
+<div class="theo">
+Soit \(r\in \mathbb{R}\), et, pour tout \(n\geqslant 1\), définissons la suite
 
-  <div class="theo">
-    Soit \(r\in \mathbb{R}\), et, pour tout \(n\geqslant 1\), définissons la suite
+\[
+S_n:= 1+r+r^2+r^3+\cdots +r^{n-1}+r^n\,.
+\]
+Dans la limite \(n\to \infty\),
+\[ 
+\lim_{n\to \infty} S_n=
+\begin{cases}
++\infty & \text{ si }r\geqslant 1\,,\\
+\frac{1}{1-r} & \text{ si }|r|\lt 1\,,\\
+\text{n'existe pas} &\text{ si }r\leqslant -1\,.
+\end{cases}
+\]
+</div>
+<p>
+Dans le cas \(|r|\lt 1\), on écrit souvent le résultat sous la forme
+\[ \boxed{1+r+r^2+r^3+\dots=\frac{1}{1-r}}
+\]
+La somme infinie, dans le côté gauche, s'appelle la 
+<b>série géométrique</b>. (On étudiera les <i>séries</i> dans un chapitre
+ultérieur.)
+</p>
 
-    \[
-    S_n:= 1+r+r^2+r^3+\cdots +r^{n-1}+r^n\,.
-    \]
-    Dans la limite \(n\to \infty\),
-    \[
-    \lim_{n\to \infty} S_n=
-    \begin{cases}
-    +\infty & \text{ si }r\geqslant 1\,,\\
-    \frac{1}{1-r} & \text{ si }|r|\lt 1\,,\\
-    \text{n'existe pas} &\text{ si }r\leqslant -1\,.
-    \end{cases}
-    \]
-  </div>
-  <p>
-    Dans le cas \(|r|\lt 1\), on écrit souvent le résultat sous la forme
-    \[ \boxed{1+r+r^2+r^3+\dots=\frac{1}{1-r}}
-    \]
-    La somme infinie, dans le côté gauche, s'appelle la
-    <b>série géométrique</b>. (On étudiera les <i>séries</i> dans un chapitre
-    ultérieur.)
-  </p>
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuveseriegeometrique" role="button" aria-expanded="false" aria-controls="theproofpreuveseriegeometrique">Preuve:</a>
+                    <div class="collapse" id="theproofpreuveseriegeometrique">
+                    <div class="card card-body">
+                    <p>
+Rappelons que si \(r=1\), alors 
+\(S_n= n+1\), ce qui implique \(S_n\to+\infty\).
 
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuveseriegeometrique" role="button" aria-expanded="false" aria-controls="preuveseriegeometrique">Preuve:</a>
-    <div class="collapse" id="preuveseriegeometrique">
-      <div class="card card-body">
-        <p>Rappelons que si \(r=1\), alors
-          \(S_n= n+1\), ce qui implique \(S_n\to+\infty\).
+<br/><br/>
+Ensuite, si \(r\neq  1\), on a vu que
+\[ 
+S_n=\frac{1-r^{n+1}}{1-r}\,.
+\]
+On peut alors considérer séparément les cas:
+</p><ul>
+<li><u>\(r\gt 1\)</u>. Dans ce cas, on écrit plutôt
+\[ 
+S_n=\frac{r^{n+1}-1}{r-1}\,.
+\]
+Comme \(r^{n+1}\to \infty\), on a \(S_n\to +\infty\).
+</li><li> <u>\(-1\lt r\lt 1\)</u>. 
+Dans ce cas. \(|r^n|=|r|^n\to 0\) car \(|r|\lt 1\),
+et donc \(S_n\to \frac{1}{1-r}\).
+</li><li> <u>\(r= -1\)</u>. 
+Dans ce cas, \(S_n=\frac12(1-(-1)^{n+1})\), et donc ne converge pas.
+</li><li> <u>\(r\lt -1\)</u>. Dans ce cas, \(r^n\) n'a pas de limite lorsque
+\(n\to\infty\) (oscille).
+</li></ul><p>
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+<div class="exemple">
+\[\begin{aligned}
+1+\tfrac12+\tfrac14+\tfrac18+\tfrac{1}{16}+\dots&=
+1+\tfrac12+(\tfrac12)^2+(\tfrac12)^3+(\tfrac12)^4+\cdots\\
+&=\tfrac{1}{1-\tfrac12}=2\,.
+\end{aligned}\]
+</div>
+<div class="exemple">
+Calculons l'aire du Flocon de von Koch (Suédois, 1870-1924).
+(Pour plus de détails, voir la vidéo ci-dessus.)
+<br/><br/><center><img class="img-fluid" src="../images/i_von_Koch_Wikipedia.png" width="400"/></center>
+On part d'un triangle d'aire \(A_0=1\), puis à chaque étape \(n\geqslant 1\),
+on rajoute le triangle-tiers sur chaque côté.
+À l'étape \(n\), l'aire du triangle rajouté vaut
+\[ a_n=(1/9)^n\,, \]
+et le nombre de triangles rajoutés vaut
+\[ \sigma_n=3\cdot 4^{n-1}\,.  \]
+L'aire après la \(n\)ème étape vaut donc 
+\[ 
+A_n=A_{n-1}+\sigma_na_n\,.
+\]
+En itérant cette expression, on obtient 
+\[\begin{aligned} 
+A_n&=1+\sigma_1a_1+\sigma_2a_2+\cdots+\sigma_n a_n \\
+&=1+\frac{1}{3}+\frac13\frac{4}{9}+\frac13\frac{4^2}{9^2}+
+\frac13\frac{4^3}{9^3}+\dots\frac13\frac{4^{n-1}}{9^{n-1}}\\
+&=1+\frac13
+\Bigl\{
+1+\frac{4}{9}+\frac{4^2}{9^2}+
+\frac{4^3}{9^3}+\dots\frac{4^{n-1}}{9^{n-1}}
+\Bigr\}
+\end{aligned}\]
+On reconnaît l'apparition d'une série géométrique de raison \(r=\frac49\lt 1\), et
+donc 
+\[ \lim_{n\to \infty} A_n=1+\frac13\frac{1}{1-\frac49}=1+\frac13\frac95=\frac85\,.
+\]
+</div>
+<h4>Application: existence du nombre \(e\)</h4>
 
-          <br><br>
-          Ensuite, si \(r\neq 1\), on a vu que
-          \[
-          S_n=\frac{1-r^{n+1}}{1-r}\,.
-          \]
-          On peut alors considérer séparément les cas:
-        <ul>
-          <li><u>\(r\gt 1\)</u>. Dans ce cas, on écrit plutôt
-            \[
-            S_n=\frac{r^{n+1}-1}{r-1}\,.
-            \]
-            Comme \(r^{n+1}\to \infty\), on a \(S_n\to +\infty\).
-          <li> <u>\(-1\lt r\lt 1\)</u>.
-            Dans ce cas. \(|r^n|=|r|^n\to 0\) car \(|r|\lt 1\),
-            et donc \(S_n\to \frac{1}{1-r}\).
-          <li> <u>\(r= -1\)</u>.
-            Dans ce cas, \(S_n=\frac12(1-(-1)^{n+1})\), et donc ne converge pas.
-          <li> <u>\(r\lt -1\)</u>. Dans ce cas, \(r^n\) n'a pas de limite lorsque
-            \(n\to\infty\) (oscille).
-        </ul>
-        </p>
-      </div>
-    </div>
-  </div>
+<center>
 
-  <div class="exemple">
-    \[\begin{aligned}
-    1+\tfrac12+\tfrac14+\tfrac18+\tfrac{1}{16}+\dots&=
-    1+\tfrac12+(\tfrac12)^2+(\tfrac12)^3+(\tfrac12)^4+\cdots\\
-    &=\tfrac{1}{1-\tfrac12}=2\,.
-    \end{aligned}\]
-  </div>
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_nombre_e" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_nombre_e">Le nombre \(e\)</a>
+                    <div class="collapse" id="IDvideodiv-v_suites_nombre_e">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_suites_nombre_e.mp4" poster="../videos/v_suites_nombre_e_thumbnail.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
+<p>
+Dans cette section, on étudie la suite 
+\[ e_n:= \Bigl(1+\frac1n\Bigr)^n\,.
+\]
+Dans la limite \(n\to \infty\), \(e_n\) mène à une 
+indétermination de la forme ''\(1^\infty\)'', et il n'est pas clair, a priori,
+de comment se comporte vraiment \(e_n\).
+</p>
+<div class="info">
+Donnons deux arguments légitimes, <i>mais faux</i>, concernant le comportement
+de \(e_n\) dans la limite \(n\to \infty\).
+<ul>
+<li>
+On peut penser, que lorsque \(n\) est grand, 
+le terme \(\frac1n\) devient négligeable, et donc écrire
+\[e_n\simeq (1+0)^n=1\,,\] 
+ce qui mène à penser que la limite de \(e_n\) est
+égale à \(1\). 
 
-  <div class="exemple">
-    Calculons l'aire du Flocon de von Koch (Suédois, 1870-1924).
-    (Pour plus de détails, voir la vidéo ci-dessus.)
-    <center><img src="../images/i_von_Koch_Wikipedia.png" class="img-fluid" width="400"></center>
-    On part d'un triangle d'aire \(A_0=1\), puis à chaque étape \(n\geqslant 1\),
-    on rajoute le triangle-tiers sur chaque côté.
-    À l'étape \(n\), l'aire du triangle rajouté vaut
-    \[ a_n=(1/9)^n\,, \]
-    et le nombre de triangles rajoutés vaut
-    \[ \sigma_n=3\cdot 4^{n-1}\,. \]
-    L'aire après la \(n\)ème étape vaut donc
-    \[
-    A_n=A_{n-1}+\sigma_na_n\,.
-    \]
-    En itérant cette expression, on obtient
-    \[\begin{aligned}
-    A_n&=1+\sigma_1a_1+\sigma_2a_2+\cdots+\sigma_n a_n \\
-    &=1+\frac{1}{3}+\frac13\frac{4}{9}+\frac13\frac{4^2}{9^2}+
-    \frac13\frac{4^3}{9^3}+\dots\frac13\frac{4^{n-1}}{9^{n-1}}\\
-    &=1+\frac13
-    \Bigl\{
-    1+\frac{4}{9}+\frac{4^2}{9^2}+
-    \frac{4^3}{9^3}+\dots\frac{4^{n-1}}{9^{n-1}}
-    \Bigr\}
-    \end{aligned}\]
-    On reconnaît l'apparition d'une série géométrique de raison \(r=\frac49\lt 1\), et
-    donc
-    \[ \lim_{n\to \infty} A_n=1+\frac13\frac{1}{1-\frac49}=1+\frac13\frac95=\frac85\,.
-    \]
-  </div>
+</li><li>
+En se rappelant que même s'il est petit, le terme \(\varepsilon=\frac1n\) est
+toujours strictement positif, ce qui mène à penser, puisque \(1+\varepsilon>1\),
+que 
+\[e_n\simeq (1+\varepsilon)^n\to \infty\,.\] 
+</li></ul>
+</div>
+<div class="theo">
+⚡ 
+Soit \((e_n)_{n\geqslant 1}\) la suite définie ci-dessus.
+Alors 
+<ol>
+<li>\((e_n)\) est strictement croissante,
+</li><li>\((e_n)\) est bornée: \(2\lt e_n\lt 3\) pour tout \(n\geqslant 1\).
+</li></ol>
+Par conséquent, il existe
+\(e\in [2,3]\) tel que 
+\[\lim_{n\to \infty} e_n=e\,.\]
+</div>
+GGB: g_suites_unplusunsurnalapuissancen_pour_video.ggb
 
 
-  <h4>Application: existence du nombre \(e\)</h4>
-
-  <div class="video">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_nombre_e" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_nombre_e">Le nombre \(~e\)</a>
-    <div class="collapse" id="IDvideodiv-v_suites_nombre_e">
-      <div class="card card-body">
-        <video class="HTMLvideo" src="../videos/v_suites_nombre_e.mp4" poster="../videos/v_suites_nombre_e_thumbnail.png" controls=true></video>
-      </div>
-    </div>
-  </div>
-
-  <p>
-    Dans cette section, on étudie la suite
-    \[ e_n:= \Bigl(1+\frac1n\Bigr)^n\,.
-    \]
-    Dans la limite \(n\to \infty\), \(e_n\) mène à une
-    indétermination de la forme ''\(1^\infty\)'', et il n'est pas clair, a priori,
-    de comment se comporte vraiment \(e_n\).
-  </p>
-
-  <div class="info">
-    Donnons deux arguments légitimes, <i>mais faux</i>, concernant le comportement
-    de \(e_n\) dans la limite \(n\to \infty\).
-    <ul>
-      <li>
-        On peut penser, que lorsque \(n\) est grand,
-        le terme \(\frac1n\) devient négligeable, et donc écrire
-        \[e_n\simeq (1+0)^n=1\,,\]
-        ce qui mène à penser que la limite de \(e_n\) est
-        égale à \(1\).
-
-      <li>
-        En se rappelant que même s'il est petit, le terme \(\varepsilon=\frac1n\) est
-        toujours strictement positif, ce qui mène à penser, puisque \(1+\varepsilon>1\),
-        que
-        \[e_n\simeq (1+\varepsilon)^n\to \infty\,.\]
-    </ul>
-  </div>
-
-  <div class="theo">
-    <img src="../svg/lightning-fill.svg" style="vertical-align:middle" />
-    Soit \((e_n)_{n\geqslant 1}\) la suite définie ci-dessus.
-    Alors
-    <ol>
-      <li>\((e_n)\) est strictement croissante,
-      <li>\((e_n)\) est bornée: \(2\lt e_n\lt 3\) pour tout \(n\geqslant 1\).
-    </ol>
-    Par conséquent, il existe
-    \(e\in [2,3]\) tel que
-    \[\lim_{n\to \infty} e_n=e\,.\]
-  </div>
-
-  <div class="preuve">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#preuveExemple" role="button" aria-expanded="false" aria-controls="preuveExemple">Preuve:</a>
-    <div class="collapse" id="preuveExemple">
-      <div class="card card-body">
-        <p>Pour commencer, utilisons la formule du binôme pour écrire \(e_n\) sous une
-          forme qui permette de mieux étudier sa dépendance en \(n\):
-          \[\begin{aligned} e_n= \Bigl(1+\frac1n\Bigr)^n
-          &=1+\sum_{k=1}^n\binom{n}{k}1^{n-k}(\tfrac1n)^k\\
-          &=1+\sum_{k=1}^n\frac{n!}{k!(n-k)!}(\tfrac1n)^k\\
-          &=1+\sum_{k=1}^n\frac{1}{k!}\frac{n(n-1)(n-2)\cdots(n-k+1)}{n\cdot n\cdots n}\\
-          &=1+\sum_{k=1}^n\frac{1}{k!}
-          \bigl(1-\tfrac1n\bigr)\cdots
-          \bigl(1-\tfrac{k-1}{n}\bigr)
-          \end{aligned}\]
-          On utilise deux fois cette expression.</p>
-        <ul>
-          <li><u>Affirmation:</u>\((e_n)\) est croissante.
-            En utilisant l'expression précédente, pour \(n+1\)
-            \[\begin{aligned}
-            e_{n+1}
-            &=1+\sum_{k=1}^{n+1}\frac{1}{k!}
-            \bigl(1-\underbrace{\tfrac1{n+1}}_{\lt \frac1n}\bigr)\cdots
-            \bigl(1-\underbrace{\tfrac{k-1}{n+1}}_{\lt \frac{k-1}{n}}\bigr)\\
-            &\gt 1+\sum_{k=1}^{n+1}\frac{1}{k!}
-            \bigl(1-\tfrac1{n}\bigr)\cdots
-            \bigl(1-\tfrac{k-1}{n}\bigr)\\
-            &= 1+\sum_{k=1}^{n}\frac{1}{k!}
-            \bigl(1-\tfrac1{n}\bigr)\cdots
-            \bigl(1-\tfrac{k-1}{n}\bigr)=e_n\,.
-            \end{aligned}\]
-            Dans l'avant-dernière égalité, on a utilisé le fait que si \(k=n+1\), alors
-            \(1-\frac{k-1}{n}=0\).
-            Comme \(e_n\) est strictement croissante, on a en particulier que \(e_n> e_1=2\).
-          <li><u>Affirmation:</u>
-            \((e_n)\) est majorée par \(M=3\).
-            En utilisant encore une fois l'expression ci-dessus,
-            \[\begin{aligned} e_n
-            &=1+\sum_{k=1}^n\frac{1}{k!}
-            \bigl(\underbrace{1-\tfrac1n}_{\lt 1}\bigr)\cdots
-            \bigl(\underbrace{1-\tfrac{k-1}{n}}_{\lt 1}\bigr)\\
-            &\lt 1+\sum_{k=1}^n\frac{1}{k!}\\
-            &=1+\frac{1}{1!}+\sum_{k=2}^n\frac{1}{k!}
-            \end{aligned}\]
-            Remarquons maintenant que pour tout \(k\geqslant 2\),
-            \[ k!=
-            \underbrace{k}_{\geqslant 2}\cdot
-            \underbrace{(k-1)}_{\geqslant 2}\cdots
-            \underbrace{3}_{\geqslant 2}\cdot 2\cdot 1\geqslant 2^{k-1}\,,
-            \]
-            et donc
-            \[ e_n\lt
-            1+1+\sum_{k=2}^n\frac{1}{2^{k-1}}< 1+\sum_{k=0}^\infty\frac{1}{2^{j}}\lt 1+\frac{1}{1-\frac12}=3\,. \] </ul>
-              <p>On a donc montré que \((e_n)\) est croissante et majorée, donc elle converge.
-                Puisque \(2\leqslant e_n\leqslant 3\) pour tout \(n\), sa limite appartient aussi à cet
-                intervalle.</p>
-      </div>
-    </div>
-  </div>
-
+<div class="preuve">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#theproofpreuvedelexistencedee" role="button" aria-expanded="false" aria-controls="theproofpreuvedelexistencedee">Preuve:</a>
+                    <div class="collapse" id="theproofpreuvedelexistencedee">
+                    <div class="card card-body">
+                    <p>
+Pour commencer, utilisons la formule du binôme pour écrire \(e_n\) sous une
+forme qui permette de mieux étudier sa dépendance en \(n\):
+\[\begin{aligned} e_n= \Bigl(1+\frac1n\Bigr)^n
+&=1+\sum_{k=1}^n\binom{n}{k}1^{n-k}(\tfrac1n)^k\\
+&=1+\sum_{k=1}^n\frac{n!}{k!(n-k)!}(\tfrac1n)^k\\
+&=1+\sum_{k=1}^n\frac{1}{k!}\frac{n(n-1)(n-2)\cdots(n-k+1)}{n\cdot n\cdots n}\\
+&=1+\sum_{k=1}^n\frac{1}{k!}
+\bigl(1-\tfrac1n\bigr)\cdots
+\bigl(1-\tfrac{k-1}{n}\bigr)
+\end{aligned}\]
+On utilise deux fois cette expression.
+</p><ul>
+<li><u>Affirmation:</u>\((e_n)\) est croissante.
+En utilisant l'expression précédente, pour \(n+1\)
+\[\begin{aligned} 
+e_{n+1}
+&=1+\sum_{k=1}^{n+1}\frac{1}{k!}
+\bigl(1-\underbrace{\tfrac1{n+1}}_{\lt \frac1n}\bigr)\cdots
+\bigl(1-\underbrace{\tfrac{k-1}{n+1}}_{\lt \frac{k-1}{n}}\bigr)\\
+&\gt  1+\sum_{k=1}^{n+1}\frac{1}{k!}
+\bigl(1-\tfrac1{n}\bigr)\cdots
+\bigl(1-\tfrac{k-1}{n}\bigr)\\
+&= 1+\sum_{k=1}^{n}\frac{1}{k!}
+\bigl(1-\tfrac1{n}\bigr)\cdots
+\bigl(1-\tfrac{k-1}{n}\bigr)=e_n\,.
+\end{aligned}\]
+Dans l'avant-dernière égalité, on a utilisé le fait que si \(k=n+1\), alors
+\(1-\frac{k-1}{n}=0\). 
+Comme \(e_n\) est strictement croissante, on a en particulier que \(e_n> e_1=2\).
+</li><li><u>Affirmation:</u>\((e_n)\) est majorée par \(M=3\).
+En utilisant encore une fois l'expression ci-dessus,
+\[\begin{aligned} e_n
+&=1+\sum_{k=1}^n\frac{1}{k!}
+\bigl(\underbrace{1-\tfrac1n}_{\lt 1}\bigr)\cdots
+\bigl(\underbrace{1-\tfrac{k-1}{n}}_{\lt 1}\bigr)\\
+&\lt 1+\sum_{k=1}^n\frac{1}{k!}\\
+&=1+\frac{1}{1!}+\sum_{k=2}^n\frac{1}{k!}
+\end{aligned}\]
+Remarquons maintenant que pour tout \(k\geqslant 2\),
+\[ k!=
+\underbrace{k}_{\geqslant 2}\cdot
+\underbrace{(k-1)}_{\geqslant 2}\cdots
+\underbrace{3}_{\geqslant 2}\cdot 2\cdot 1\geqslant 2^{k-1}\,,
+\]
+et donc
+\[ e_n\lt 
+1+1+\sum_{k=2}^n\frac{1}{2^{k-1}}<
+1+\sum_{k=0}^\infty\frac{1}{2^{j}}\lt 1+\frac{1}{1-\frac12}=3\,.
+\]
+</li></ul><p>
+On a donc montré que \((e_n)\) est croissante et majorée, donc elle converge. 
+Puisque \(2\leqslant e_n\leqslant 3\) pour tout \(n\), sa limite appartient aussi à cet
+intervalle.
+</p>
+                    </div>
+                    </div>
+                    </div>
+                    
+</div>
 </body>
-
 </html>

@@ -1,199 +1,185 @@
 <!DOCTYPE html>
 <html lang=fr>
-
 <head>
-
   <meta charset="utf-8">
   <title></title>
-
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
   <!-- KaTeX -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);">
   </script>
-
   <!-- Bootstrap 4 & jQuery scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../content-styles.css">
-
   <!-- Custom JS -->
   <script type="text/javascript" src="../content-main.js"></script>
-
 </head>
-
 <body>
+<div class="sec" id="IDs-secsuitesquitendentverslinfini-sDI"><h3>3.6 Suites qui tendent vers l'infini</h3>
 
-  <h3>3.6 Suites qui tendent vers l'infini</h3>
+<center>
 
-  <div class="video">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_tendent_vers_infini_2" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_tendent_vers_infini_2">Les suites qui tendent vers l'infini</a>
-    <div class="collapse" id="IDvideodiv-v_suites_tendent_vers_infini_2">
-      <div class="card card-body">
-        <video class="HTMLvideo" src="../videos/v_suites_tendent_vers_infini_2.mp4" poster="../videos/v_suites_tendent_vers_infini_2_thumbnail.png" controls=true></video>
-      </div>
-    </div>
-  </div>
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_tendent_vers_infini_2" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_tendent_vers_infini_2">Les suites qui tendent vers l'infini</a>
+                    <div class="collapse" id="IDvideodiv-v_suites_tendent_vers_infini_2">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_suites_tendent_vers_infini_2.mp4" poster="../videos/v_suites_tendent_vers_infini_2_thumbnail.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
+<p>
+Un comportement possible, pour une suite qui ne possède pas de limite lorsque 
+\(n\to\infty\), est de tendre vers l'infini.
+</p>
+<div class="defin">
+Soit \((a_n)\) une suite.
+<ol>
+<li>On dit que \((a_n)\) 
+<b>tend vers \(+\infty\) (lorsque \(n\to\infty\))</b>
+si pour tout \(M\gt 0\) il existe un entier positif \(N_0\) (qui dépend en général
+de \(M\)) tel que  
+\[ 
+a_n\geqslant M\qquad \forall n\geqslant N_0\,.
+\]
+On notera (formellement)
+\(\displaystyle{\lim_{n\to \infty} a_n=+\infty}\), ou simplement \(a_n\to+\infty\). 
+</li><li>
+On dit que 
+\((a_n)\) <b>tend vers \(-\infty\) (lorsque \(n\to\infty\))</b> si pour tout
+\(M\lt 0\) il existe un entier positif \(N_0\) (qui dépend en général
+de \(M\)) tel que  
+\[ 
+a_n\leqslant M\qquad \forall n\geqslant N_0\,.
+\]
+On notera (formellement)
+\(\displaystyle{\lim_{n\to \infty} a_n=-\infty}\), ou simplement \(a_n\to-\infty\). 
+</li></ol>
+</div>
+<br/><br/><center><img class="img-fluid" src="../images/i_suites_tend_vers_l_infini.jpg" width="400"/></center>
+<p>
+Comme exemples classiques de fonctions qui tendent vers l'infini, on a
+</p><ul>
+<li>Les 
+<b>puissances entières positives \(p\in \mathbb{N}^*\)</b>: \(a_n=n^p\to +\infty\).
+</li><li>Les <b>exponentielles de base \(r\gt 1\)</b>: \(a_n=r^n\to\infty\).
+</li><li>Les <b>polynômes de degré \(p\)</b>: 
+\(a_n=c_0+c_1n+c_2n^2+\dots+c_pn^p\), avec \(c_p\neq 0\):
+\[ 
+a_n\to
+\begin{cases}
++\infty&\text{ si }c_p\gt 0\,,\\
+-\infty&\text{ si }c_p\lt 0\,.
+\end{cases}
+\]
+</li><li>Les <b>logarithmes de base \(r\gt 1\)</b>: \(a_n=\log_r(n)\to+\infty\)
+</li><li>Les <b>logarithmes de base \(0\lt r\lt 1\)</b>: \(a_n=\log_r(n)\to-\infty\)
+</li></ul>
+<div class="exemple">
+Considérons la suite \(a_n=\frac{2n-5}{7}\), et montrons que \(a_n\to \infty\).
+Pour cela, fixons un seuil arbitraire \(M>0\). On aura
+\[ a_n\geqslant M\quad \Leftrightarrow \quad \frac{2n-5}{7}
+\quad \Leftrightarrow \quad n\geqslant 7M+5\,.
+\]
+Soit donc \(N:= [7M+5]+1\). Si \(n\geqslant N\), 
+alors \(n\geqslant 7M+5\) et donc \(a_n\geqslant M\). 
+</div>
+<div class="exemple">
+Considérons ensuite
+\(a_n=\frac{n^2}{n+1}\) et montrons que \(a_n\to \infty\).
+Pour un seuil \(M>0\), on aura
+\[ a_n\geqslant M\quad 
+\Leftrightarrow \quad 
+n^2-Mn-M\geqslant 0
+\]
+Le polynôme \(P(x)=x^2-Mx-M\) possède deux racines, 
+\(x_\pm=\frac{M\pm \sqrt{M^2+4M}}{2}\); il est positif partout en dehors de
+l'intervalle \([x_-,x_+]\). En définissant \(N:= [x_+]+1\), 
+on a bien \(a_n\geqslant M\) dès que \(n\geqslant N\).
+</div>
+<h4>Propriétés des suites qui tendent vers l'infini</h4>
+<div class="lem"> 
+Soient \((a_n)\) et \((b_n)\) deux suites.
+Si \(a_n\to +\infty\), 
+<ol>
+<li>alors \(\frac{1}{a_n}\to
+0\).  
+</li><li>et si \(b_n\to +\infty\), alors 
+\(a_n+b_n\to+\infty\) et \(a_nb_n\to+\infty\).
+</li><li>et si \(b_n\) est bornée, alors 
+\(a_n+b_n\to +\infty\) et \(\frac{b_n}{a_n}\to 0\).
+</li><li>et s'il existe \(\delta\gt 0\) tel que \(b_n\geqslant
+\delta\) pour tout \(n\) suffisamment grand, alors \(a_nb_n\to+\infty\).
+</li><li> et si \(b_n\geqslant a_n\) pour tout \(n\) suffisamment
+grand, alors \(b_n\to+\infty\). (<b>Chien méchant</b>)
+</li></ol>
+</div>
 
-  <p>
-    Un comportement possible, pour une suite qui ne possède pas de limite lorsque
-    \(n\to\infty\), est de tendre vers l'infini.
-  </p>
+<center>
 
-  <div class="defin">
-    Soit \((a_n)\) une suite.
-    <ol>
-      <li>On dit que \((a_n)\)
-        <b>tend vers \(+\infty\) (lorsque \(n\to\infty\))</b>
-        si pour tout \(M\gt 0\) il existe un entier positif \(N_0\) (qui dépend en général
-        de \(M\)) tel que
-        \[
-        a_n\geqslant M\qquad \forall n\geqslant N_0\,.
-        \]
-        On notera (formellement)
-        \(\displaystyle{\lim_{n\to \infty} a_n=+\infty}\), ou simplement \(a_n\to+\infty\).
-      <li>
-        On dit que
-        \((a_n)\) <b>tend vers \(-\infty\) (lorsque \(n\to\infty\))</b> si pour tout
-        \(M\lt 0\) il existe un entier positif \(N_0\) (qui dépend en général
-        de \(M\)) tel que
-        \[
-        a_n\leqslant M\qquad \forall n\geqslant N_0\,.
-        \]
-        On notera (formellement)
-        \(\displaystyle{\lim_{n\to \infty} a_n=-\infty}\), ou simplement \(a_n\to-\infty\).
-    </ol>
-  </div>
-
-  <center><img src="../images/i_suites_tend_vers_l_infini.jpg" class="img-fluid" width="400"></center>
-
-  <p>
-    Comme exemples classiques de fonctions qui tendent vers l'infini, on a
-  <ul>
-    <li>Les
-      <b>puissances entières positives \(p\in \mathbb{N}^*\)</b>: \(a_n=n^p\to +\infty\).
-    <li>Les <b>exponentielles de base \(r\gt 1\)</b>: \(a_n=r^n\to\infty\).
-    <li>Les <b>polynômes de degré \(p\)</b>:
-      \(a_n=c_0+c_1n+c_2n^2+\dots+c_pn^p\), avec \(c_p\neq 0\):
-      \[
-      a_n\to
-      \begin{cases}
-      +\infty&\text{ si }c_p\gt 0\,,\\
-      -\infty&\text{ si }c_p\lt 0\,.
-      \end{cases}
-      \]
-    <li>Les <b>logarithmes de base \(r\gt 1\)</b>: \(a_n=\log_r(n)\to+\infty\)
-    <li>Les <b>logarithmes de base \(0\lt r\lt 1\)</b>: \(a_n=\log_r(n)\to-\infty\)
-  </ul>
-  </p>
-
-  <div class="exemple">
-    Considérons la suite \(a_n=\frac{2n-5}{7}\), et montrons que \(a_n\to \infty\).
-    Pour cela, fixons un seuil arbitraire \(M>0\). On aura
-    \[ a_n\geqslant M\quad \Leftrightarrow \quad \frac{2n-5}{7}
-    \quad \Leftrightarrow \quad n\geqslant 7M+5\,.
-    \]
-    Soit donc \(N:= [7M+5]+1\). Si \(n\geqslant N\),
-    alors \(n\geqslant 7M+5\) et donc \(a_n\geqslant M\).
-  </div>
-
-  <div class="exemple">
-    Considérons ensuite
-    \(a_n=\frac{n^2}{n+1}\) et montrons que \(a_n\to \infty\).
-    Pour un seuil \(M>0\), on aura
-    \[ a_n\geqslant M\quad
-    \Leftrightarrow \quad
-    n^2-Mn-M\geqslant 0
-    \]
-    Le polynôme \(P(x)=x^2-Mx-M\) possède deux racines,
-    \(x_\pm=\frac{M\pm \sqrt{M^2+4M}}{2}\); il est positif partout en dehors de
-    l'intervalle \([x_-,x_+]\). En définissant \(N:= [x_+]+1\),
-    on a bien \(a_n\geqslant M\) dès que \(n\geqslant N\).
-  </div>
-
-  <h4>Propriétés des suites qui tendent vers l'infini</h4>
-
-  <div class="lem">
-    Soient \((a_n)\) et \((b_n)\) deux suites.
-    Si \(a_n\to +\infty\),
-    <ol>
-      <li>alors \(\frac{1}{a_n}\to
-        0\).
-      <li>et si \(b_n\to +\infty\), alors
-        \(a_n+b_n\to+\infty\) et \(a_nb_n\to+\infty\).
-      <li>et si \(b_n\) est bornée, alors
-        \(a_n+b_n\to +\infty\) et \(\frac{b_n}{a_n}\to 0\).
-      <li>et s'il existe \(\delta\gt 0\) tel que \(b_n\geqslant
-        \delta\) pour tout \(n\) suffisamment grand, alors \(a_nb_n\to+\infty\).
-      <li> et si \(b_n\geqslant a_n\) pour tout \(n\) suffisamment
-        grand, alors \(b_n\to+\infty\). (<b>Chien méchant</b>)
-    </ol>
-  </div>
-
-  <div class="video">
-    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_tendent_vers_infini_preuves" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_tendent_vers_infini_preuves">Preuve des propriétés</a>
-    <div class="collapse" id="IDvideodiv-v_suites_tendent_vers_infini_preuves">
-      <div class="card card-body">
-        <video class="HTMLvideo" src="../videos/v_suites_tendent_vers_infini_preuves.mp4" poster="../videos/v_suites_tendent_vers_infini_preuves_thumbnail.png" controls=true></video>
-      </div>
-    </div>
-  </div>
-
-  <div class="exemple">
-    Soit \(x_n=n^2-3\sin(n^3)\).
-    Comme \(a_n=n^2\to\infty\) et \(b_n=-3\sin(n^3)\) est bornée (\(|b_n|\leqslant 3\)
-    pour tout \(n\)), on a que \(x_n=a_n+b_n\to\infty\).
-  </div>
-
-  <div class="quiz" id="quiz3_6_1">
-    Soit \((a_n)\) une suite qui n'est pas majorée. Parmis les affirmations
-    suivantes, lesquelles sont correctes?
-    <ol>
-      <li><span class="itemEMPTY">[ ]</span> Il existe \(M\) tel que \(a_n\geqslant M\) pour tout \(n\).
-      <li><span class="itemFULL">[ ]</span> Pour tout \(M>0\), il existe \(n\) tel que \(a_n\geqslant M\).
-      <li><span class="itemEMPTY">[ ]</span> \(a_n\to\infty\) lorsque \(n\to\infty\)
-      <li><span class="itemEMPTY">[ ]</span> \(a_n>M\) pour tout \(M\).
-    </ol>
-    <span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_6_1')">Solutions</button></span>
-  </div>
-  <div class="quiz" id="quiz3_6_2">
-    Si une suite \((a_n)\) ne tend pas vers \(+\infty\), alors
-    <ol>
-      <li><span class="itemEMPTY">[ ]</span> soit elle tend vers \(-\infty\),
-        soit elle tend vers une valeur \(L\in \mathbb{R}\).
-      <li><span class="itemEMPTY">[ ]</span> \((a_n)\) est majorée.
-      <li><span class="itemEMPTY">[ ]</span> il existe \(N\) telle que \((a_n)\) est décroissante à partir de
-        \(N\).
-      <li><span class="itemEMPTY">[ ]</span> pour tout \(M\gt 0\), il existe un entier \(N\) tel que \(a_n\leqslant M\) pour
-        tout \(n\geqslant N\).
-      <li><span class="itemFULL">[ ]</span> il existe un \(M\gt 0\) tel que \(a_n\lt M\) pour une infinité d'indices
-        \(n\).
-    </ol>
-    <span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_6_2')">Solutions</button></span>
-  </div>
-  <div class="quiz" id="quiz3_6_3">
-    Soit \(a_n\to+\infty\).
-    Parmi les affirmations suivantes, lesquelles sont toujours vraies?
-    <ol>
-      <li><span class="itemEMPTY">[ ]</span> Si \(a_n\leqslant b_n\) pour une infinité d'indices \(n\), alors
-        \(b_n\to\infty\).
-      <li><span class="itemFULL">[ ]</span> Si \(a_n\leqslant b_n\) pour tout \(n\), alors \(\frac{1}{b_n}\to 0\).
-      <li><span class="itemEMPTY">[ ]</span> Si \(b_n\leqslant a_n\), alors \((b_n)\) est majorée.
-      <li><span class="itemEMPTY">[ ]</span> Si \(b_n\) est minorée, alors \(a_nb_n\to \infty\).
-      <li><span class="itemEMPTY">[ ]</span> Si il existe \(\delta\geqslant 0\) tel que \(b_n\geqslant \delta\) pour tout
-        \(n\) suffisamment grand, alors \(a_nb_n\to \infty\).
-      <li><span class="itemEMPTY">[ ]</span> Si \(r>1\), alors \(\frac{a_n}{r^n}\to 0\).
-      <li><span class="itemFULL">[ ]</span> \(e^{-a_n}\to 0\)
-      <li><span class="itemEMPTY">[ ]</span> \(\frac{\sin(a_n)}{a_n}\to 1\)
-    </ol>
-    <span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_6_3')">Solutions</button></span>
-  </div>
-
+                    <div class="video">
+                    <a class="btn btn-outline-secondary" data-toggle="collapse" href="#IDvideodiv-v_suites_tendent_vers_infini_preuves" role="button" aria-expanded="false" aria-controls="IDvideodiv-v_suites_tendent_vers_infini_preuves">Preuve des propriétés</a>
+                    <div class="collapse" id="IDvideodiv-v_suites_tendent_vers_infini_preuves">
+                    <div class="card card-body">
+                    <video class="HTMLvideo" src="../videos/v_suites_tendent_vers_infini_preuves.mp4" poster="../videos/v_suites_tendent_vers_infini_preuves_thumbnail.png" controls=true></video>
+                    </div>
+                    </div>
+                    </div>
+                    
+</center>
+<div class="exemple">
+Soit \(x_n=n^2-3\sin(n^3)\).
+Comme \(a_n=n^2\to\infty\) et \(b_n=-3\sin(n^3)\) est bornée (\(|b_n|\leqslant 3\)
+pour tout \(n\)), on a que \(x_n=a_n+b_n\to\infty\).
+</div>
+<div class="quiz" id="quiz3_6_1">
+Soit \((a_n)\) une suite qui n'est pas majorée. Parmis les affirmations
+suivantes, lesquelles sont correctes?
+<ol>
+<li><span class="itemEMPTY">[  ]</span> Il existe \(M\) tel que \(a_n\geqslant M\) pour tout \(n\).
+</li><li><span class="itemFULL">[  ]</span> Pour tout \(M>0\), il existe \(n\) tel que \(a_n\geqslant M\).
+</li><li><span class="itemEMPTY">[  ]</span> \(a_n\to\infty\) lorsque \(n\to\infty\)
+</li><li><span class="itemEMPTY">[  ]</span> \(a_n>M\) pour tout \(M\).
+</li></ol>
+<span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_6_1')">Solutions</button></span>
+</div><!--quizz-->
+<div class="quiz" id="quiz3_6_2">
+Si une suite \((a_n)\) ne tend pas vers \(+\infty\), alors
+<ol>
+<li><span class="itemEMPTY">[  ]</span>  soit elle tend vers \(-\infty\),
+soit elle tend vers une valeur \(L\in \mathbb{R}\).
+</li><li><span class="itemEMPTY">[  ]</span> \((a_n)\) est majorée.
+</li><li><span class="itemEMPTY">[  ]</span> il existe \(N\) telle que \((a_n)\) est décroissante à partir de
+\(N\).
+</li><li><span class="itemEMPTY">[  ]</span> pour tout \(M\gt 0\), il existe un entier \(N\) tel que \(a_n\leqslant M\) pour
+tout \(n\geqslant N\).
+</li><li><span class="itemFULL">[  ]</span> il existe un \(M\gt 0\) tel que \(a_n\lt M\) pour une infinité d'indices
+\(n\).
+</li></ol>
+<span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_6_2')">Solutions</button></span>
+</div><!--quizz-->
+<div class="quiz" id="quiz3_6_3">
+Soit \(a_n\to+\infty\).
+Parmi les affirmations suivantes, lesquelles sont toujours vraies?
+<ol>
+<li><span class="itemEMPTY">[  ]</span> Si \(a_n\leqslant b_n\) pour une infinité d'indices \(n\), alors
+\(b_n\to\infty\).
+</li><li><span class="itemFULL">[  ]</span> Si \(a_n\leqslant b_n\) pour tout \(n\), alors \(\frac{1}{b_n}\to 0\).
+</li><li><span class="itemEMPTY">[  ]</span> Si \(b_n\leqslant a_n\), alors \((b_n)\) est majorée.
+</li><li><span class="itemEMPTY">[  ]</span> Si \(b_n\) est minorée, alors \(a_nb_n\to \infty\).
+</li><li><span class="itemEMPTY">[  ]</span> Si il existe \(\delta\geqslant 0\) tel que \(b_n\geqslant \delta\) pour tout
+\(n\) suffisamment grand, alors \(a_nb_n\to \infty\). 
+</li><li><span class="itemEMPTY">[  ]</span> Si \(r>1\), alors \(\frac{a_n}{r^n}\to 0\).
+</li><li><span class="itemFULL">[  ]</span> \(e^{-a_n}\to 0\)
+</li><li><span class="itemEMPTY">[  ]</span> \(\frac{\sin(a_n)}{a_n}\to 1\)
+</li></ol>
+<span class="quiz-btn"><button type="button" class="btn btn-primary" onclick="montrer_cacher('quiz3_6_3')">Solutions</button></span>
+</div><!--quizz-->
+</div>
 </body>
-
 </html>
