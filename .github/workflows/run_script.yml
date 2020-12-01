@@ -1,0 +1,9 @@
+name: Run website beautify
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run python script
+      run: |
+        python website_beautify.py
