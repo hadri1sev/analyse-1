@@ -65,7 +65,7 @@ with open(index_to_convert, encoding="utf-8") as fp:
 
                 # Mettre à jour les images
                 for img in section[j].find_all('img'):
-                    img['src'] = f"http://botafogo.saitis.net/analyse-1/{img['src']}"
+                    img['src'] = f"../{img['src']}"
                     img['class'] = f"img-fluid"
 
                 # Mettre à jour les preuves
