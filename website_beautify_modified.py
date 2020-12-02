@@ -61,7 +61,7 @@ with open(index_to_convert, encoding="utf-8") as fp:
                 # Mettre à jour les liens des pdfs
                 for a in section[j].find_all('a'):
                     if 'pdfs' in a['href']:
-                        a['href'] = f"../{a['href']}"
+                        a['href'] = f"http://botafogo.saitis.net/analyse-1/{a['href']}"
 
                 # Mettre à jour les images
                 for img in section[j].find_all('img'):
